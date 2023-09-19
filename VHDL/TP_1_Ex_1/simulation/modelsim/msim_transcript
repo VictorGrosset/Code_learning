@@ -1,0 +1,65 @@
+# Reading C:/intelFPGA/18.1/modelsim_ase/tcl/vsim/pref.tcl
+# do DE2_115_run_msim_rtl_vhdl.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 10.5b Lib Mapping Utility 2016.10 Oct  5 2016
+# vmap work rtl_work 
+# Copying C:/intelFPGA/18.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vcom -93 -work work {H:/Programmation/VHDL/TP_1_Ex_1/src/mux4v1.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 08:32:14 on Sep 15,2023
+# vcom -reportprogress 300 -93 -work work H:/Programmation/VHDL/TP_1_Ex_1/src/mux4v1.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity mux4v1
+# -- Compiling architecture ar of mux4v1
+# End time: 08:32:15 on Sep 15,2023, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# 
+vcom -reportprogress 300 -work work H:/Programmation/VHDL/TP_1_Ex_1/src/testbench_mux4v1.vhd
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 08:33:03 on Sep 15,2023
+# vcom -reportprogress 300 -work work H:/Programmation/VHDL/TP_1_Ex_1/src/testbench_mux4v1.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity testbench_mux4v1
+# -- Compiling architecture ar of testbench_mux4v1
+# -- Loading entity mux4v1
+# End time: 08:33:03 on Sep 15,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -reportprogress 300 -work work H:/Programmation/VHDL/TP_1_Ex_1/src/testbench_mux4v1.vhd
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 08:33:16 on Sep 15,2023
+# vcom -reportprogress 300 -work work H:/Programmation/VHDL/TP_1_Ex_1/src/testbench_mux4v1.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity testbench_mux4v1
+# -- Compiling architecture ar of testbench_mux4v1
+# -- Loading entity mux4v1
+# End time: 08:33:17 on Sep 15,2023, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+vsim work.testbench_mux4v1
+# vsim work.testbench_mux4v1 
+# Start time: 08:33:47 on Sep 15,2023
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.testbench_mux4v1(ar)
+# Loading work.mux4v1(ar)
+view -new wave
+# -new not supported on PE
+add wave -position insertpoint  \
+sim:/testbench_mux4v1/uut/d \
+sim:/testbench_mux4v1/uut/sel \
+sim:/testbench_mux4v1/uut/s
+run
+# End time: 08:46:24 on Sep 15,2023, Elapsed time: 0:12:37
+# Errors: 1, Warnings: 0

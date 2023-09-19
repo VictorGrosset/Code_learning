@@ -1,0 +1,45 @@
+Sure! Here are some exercises related to classes in C++. Try to solve them, and feel free to ask for explanations or solutions if needed.
+
+Exercise 1:
+Create a class called `Rectangle` with private attributes `width` and `height` (both integers). Implement public member functions to 
+set and get the width and height, calculate the area of the rectangle, and check if the rectangle is a square (i.e., width and height 
+are equal).
+
+Exercise 2:
+Create a class called `Student` with private attributes `name` (string) and `age` (integer). Implement public member functions to set 
+and get the name and age of the student. Additionally, create a function that prints the student's information.
+
+Exercise 3:
+Create a class called `BankAccount` with private attributes `accountNumber` (string) and `balance` (double). Implement public member 
+functions to set the account number and balance, deposit and withdraw money from the account, and display the current balance.
+
+Exercise 4:
+Create a class called `Time` with private attributes `hours`, `minutes`, and `seconds` (all integers). Implement public member 
+functions to set the time and display it in 24-hour and 12-hour formats.
+
+Exercise 5:
+Create a class called `Car` with private attributes `make` (string), `model` (string), and `year` (integer). Implement public member 
+functions to set and get the car's details and print the car's information.
+
+Exercise 6:
+Create a class called `Date` with private attributes `day`, `month`, and `year` (all integers). Implement public member functions to 
+set the date, display the date in different formats (e.g., dd-mm-yyyy and yyyy-mm-dd), and check if the year is a leap year.
+
+Exercise 7:
+Create a class called `Point` with private attributes `x` and `y` (both integers). Implement public member functions to set the point's
+coordinates, calculate the distance between two points, and check if two points are equal.
+
+Exercise 8:
+Create a class called `Employee` with private attributes `name` (string), `id` (string), and `salary` (double). Implement public member 
+functions to set and get the employee's details and calculate the annual salary.
+
+Exercise 9:
+Create a class called `Bank` with a private vector of `BankAccount` objects. Implement public member functions to add a new account, 
+remove an account, and display all the accounts in the bank.
+
+Exercise 10:
+Create a class called `Book` with private attributes `title` (string), `author` (string), and `publicationYear` (integer). Implement 
+public member functions to set and get the book's details and display the book's information.
+
+Remember to use encapsulation and provide appropriate access modifiers for the class members. Good luck with the exercises! If you need 
+any further assistance or solutions, feel free to ask.

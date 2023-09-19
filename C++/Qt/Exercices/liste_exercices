@@ -1,0 +1,39 @@
+Sure, here are some simple exercises on Qt Creator to get you started:
+
+Exercise 1: Creating a Basic Qt Application
+1. Open Qt Creator and create a new Qt Widgets Application project.
+2. Add a QLabel widget to the main window and set its text to "Hello, Qt!"
+3. Add a QPushButton widget to the main window and set its text to "Click Me!"
+4. Connect the QPushButton's clicked() signal to a slot that changes the text of the QLabel to "Button Clicked!" when the button is clicked.
+
+Exercise 2: Layouts and Widgets
+1. Create a new Qt Widgets Application project.
+2. Add a QGridLayout to the main window.
+3. Add three QPushButtons to the grid layout with texts "Button 1", "Button 2", and "Button 3".
+4. Add a QLabel to the grid layout and set its text to "Click a button!".
+5. Connect each QPushButton's clicked() signal to a single slot that changes the text of the QLabel to "Button 1 clicked!", "Button 2 clicked!", and "Button 3 clicked!" respectively.
+
+Exercise 3: Dialog Boxes and User Input
+1. Create a new Qt Widgets Application project.
+2. Add a QPushButton to the main window with the text "Show Dialog".
+3. Create a custom QDialog subclass with a QLineEdit and two QPushButtons ("OK" and "Cancel").
+4. When the "Show Dialog" button is clicked, open the custom dialog box.
+5. If the user clicks "OK," display a QMessageBox with the text "You entered: [text from QLineEdit]".
+6. If the user clicks "Cancel," display a QMessageBox with the text "Dialog canceled."
+
+Exercise 4: Drawing Shapes on a Custom Widget
+1. Create a new Qt Widgets Application project.
+2. Add a new class called "CustomWidget" that subclasses QWidget.
+3. Override the paintEvent() method in the "CustomWidget" class.
+4. In the paintEvent() method, use QPainter to draw a simple shape like a rectangle or ellipse on the custom widget.
+5. Add the "CustomWidget" to the main window and ensure it is visible.
+
+Exercise 5: File I/O and QListWidget
+1. Create a new Qt Widgets Application project.
+2. Add a QListWidget to the main window.
+3. Create a "Load" QPushButton and a "Save" QPushButton.
+4. When the "Load" button is clicked, open a file dialog to load text from a file.
+5. Display the contents of the file in the QListWidget.
+6. When the "Save" button is clicked, open a file dialog to save the current items in the QListWidget to a text file.
+
+Remember to connect signals to slots using QObject::connect() and use the appropriate Qt classes for each task. These exercises should help you become familiar with Qt Creator and get you started with Qt application development. Good luck!

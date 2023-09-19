@@ -1,0 +1,16 @@
+library IEEE;
+use IEEE.std_logic_1164.all;
+
+
+entity deco7seg is
+	port(
+	    );
+end entity;
+
+
+
+architecture ar of deco7seg is
+begin
+
+
+end architecture;

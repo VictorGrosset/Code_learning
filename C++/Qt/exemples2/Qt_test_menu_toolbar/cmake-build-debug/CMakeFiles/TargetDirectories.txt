@@ -1,0 +1,5 @@
+/home/victor/Documents/Qt_creator/Qt_test_menu_toolbar/cmake-build-debug/CMakeFiles/Qt_test_menu_toolbar.dir
+/home/victor/Documents/Qt_creator/Qt_test_menu_toolbar/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/victor/Documents/Qt_creator/Qt_test_menu_toolbar/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/victor/Documents/Qt_creator/Qt_test_menu_toolbar/cmake-build-debug/CMakeFiles/Qt_test_menu_toolbar_autogen_timestamp_deps.dir
+/home/victor/Documents/Qt_creator/Qt_test_menu_toolbar/cmake-build-debug/CMakeFiles/Qt_test_menu_toolbar_autogen.dir

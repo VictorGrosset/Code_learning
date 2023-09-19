@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/TD1_3_Développer_une_classe_Point.iml" filepath="$PROJECT_DIR$/.idea/TD1_3_Développer_une_classe_Point.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../TD1_4_Point_et_Triangle/.idea/TD1_4_Point_et_Triangle.iml" filepath="$PROJECT_DIR$/../TD1_4_Point_et_Triangle/.idea/TD1_4_Point_et_Triangle.iml" />
+    </modules>
+  </component>
+</project>

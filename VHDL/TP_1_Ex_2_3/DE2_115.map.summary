@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Fri Sep 15 11:17:52 2023
+Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Standard Edition
+Revision Name : DE2_115
+Top-level Entity Name : exo3_complet
+Family : Cyclone IV E
+Total logic elements : 24
+    Total combinational functions : 24
+    Dedicated logic registers : 0
+Total registers : 0
+Total pins : 22
+Total virtual pins : 0
+Total memory bits : 0
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0

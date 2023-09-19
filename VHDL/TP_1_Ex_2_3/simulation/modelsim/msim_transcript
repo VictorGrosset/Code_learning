@@ -1,0 +1,52 @@
+# Reading C:/intelFPGA/18.1/modelsim_ase/tcl/vsim/pref.tcl
+# do DE2_115_run_msim_rtl_vhdl.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 10.5b Lib Mapping Utility 2016.10 Oct  5 2016
+# vmap work rtl_work 
+# Copying C:/intelFPGA/18.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vcom -93 -work work {H:/Programmation/VHDL/TP_1_Ex_2_3/src/encodeur_prio.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 11:10:27 on Sep 15,2023
+# vcom -reportprogress 300 -93 -work work H:/Programmation/VHDL/TP_1_Ex_2_3/src/encodeur_prio.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity encodeur_prio
+# -- Compiling architecture ar of encodeur_prio
+# End time: 11:10:27 on Sep 15,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+vcom -reportprogress 300 -work work H:/Programmation/VHDL/TP_1_Ex_2_3/src/testbench_encodeur_prio.vhd
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 11:10:45 on Sep 15,2023
+# vcom -reportprogress 300 -work work H:/Programmation/VHDL/TP_1_Ex_2_3/src/testbench_encodeur_prio.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity testbench_encodeur_prio
+# -- Compiling architecture ar of testbench_encodeur_prio
+# -- Loading entity encodeur_prio
+# End time: 11:10:46 on Sep 15,2023, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+vsim work.testbench_encodeur_prio
+# vsim work.testbench_encodeur_prio 
+# Start time: 11:11:03 on Sep 15,2023
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.testbench_encodeur_prio(ar)
+# Loading work.encodeur_prio(ar)
+view -new wave
+# -new not supported on PE
+add wave -position insertpoint  \
+sim:/testbench_encodeur_prio/uut/inter \
+sim:/testbench_encodeur_prio/uut/numero
+run
+# End time: 11:16:24 on Sep 15,2023, Elapsed time: 0:05:21
+# Errors: 1, Warnings: 0

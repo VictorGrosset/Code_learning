@@ -1,0 +1,2 @@
+../Core/Src/u8x8_stm32_HAL.c:15:9:u8x8_stm32_gpio_and_delay_cb	24	static
+../Core/Src/u8x8_stm32_HAL.c:101:9:u8x8_byte_hw_i2c	40	static
