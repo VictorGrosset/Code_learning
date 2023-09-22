@@ -1,0 +1,34 @@
+library IEEE;
+use IEEE.std_logic_1164.all;
+
+entity testbench_aff_mux is
+
+end entity;
+
+
+
+architecture ar of testbench_aff_mux is
+
+	-- signaux pour les entrees
+	
+begin
+
+
+	uut:...
+	
+	-- SW(8) s'inverse après 10 us
+
+	process
+	begin
+
+	-- debut de simulation
+	-- modifier SW(7 downto 4) et SW(3 donwto 0) toutes les 40 us  
+	-- 
+
+
+
+	-- fin de simulation
+	
+	end process;
+
+end architecture;

@@ -45,10 +45,10 @@ class Distributeur:
                 if event.action == pressed:
                     if event.direction == left_key:
                         self.index -= 1
-                        if (self.index < 0):
+                        if self.index < 0:
                             self.index = self.nb_produit
                     elif event.direction == right_key:
-                        if (self.index >= self.nb_produit):
+                        if self.index >= self.nb_produit:
                             self.index = 0
                         self.index += 1
                     else:

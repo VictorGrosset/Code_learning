@@ -1,0 +1,17 @@
+|deco1p4
+en => s_deco.OUTPUTSELECT
+en => s_deco.OUTPUTSELECT
+en => s_deco.OUTPUTSELECT
+en => s_deco.OUTPUTSELECT
+sel[0] => Equal0.IN0
+sel[0] => Equal1.IN1
+sel[0] => Equal2.IN1
+sel[1] => Equal0.IN1
+sel[1] => Equal1.IN0
+sel[1] => Equal2.IN0
+s_deco[0] << s_deco.DB_MAX_OUTPUT_PORT_TYPE
+s_deco[1] << s_deco.DB_MAX_OUTPUT_PORT_TYPE
+s_deco[2] << s_deco.DB_MAX_OUTPUT_PORT_TYPE
+s_deco[3] << s_deco.DB_MAX_OUTPUT_PORT_TYPE
+
+

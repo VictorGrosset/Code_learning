@@ -1,0 +1,106 @@
+# Reading C:/intelFPGA/18.1/modelsim_ase/tcl/vsim/pref.tcl
+# do DE2_115_run_msim_rtl_vhdl.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 10.5b Lib Mapping Utility 2016.10 Oct  5 2016
+# vmap work rtl_work 
+# Copying C:/intelFPGA/18.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vcom -93 -work work {H:/VHDL/TP2/TP_2_Ex_3/src/mux2v1_4b.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 09:42:07 on Sep 22,2023
+# vcom -reportprogress 300 -93 -work work H:/VHDL/TP2/TP_2_Ex_3/src/mux2v1_4b.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity mux2v1_4b
+# -- Compiling architecture ar of mux2v1_4b
+# End time: 09:42:07 on Sep 22,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+vcom -reportprogress 300 -work work H:/VHDL/TP2/TP_2_Ex_3/src/testbench_mux2v1_4b.vhd
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 09:42:26 on Sep 22,2023
+# vcom -reportprogress 300 -work work H:/VHDL/TP2/TP_2_Ex_3/src/testbench_mux2v1_4b.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity testbench_mux2v1_4b
+# -- Compiling architecture ar of testbench_mux2v1_4b
+# -- Loading entity mux2v1_4b
+# ** Error: H:/VHDL/TP2/TP_2_Ex_3/src/testbench_mux2v1_4b.vhd(28): near "10": (vcom-1576) expecting ';'.
+# ** Error: H:/VHDL/TP2/TP_2_Ex_3/src/testbench_mux2v1_4b.vhd(31): near "10": (vcom-1576) expecting ';'.
+# ** Error: H:/VHDL/TP2/TP_2_Ex_3/src/testbench_mux2v1_4b.vhd(35): near "10": (vcom-1576) expecting ';'.
+# ** Error: H:/VHDL/TP2/TP_2_Ex_3/src/testbench_mux2v1_4b.vhd(38): near "10": (vcom-1576) expecting ';'.
+# ** Error: H:/VHDL/TP2/TP_2_Ex_3/src/testbench_mux2v1_4b.vhd(43): near "10": (vcom-1576) expecting ';'.
+# ** Error: H:/VHDL/TP2/TP_2_Ex_3/src/testbench_mux2v1_4b.vhd(46): near "10": (vcom-1576) expecting ';'.
+# ** Error: H:/VHDL/TP2/TP_2_Ex_3/src/testbench_mux2v1_4b.vhd(50): near "10": (vcom-1576) expecting ';'.
+# ** Error: H:/VHDL/TP2/TP_2_Ex_3/src/testbench_mux2v1_4b.vhd(58): VHDL Compiler exiting
+# End time: 09:42:26 on Sep 22,2023, Elapsed time: 0:00:00
+# Errors: 8, Warnings: 0
+vcom -reportprogress 300 -work work H:/VHDL/TP2/TP_2_Ex_3/src/testbench_mux2v1_4b.vhd
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 09:42:29 on Sep 22,2023
+# vcom -reportprogress 300 -work work H:/VHDL/TP2/TP_2_Ex_3/src/testbench_mux2v1_4b.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity testbench_mux2v1_4b
+# -- Compiling architecture ar of testbench_mux2v1_4b
+# -- Loading entity mux2v1_4b
+# ** Error: H:/VHDL/TP2/TP_2_Ex_3/src/testbench_mux2v1_4b.vhd(28): near "10": (vcom-1576) expecting ';'.
+# ** Error: H:/VHDL/TP2/TP_2_Ex_3/src/testbench_mux2v1_4b.vhd(31): near "10": (vcom-1576) expecting ';'.
+# ** Error: H:/VHDL/TP2/TP_2_Ex_3/src/testbench_mux2v1_4b.vhd(35): near "10": (vcom-1576) expecting ';'.
+# ** Error: H:/VHDL/TP2/TP_2_Ex_3/src/testbench_mux2v1_4b.vhd(38): near "10": (vcom-1576) expecting ';'.
+# ** Error: H:/VHDL/TP2/TP_2_Ex_3/src/testbench_mux2v1_4b.vhd(43): near "10": (vcom-1576) expecting ';'.
+# ** Error: H:/VHDL/TP2/TP_2_Ex_3/src/testbench_mux2v1_4b.vhd(46): near "10": (vcom-1576) expecting ';'.
+# ** Error: H:/VHDL/TP2/TP_2_Ex_3/src/testbench_mux2v1_4b.vhd(50): near "10": (vcom-1576) expecting ';'.
+# ** Error: H:/VHDL/TP2/TP_2_Ex_3/src/testbench_mux2v1_4b.vhd(58): VHDL Compiler exiting
+# End time: 09:42:29 on Sep 22,2023, Elapsed time: 0:00:00
+# Errors: 8, Warnings: 0
+vcom -work work H:/VHDL/TP2/TP_2_Ex_3/src/testbench_mux2v1_4b.vhd
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 09:44:15 on Sep 22,2023
+# vcom -reportprogress 300 -work work H:/VHDL/TP2/TP_2_Ex_3/src/testbench_mux2v1_4b.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity testbench_mux2v1_4b
+# -- Compiling architecture ar of testbench_mux2v1_4b
+# -- Loading entity mux2v1_4b
+# End time: 09:44:15 on Sep 22,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vsim work.testbench_mux2v1_4b(ar)
+# vsim work.testbench_mux2v1_4b(ar) 
+# Start time: 09:44:24 on Sep 22,2023
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.testbench_mux2v1_4b(ar)
+# Loading work.mux2v1_4b(ar)
+view -new wave
+# -new not supported on PE
+add wave -position insertpoint  \
+sim:/testbench_mux2v1_4b/sel \
+sim:/testbench_mux2v1_4b/A \
+sim:/testbench_mux2v1_4b/B \
+sim:/testbench_mux2v1_4b/S
+run
+run
+run
+view -new wave
+# -new not supported on PE
+add wave -position insertpoint  \
+sim:/testbench_mux2v1_4b/sel \
+sim:/testbench_mux2v1_4b/A \
+sim:/testbench_mux2v1_4b/B \
+sim:/testbench_mux2v1_4b/S
+run
+restart
+run
+# End time: 09:50:32 on Sep 22,2023, Elapsed time: 0:06:08
+# Errors: 2, Warnings: 0

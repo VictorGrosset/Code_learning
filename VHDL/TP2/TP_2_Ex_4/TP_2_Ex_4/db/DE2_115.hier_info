@@ -1,0 +1,153 @@
+|aff_mux
+sw[0] => mux2v1_4b:Mux.B[0]
+sw[1] => mux2v1_4b:Mux.B[1]
+sw[2] => mux2v1_4b:Mux.B[2]
+sw[3] => mux2v1_4b:Mux.B[3]
+sw[4] => mux2v1_4b:Mux.A[0]
+sw[5] => mux2v1_4b:Mux.A[1]
+sw[6] => mux2v1_4b:Mux.A[2]
+sw[7] => mux2v1_4b:Mux.A[3]
+sw[8] => mux2v1_4b:Mux.sel
+sw[8] => deco1p4:Deco1p4.sel[0]
+hex1[0] << deco7seg_en:Deco1.S[0]
+hex1[1] << deco7seg_en:Deco1.S[1]
+hex1[2] << deco7seg_en:Deco1.S[2]
+hex1[3] << deco7seg_en:Deco1.S[3]
+hex1[4] << deco7seg_en:Deco1.S[4]
+hex1[5] << deco7seg_en:Deco1.S[5]
+hex1[6] << deco7seg_en:Deco1.S[6]
+hex0[0] << deco7seg_en:Deco0.S[0]
+hex0[1] << deco7seg_en:Deco0.S[1]
+hex0[2] << deco7seg_en:Deco0.S[2]
+hex0[3] << deco7seg_en:Deco0.S[3]
+hex0[4] << deco7seg_en:Deco0.S[4]
+hex0[5] << deco7seg_en:Deco0.S[5]
+hex0[6] << deco7seg_en:Deco0.S[6]
+
+
+|aff_mux|deco1p4:Deco1p4
+en => s_deco.OUTPUTSELECT
+en => s_deco.OUTPUTSELECT
+en => s_deco.OUTPUTSELECT
+en => s_deco.OUTPUTSELECT
+sel[0] => Equal0.IN0
+sel[0] => Equal1.IN1
+sel[0] => Equal2.IN1
+sel[1] => Equal0.IN1
+sel[1] => Equal1.IN0
+sel[1] => Equal2.IN0
+s_deco[0] <= s_deco.DB_MAX_OUTPUT_PORT_TYPE
+s_deco[1] <= s_deco.DB_MAX_OUTPUT_PORT_TYPE
+s_deco[2] <= s_deco.DB_MAX_OUTPUT_PORT_TYPE
+s_deco[3] <= s_deco.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|aff_mux|mux2v1_4b:Mux
+sel => S.OUTPUTSELECT
+sel => S.OUTPUTSELECT
+sel => S.OUTPUTSELECT
+sel => S.OUTPUTSELECT
+A[0] => S.DATAB
+A[1] => S.DATAB
+A[2] => S.DATAB
+A[3] => S.DATAB
+B[0] => S.DATAA
+B[1] => S.DATAA
+B[2] => S.DATAA
+B[3] => S.DATAA
+S[0] <= S.DB_MAX_OUTPUT_PORT_TYPE
+S[1] <= S.DB_MAX_OUTPUT_PORT_TYPE
+S[2] <= S.DB_MAX_OUTPUT_PORT_TYPE
+S[3] <= S.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|aff_mux|deco7seg_en:Deco0
+E[0] => Mux0.IN35
+E[0] => Mux1.IN35
+E[0] => Mux2.IN35
+E[0] => Mux3.IN35
+E[0] => Mux4.IN35
+E[0] => Mux5.IN35
+E[0] => Mux6.IN35
+E[1] => Mux0.IN34
+E[1] => Mux1.IN34
+E[1] => Mux2.IN34
+E[1] => Mux3.IN34
+E[1] => Mux4.IN34
+E[1] => Mux5.IN34
+E[1] => Mux6.IN34
+E[2] => Mux0.IN33
+E[2] => Mux1.IN33
+E[2] => Mux2.IN33
+E[2] => Mux3.IN33
+E[2] => Mux4.IN33
+E[2] => Mux5.IN33
+E[2] => Mux6.IN33
+E[3] => Mux0.IN32
+E[3] => Mux1.IN32
+E[3] => Mux2.IN32
+E[3] => Mux3.IN32
+E[3] => Mux4.IN32
+E[3] => Mux5.IN32
+E[3] => Mux6.IN32
+en => Mux0.IN36
+en => Mux1.IN36
+en => Mux2.IN36
+en => Mux3.IN36
+en => Mux4.IN36
+en => Mux5.IN36
+en => Mux6.IN36
+S[0] <= Mux6.DB_MAX_OUTPUT_PORT_TYPE
+S[1] <= Mux5.DB_MAX_OUTPUT_PORT_TYPE
+S[2] <= Mux4.DB_MAX_OUTPUT_PORT_TYPE
+S[3] <= Mux3.DB_MAX_OUTPUT_PORT_TYPE
+S[4] <= Mux2.DB_MAX_OUTPUT_PORT_TYPE
+S[5] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
+S[6] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|aff_mux|deco7seg_en:Deco1
+E[0] => Mux0.IN35
+E[0] => Mux1.IN35
+E[0] => Mux2.IN35
+E[0] => Mux3.IN35
+E[0] => Mux4.IN35
+E[0] => Mux5.IN35
+E[0] => Mux6.IN35
+E[1] => Mux0.IN34
+E[1] => Mux1.IN34
+E[1] => Mux2.IN34
+E[1] => Mux3.IN34
+E[1] => Mux4.IN34
+E[1] => Mux5.IN34
+E[1] => Mux6.IN34
+E[2] => Mux0.IN33
+E[2] => Mux1.IN33
+E[2] => Mux2.IN33
+E[2] => Mux3.IN33
+E[2] => Mux4.IN33
+E[2] => Mux5.IN33
+E[2] => Mux6.IN33
+E[3] => Mux0.IN32
+E[3] => Mux1.IN32
+E[3] => Mux2.IN32
+E[3] => Mux3.IN32
+E[3] => Mux4.IN32
+E[3] => Mux5.IN32
+E[3] => Mux6.IN32
+en => Mux0.IN36
+en => Mux1.IN36
+en => Mux2.IN36
+en => Mux3.IN36
+en => Mux4.IN36
+en => Mux5.IN36
+en => Mux6.IN36
+S[0] <= Mux6.DB_MAX_OUTPUT_PORT_TYPE
+S[1] <= Mux5.DB_MAX_OUTPUT_PORT_TYPE
+S[2] <= Mux4.DB_MAX_OUTPUT_PORT_TYPE
+S[3] <= Mux3.DB_MAX_OUTPUT_PORT_TYPE
+S[4] <= Mux2.DB_MAX_OUTPUT_PORT_TYPE
+S[5] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
+S[6] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+
+

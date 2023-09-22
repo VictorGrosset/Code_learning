@@ -1,0 +1,209 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dH:/VHDL/TP2/TP_2_Ex_4/TP_2_Ex_4/simulation/modelsim
+Eaff_mux
+Z1 w1695374333
+Z2 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z3 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+R0
+Z4 8H:/VHDL/TP2/TP_2_Ex_4/TP_2_Ex_4/src/aff_mux.vhd
+Z5 FH:/VHDL/TP2/TP_2_Ex_4/TP_2_Ex_4/src/aff_mux.vhd
+l0
+L4
+VLhg@KP=ImmAOLJ<JTnRGa2
+!s100 D?IiA:0FIjcd4eZ5>Uz[N3
+Z6 OV;C;10.5b;63
+31
+Z7 !s110 1695374975
+!i10b 1
+Z8 !s108 1695374974.000000
+Z9 !s90 -reportprogress|300|-93|-work|work|H:/VHDL/TP2/TP_2_Ex_4/TP_2_Ex_4/src/aff_mux.vhd|
+Z10 !s107 H:/VHDL/TP2/TP_2_Ex_4/TP_2_Ex_4/src/aff_mux.vhd|
+!i113 1
+Z11 o-93 -work work
+Z12 tExplicit 1 CvgOpt 0
+Aarch_aff_mux
+Z13 DEx4 work 11 deco7seg_en 0 22 0lJ9aGf]fKW<WK`kPk7Vo3
+Z14 DEx4 work 9 mux2v1_4b 0 22 @n;73UfEJeAFolWS;aKD80
+Z15 DEx4 work 7 deco1p4 0 22 9PfH^b4DjEaPI^:cajhfz3
+R2
+R3
+Z16 DEx4 work 7 aff_mux 0 22 Lhg@KP=ImmAOLJ<JTnRGa2
+l15
+L10
+VYZLiFoWG^iGB`oJ[Egi=J1
+!s100 D^9?9b?WI@OE<5K0c8U0c1
+R6
+31
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12
+Edeco1p4
+Z17 w1695365131
+R2
+R3
+R0
+Z18 8H:/VHDL/TP2/TP_2_Ex_2/TP_2_Ex_2/src/deco1p4.vhd
+Z19 FH:/VHDL/TP2/TP_2_Ex_2/TP_2_Ex_2/src/deco1p4.vhd
+l0
+L4
+V9PfH^b4DjEaPI^:cajhfz3
+!s100 zEI^hj0JGaQCI[BJoB3Y00
+R6
+31
+Z20 !s110 1695374974
+!i10b 1
+R8
+Z21 !s90 -reportprogress|300|-93|-work|work|H:/VHDL/TP2/TP_2_Ex_2/TP_2_Ex_2/src/deco1p4.vhd|
+Z22 !s107 H:/VHDL/TP2/TP_2_Ex_2/TP_2_Ex_2/src/deco1p4.vhd|
+!i113 1
+R11
+R12
+Aarch_deco1p4
+R2
+R3
+R15
+l12
+L10
+V[QD4Wa6n^UnfiP>U>GFkD0
+!s100 XXYUeN2^N8=7V7C19;Wkg0
+R6
+31
+R20
+!i10b 1
+R8
+R21
+R22
+!i113 1
+R11
+R12
+Edeco7seg_en
+Z23 w1695370168
+R2
+R3
+R0
+Z24 8H:/VHDL/TP2/TP_2_Ex_4/TP_2_Ex_4/src/deco7seg_en.vhd
+Z25 FH:/VHDL/TP2/TP_2_Ex_4/TP_2_Ex_4/src/deco7seg_en.vhd
+l0
+L5
+V0lJ9aGf]fKW<WK`kPk7Vo3
+!s100 7j]jP4e[92_hoCB3B]oOZ1
+R6
+31
+R20
+!i10b 1
+R8
+Z26 !s90 -reportprogress|300|-93|-work|work|H:/VHDL/TP2/TP_2_Ex_4/TP_2_Ex_4/src/deco7seg_en.vhd|
+Z27 !s107 H:/VHDL/TP2/TP_2_Ex_4/TP_2_Ex_4/src/deco7seg_en.vhd|
+!i113 1
+R11
+R12
+Aar
+R2
+R3
+R13
+l15
+L14
+V]^X4XbVd59l;iK?10Gn1V2
+!s100 6VEL415Ig2?P;m4[7lbbG3
+R6
+31
+R20
+!i10b 1
+R8
+R26
+R27
+!i113 1
+R11
+R12
+Emux2v1_4b
+Z28 w1695368046
+R2
+R3
+R0
+Z29 8H:/VHDL/TP2/TP_2_Ex_3/src/mux2v1_4b.vhd
+Z30 FH:/VHDL/TP2/TP_2_Ex_3/src/mux2v1_4b.vhd
+l0
+L4
+V@n;73UfEJeAFolWS;aKD80
+!s100 GP:Fo?3dKDkZZCcmTe7PF3
+R6
+31
+R20
+!i10b 1
+R8
+Z31 !s90 -reportprogress|300|-93|-work|work|H:/VHDL/TP2/TP_2_Ex_3/src/mux2v1_4b.vhd|
+Z32 !s107 H:/VHDL/TP2/TP_2_Ex_3/src/mux2v1_4b.vhd|
+!i113 1
+R11
+R12
+Aar
+R2
+R3
+R14
+l13
+L12
+VBO1zc7]>Wnj;5b5J78`Qi0
+!s100 >zR3n:mjn?mIQPjNmkDM^2
+R6
+31
+R20
+!i10b 1
+R8
+R31
+R32
+!i113 1
+R11
+R12
+Etestbench_aff_mux
+Z33 w1695374930
+R2
+R3
+R0
+Z34 8H:/VHDL/TP2/TP_2_Ex_4/TP_2_Ex_4/src/testbench_aff_mux.vhd
+Z35 FH:/VHDL/TP2/TP_2_Ex_4/TP_2_Ex_4/src/testbench_aff_mux.vhd
+l0
+L4
+V:9d];VLC2I:a_JM;`Da8j3
+!s100 ]FPWE=;^1QDHSfD5be0UT1
+R6
+32
+Z36 !s110 1695374986
+!i10b 1
+Z37 !s108 1695374986.000000
+Z38 !s90 -reportprogress|300|-work|work|H:/VHDL/TP2/TP_2_Ex_4/TP_2_Ex_4/src/testbench_aff_mux.vhd|
+Z39 !s107 H:/VHDL/TP2/TP_2_Ex_4/TP_2_Ex_4/src/testbench_aff_mux.vhd|
+!i113 1
+Z40 o-work work
+R12
+Aar
+R16
+R2
+R3
+DEx4 work 17 testbench_aff_mux 0 22 :9d];VLC2I:a_JM;`Da8j3
+l16
+L10
+V2m9OZA^0UeJgJbjzG^^UQ2
+!s100 <_Ph29No@kc]VL`^ICQ3k3
+R6
+32
+R36
+!i10b 1
+R37
+R38
+R39
+!i113 1
+R40
+R12
