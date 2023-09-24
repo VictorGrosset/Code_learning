@@ -6,7 +6,7 @@ class Robot:
     def afficher_infos(self):
         return f"Je m'appelle: {self.nom} et ma vitesse est {self.vitesse_max} m/s"
 
-    # Robot est une classe abstraite car executer_tache n'est pas définie. (Au moins une fonction non définie)
+    # Robot est une classe abstraite, car executer_tache n'est pas définie. (Au moins une fonction non définie)
     def executer_tache(self):
         pass
 
@@ -43,7 +43,7 @@ class RobotAspirateur(RobotNettoyeur):
         self.aspirer()
 
 
-class Salle():
+class Salle:
     def __init__(self, numero, surface):
         self.numero = numero
         self.surface = surface
