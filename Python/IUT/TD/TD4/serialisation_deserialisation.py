@@ -74,20 +74,24 @@ class Etudiant:
 
 
 class EtudiantEncoder(json.JSONEncoder):
-    def __init__(self, obj: Etudiant):
-        super().__init__()
-        self.__default__(obj)
 
-    def __default__(self, obj: Etudiant):
-        return {"Nom": obj.nom,
-                "Groupe": obj.groupe,
-                "Notes": obj.notes
-                }
+    def default(self, obj: Etudiant):
+        if isinstance(obj, Etudiant):
+            return {"Nom": obj.nom,
+                    "Groupe": obj.groupe,
+                    "Notes": obj.notes
+                    }
+        else:
+            print(f"{colorama.Fore.RED}L'objet passé en argument n'est pas du type Etudiant. ({type(obj)} {obj}")
 
 
-class Test():
-    pass
+class EtudiantDecoder(json.JSONDecoder):
 
+    def decode(self, s):
+        object_data = super().decode(s)
+        etu = Etudiant(object_data["Nom"], object_data["Groupe"])
+        etu.notes = object_data["Notes"]
+        return etu
 
 # Sans la classe EtudiantEncoder
 # etu = Etudiant("John Doe", "S5 POO")
@@ -117,14 +121,10 @@ class Test():
 etu = Etudiant("John Doe", "S5 POO")
 etu.ajouter_notes(15)
 etu.ajouter_notes([15, 0, 13, 20])
-etu.ajouter_notes("check")
-print(etu)
-etu.ajouter_notes([13, 3, 20])
-print(etu)
-etu.ajouter_notes([3.0, "mec", 'a', oct(168)])
-print(etu)
 
-test = Test()
-# cls_test = EtudiantEncoder(test) test n'est pas une instance de Etudiant
-cls = EtudiantEncoder.__default__(etu)
-print(cls)
+encoder = EtudiantEncoder()
+decoder = EtudiantDecoder()
+json_data = json.dumps(etu, cls=EtudiantEncoder)  # cls est une classe Encoder personnalisée. On passe la classe directement en argument
+print(json_data)
+etu1 = json.loads(json_data, cls=EtudiantDecoder)
+print(etu1)
