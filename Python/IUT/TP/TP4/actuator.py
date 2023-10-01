@@ -1,11 +1,12 @@
 from .device import IoTDevice
 
+
 class Actuator(IoTDevice):
     def __init__(self, name, descr):
         super().__init__(name, descr)
         self.last_action = None
         self.last_params = None
-    
+
     def doAction(self, action, params):
         self.last_action = action
         self.last_params = params
@@ -13,15 +14,16 @@ class Actuator(IoTDevice):
 
     def getLastAction(self):
         result = {
-            "action" : self.last_action,
-            "params" : self.last_params
+            "action": self.last_action,
+            "params": self.last_params
         }
         return result
+
 
 class LedActuator(Actuator):
     def __init__(self, x, y):
         super().__init__(f"L{x}{y}", f"Led at ({x},{y})")
-        self.position = {"x":x, "y":y}
+        self.position = {"x": x, "y": y}
         self.color = [0, 0, 0]
 
     def doAction(self, action, params):
