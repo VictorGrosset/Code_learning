@@ -1,53 +1,62 @@
 #include <stdio.h>
 #include <time.h>
+#include <wait.h>
+#include <unistd.h>
+#include <math.h>
 
 #define X_PIXEL 128
 #define Y_PIXEL 64
-#define MY_CHAR "x"
+#define PI 3.14159
+#define FREQUENCE 10
+#define AMPLITUDE 1
 
-typedef enum {FALSE, TRUE} bool;
-volatile bool interruption_signal = FALSE;
-bool interruption_handled = FALSE;
-volatile bool end_program = FALSE;
-time_t start_time;
-
-void handle_interrupt(int time_passed);
-void display();
+typedef enum{False, True} bool;
 
 int main() {
-    start_time = time(NULL);
-    int timer = 3;
+    struct timespec start_ts;
+    clock_gettime(CLOCK_REALTIME, &start_ts);
+    double start_time_s = start_ts.tv_sec + start_ts.tv_nsec / 1e9;     //temps de départ en s
+    char systeme_coordonnee[Y_PIXEL][X_PIXEL];
 
-    while(!end_program) {
-        time_t current_time = time(NULL);
-        int time_passed = (int)difftime(current_time, start_time);
-
-        if(interruption_signal && !interruption_handled) {
-            interruption_handled = TRUE;
-            handle_interrupt(time_passed);
-            start_time = current_time;
+    for(int y = 0; y < Y_PIXEL; y++) {
+        for(int x = 0; x < X_PIXEL; x++) {
+            systeme_coordonnee[y][x] = ' ';
         }
-        if(time_passed >= timer) {
-            interruption_signal = TRUE;
-            interruption_handled = FALSE;
-        }
-        //printf("Pas d'interruption\n");
     }
 
-    printf("Fin du programme\n");
+
+    while(True) {
+        struct timespec ts;
+        clock_gettime(CLOCK_REALTIME, &ts);
+        double time_s = ts.tv_sec + ts.tv_nsec / 1e9;                   //nouveau temps en s
+        double elapsed_time = (time_s - start_time_s) * 1000;             //difference debut-présent + scale 1 ms = 1 pixel
+        int elapsed_time_whole = (int)elapsed_time;
+
+        double y = AMPLITUDE * sin(2*PI*FREQUENCE*elapsed_time_whole) * 31;//scale 1 = 31 -1 = -31 pixel
+        int y_whole = (int)y;
+
+        if(elapsed_time_whole >= X_PIXEL) {
+            for (int y_ = 0; y_ < Y_PIXEL; y_++) {
+                for (int x_ = 0; x_ < X_PIXEL; x_++) {
+                    printf("%c", systeme_coordonnee[y_][x_]);
+                }
+                printf("\n");
+            }
+            return 0;
+        }
+        else {
+            //printf("t: %.3f\n y: %.1f\n\n", elapsed_time, y);
+            systeme_coordonnee[y_whole][elapsed_time_whole] = '*';
+        }
+
+
+        struct timespec sleep_time = {0, 1000000}; // Sleep for 1ms
+        nanosleep(&sleep_time, NULL);
+    }
     return 0;
 }
 
-void handle_interrupt(int time_passed) {
-    display();
-    printf("start time : %ld current time : %d\n", start_time, time_passed);
-}
+//A faire,
+//    centrer le sinus sur le zero
+//      faire défiler le sinus
 
-void display() {
-    static int counter = 0;
-    counter += 1;
-    printf("%d interruption(s)\n", counter);
-    if(counter == 5) {
-        end_program = TRUE;
-    }
-}
