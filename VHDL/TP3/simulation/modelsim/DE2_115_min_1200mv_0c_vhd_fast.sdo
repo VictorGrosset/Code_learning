@@ -1,0 +1,1909 @@
+// Copyright (C) 2018  Intel Corporation. All rights reserved.
+// Your use of Intel Corporation's design tools, logic functions 
+// and other software and tools, and its AMPP partner logic 
+// functions, and any output files from any of the foregoing 
+// (including device programming or simulation files), and any 
+// associated documentation or information are expressly subject 
+// to the terms and conditions of the Intel Program License 
+// Subscription Agreement, the Intel Quartus Prime License Agreement,
+// the Intel FPGA IP License Agreement, or other applicable license
+// agreement, including, without limitation, that your use is for
+// the sole purpose of programming logic devices manufactured by
+// Intel and sold by Intel or its authorized distributors.  Please
+// refer to the applicable agreement for further details.
+
+
+// 
+// Device: Altera EP4CE115F29C7 Package FBGA780
+// 
+
+//
+// This file contains Fast Corner delays for the design using part EP4CE115F29C7,
+// with speed grade M, core voltage 1.2VmV, and temperature 0 Celsius
+//
+
+// 
+// This SDF file should be used for ModelSim-Altera (VHDL) only
+// 
+
+(DELAYFILE
+  (SDFVERSION "2.1")
+  (DESIGN "Carte_DE2_115")
+  (DATE "09/29/2023 16:59:37")
+  (VENDOR "Altera")
+  (PROGRAM "Quartus Prime")
+  (VERSION "Version 18.1.0 Build 625 09/12/2018 SJ Standard Edition")
+  (DIVIDER .)
+  (TIMESCALE 1 ps)
+
+  (CELL
+    (CELLTYPE "cycloneive_routing_wire")
+    (INSTANCE LEDR_a0_a_aoutput_I_routing_wire_inst)
+    (DELAY
+      (ABSOLUTE
+        (IOPATH datain dataout (1591:1591:1591) (1823:1823:1823))
+        (IOPATH datainglitch dataout (350:350:350) (350:350:350))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneive_io_obuf")
+    (INSTANCE LEDR_a0_a_aoutput)
+    (DELAY
+      (ABSOLUTE
+        (IOPATH i o (1632:1632:1632) (1635:1635:1635))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneive_routing_wire")
+    (INSTANCE LEDR_a1_a_aoutput_I_routing_wire_inst)
+    (DELAY
+      (ABSOLUTE
+        (IOPATH datain dataout (2108:2108:2108) (2389:2389:2389))
+        (IOPATH datainglitch dataout (350:350:350) (350:350:350))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneive_io_obuf")
+    (INSTANCE LEDR_a1_a_aoutput)
+    (DELAY
+      (ABSOLUTE
+        (IOPATH i o (1572:1572:1572) (1575:1575:1575))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneive_routing_wire")
+    (INSTANCE LEDR_a2_a_aoutput_I_routing_wire_inst)
+    (DELAY
+      (ABSOLUTE
+        (IOPATH datain dataout (1735:1735:1735) (2001:2001:2001))
+        (IOPATH datainglitch dataout (350:350:350) (350:350:350))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneive_io_obuf")
+    (INSTANCE LEDR_a2_a_aoutput)
+    (DELAY
+      (ABSOLUTE
+        (IOPATH i o (1572:1572:1572) (1575:1575:1575))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneive_routing_wire")
+    (INSTANCE LEDR_a3_a_aoutput_I_routing_wire_inst)
+    (DELAY
+      (ABSOLUTE
+        (IOPATH datain dataout (953:953:953) (1106:1106:1106))
+        (IOPATH datainglitch dataout (350:350:350) (350:350:350))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneive_io_obuf")
+    (INSTANCE LEDR_a3_a_aoutput)
+    (DELAY
+      (ABSOLUTE
+        (IOPATH i o (1572:1572:1572) (1575:1575:1575))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneive_routing_wire")
+    (INSTANCE LEDR_a4_a_aoutput_I_routing_wire_inst)
+    (DELAY
+      (ABSOLUTE
+        (IOPATH datain dataout (1099:1099:1099) (1279:1279:1279))
+        (IOPATH datainglitch dataout (350:350:350) (350:350:350))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneive_io_obuf")
+    (INSTANCE LEDR_a4_a_aoutput)
+    (DELAY
+      (ABSOLUTE
+        (IOPATH i o (1572:1572:1572) (1575:1575:1575))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneive_routing_wire")
+    (INSTANCE LEDR_a5_a_aoutput_I_routing_wire_inst)
+    (DELAY
+      (ABSOLUTE
+        (IOPATH datain dataout (1118:1118:1118) (1294:1294:1294))
+        (IOPATH datainglitch dataout (350:350:350) (350:350:350))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneive_io_obuf")
+    (INSTANCE LEDR_a5_a_aoutput)
+    (DELAY
+      (ABSOLUTE
+        (IOPATH i o (1582:1582:1582) (1585:1585:1585))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneive_routing_wire")
+    (INSTANCE LEDR_a6_a_aoutput_I_routing_wire_inst)
+    (DELAY
+      (ABSOLUTE
+        (IOPATH datain dataout (1212:1212:1212) (1418:1418:1418))
+        (IOPATH datainglitch dataout (350:350:350) (350:350:350))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneive_io_obuf")
+    (INSTANCE LEDR_a6_a_aoutput)
+    (DELAY
+      (ABSOLUTE
+        (IOPATH i o (1602:1602:1602) (1605:1605:1605))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneive_routing_wire")
+    (INSTANCE LEDR_a7_a_aoutput_I_routing_wire_inst)
+    (DELAY
+      (ABSOLUTE
+        (IOPATH datain dataout (1726:1726:1726) (1975:1975:1975))
+        (IOPATH datainglitch dataout (350:350:350) (350:350:350))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneive_io_obuf")
+    (INSTANCE LEDR_a7_a_aoutput)
+    (DELAY
+      (ABSOLUTE
+        (IOPATH i o (1592:1592:1592) (1595:1595:1595))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneive_routing_wire")
+    (INSTANCE LEDR_a8_a_aoutput_I_routing_wire_inst)
+    (DELAY
+      (ABSOLUTE
+        (IOPATH datain dataout (1396:1396:1396) (1622:1622:1622))
+        (IOPATH datainglitch dataout (350:350:350) (350:350:350))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneive_io_obuf")
+    (INSTANCE LEDR_a8_a_aoutput)
+    (DELAY
+      (ABSOLUTE
+        (IOPATH i o (1562:1562:1562) (1565:1565:1565))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneive_routing_wire")
+    (INSTANCE LEDR_a9_a_aoutput_I_routing_wire_inst)
+    (DELAY
+      (ABSOLUTE
+        (IOPATH datain dataout (2652:2652:2652) (3006:3006:3006))
+        (IOPATH datainglitch dataout (350:350:350) (350:350:350))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneive_io_obuf")
+    (INSTANCE LEDR_a9_a_aoutput)
+    (DELAY
+      (ABSOLUTE
+        (IOPATH i o (2505:2505:2505) (2564:2564:2564))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneive_routing_wire")
+    (INSTANCE LEDR_a10_a_aoutput_I_routing_wire_inst)
+    (DELAY
+      (ABSOLUTE
+        (IOPATH datain dataout (3208:3208:3208) (3684:3684:3684))
+        (IOPATH datainglitch dataout (350:350:350) (350:350:350))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneive_io_obuf")
+    (INSTANCE LEDR_a10_a_aoutput)
+    (DELAY
+      (ABSOLUTE
+        (IOPATH i o (1572:1572:1572) (1575:1575:1575))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneive_routing_wire")
+    (INSTANCE LEDR_a11_a_aoutput_I_routing_wire_inst)
+    (DELAY
+      (ABSOLUTE
+        (IOPATH datain dataout (2764:2764:2764) (3146:3146:3146))
+        (IOPATH datainglitch dataout (350:350:350) (350:350:350))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneive_io_obuf")
+    (INSTANCE LEDR_a11_a_aoutput)
+    (DELAY
+      (ABSOLUTE
+        (IOPATH i o (1582:1582:1582) (1585:1585:1585))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneive_routing_wire")
+    (INSTANCE LEDR_a12_a_aoutput_I_routing_wire_inst)
+    (DELAY
+      (ABSOLUTE
+        (IOPATH datain dataout (3109:3109:3109) (3503:3503:3503))
+        (IOPATH datainglitch dataout (350:350:350) (350:350:350))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneive_io_obuf")
+    (INSTANCE LEDR_a12_a_aoutput)
+    (DELAY
+      (ABSOLUTE
+        (IOPATH i o (1602:1602:1602) (1605:1605:1605))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneive_routing_wire")
+    (INSTANCE LEDR_a13_a_aoutput_I_routing_wire_inst)
+    (DELAY
+      (ABSOLUTE
+        (IOPATH datain dataout (2603:2603:2603) (2956:2956:2956))
+        (IOPATH datainglitch dataout (350:350:350) (350:350:350))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneive_io_obuf")
+    (INSTANCE LEDR_a13_a_aoutput)
+    (DELAY
+      (ABSOLUTE
+        (IOPATH i o (1572:1572:1572) (1575:1575:1575))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneive_routing_wire")
+    (INSTANCE LEDR_a14_a_aoutput_I_routing_wire_inst)
+    (DELAY
+      (ABSOLUTE
+        (IOPATH datain dataout (1472:1472:1472) (1719:1719:1719))
+        (IOPATH datainglitch dataout (350:350:350) (350:350:350))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneive_io_obuf")
+    (INSTANCE LEDR_a14_a_aoutput)
+    (DELAY
+      (ABSOLUTE
+        (IOPATH i o (1592:1592:1592) (1595:1595:1595))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneive_routing_wire")
+    (INSTANCE LEDR_a15_a_aoutput_I_routing_wire_inst)
+    (DELAY
+      (ABSOLUTE
+        (IOPATH datain dataout (2718:2718:2718) (3114:3114:3114))
+        (IOPATH datainglitch dataout (350:350:350) (350:350:350))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneive_io_obuf")
+    (INSTANCE LEDR_a15_a_aoutput)
+    (DELAY
+      (ABSOLUTE
+        (IOPATH i o (2495:2495:2495) (2554:2554:2554))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneive_io_ibuf")
+    (INSTANCE Key_a0_a_ainput)
+    (DELAY
+      (ABSOLUTE
+        (IOPATH i o (203:203:203) (755:755:755))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneive_io_ibuf")
+    (INSTANCE SW_a0_a_ainput)
+    (DELAY
+      (ABSOLUTE
+        (IOPATH i o (253:253:253) (805:805:805))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneive_routing_wire")
+    (INSTANCE registre_aq_a0_a_afeeder_DATAD_routing_wire_inst)
+    (DELAY
+      (ABSOLUTE
+        (IOPATH datain dataout (2218:2218:2218) (2486:2486:2486))
+        (IOPATH datainglitch dataout (350:350:350) (350:350:350))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneive_lcell_comb")
+    (INSTANCE registre_aq_a0_a_afeeder)
+    (DELAY
+      (ABSOLUTE
+        (IOPATH datad combout (68:68:68) (63:63:63))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneive_io_ibuf")
+    (INSTANCE Key_a1_a_ainput)
+    (DELAY
+      (ABSOLUTE
+        (IOPATH i o (203:203:203) (755:755:755))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneive_io_ibuf")
+    (INSTANCE SW_a17_a_ainput)
+    (DELAY
+      (ABSOLUTE
+        (IOPATH i o (203:203:203) (755:755:755))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneive_routing_wire")
+    (INSTANCE registre_aq_a0_a_CLK_routing_wire_inst)
+    (DELAY
+      (ABSOLUTE
+        (IOPATH datain dataout (296:296:296) (319:319:319))
+        (IOPATH datainglitch dataout (350:350:350) (350:350:350))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneive_routing_wire")
+    (INSTANCE registre_aq_a0_a_CLRN_routing_wire_inst)
+    (DELAY
+      (ABSOLUTE
+        (IOPATH datain dataout (1895:1895:1895) (2136:2136:2136))
+        (IOPATH datainglitch dataout (350:350:350) (350:350:350))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneive_routing_wire")
+    (INSTANCE registre_aq_a0_a_ENA_routing_wire_inst)
+    (DELAY
+      (ABSOLUTE
+        (IOPATH datain dataout (2274:2274:2274) (2561:2561:2561))
+        (IOPATH datainglitch dataout (350:350:350) (350:350:350))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "dffeas")
+    (INSTANCE registre_aq_a0_a)
+    (DELAY
+      (ABSOLUTE
+        (PORT clk (295:295:295) (291:291:291))
+        (PORT d (37:37:37) (50:50:50))
+        (PORT clrn (281:281:281) (276:276:276))
+        (PORT ena (312:312:312) (317:317:317))
+        (IOPATH (posedge clk) q (105:105:105) (105:105:105))
+        (IOPATH (negedge clrn) q (110:110:110) (110:110:110))
+      )
+    )
+    (TIMINGCHECK
+      (HOLD d (posedge clk) (84:84:84))
+      (HOLD ena (posedge clk) (84:84:84))
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneive_io_ibuf")
+    (INSTANCE SW_a1_a_ainput)
+    (DELAY
+      (ABSOLUTE
+        (IOPATH i o (253:253:253) (805:805:805))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneive_routing_wire")
+    (INSTANCE registre_aq_a1_a_afeeder_DATAD_routing_wire_inst)
+    (DELAY
+      (ABSOLUTE
+        (IOPATH datain dataout (2132:2132:2132) (2405:2405:2405))
+        (IOPATH datainglitch dataout (350:350:350) (350:350:350))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneive_lcell_comb")
+    (INSTANCE registre_aq_a1_a_afeeder)
+    (DELAY
+      (ABSOLUTE
+        (IOPATH datad combout (68:68:68) (63:63:63))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneive_routing_wire")
+    (INSTANCE registre_aq_a1_a_CLK_routing_wire_inst)
+    (DELAY
+      (ABSOLUTE
+        (IOPATH datain dataout (296:296:296) (319:319:319))
+        (IOPATH datainglitch dataout (350:350:350) (350:350:350))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneive_routing_wire")
+    (INSTANCE registre_aq_a1_a_CLRN_routing_wire_inst)
+    (DELAY
+      (ABSOLUTE
+        (IOPATH datain dataout (1895:1895:1895) (2136:2136:2136))
+        (IOPATH datainglitch dataout (350:350:350) (350:350:350))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneive_routing_wire")
+    (INSTANCE registre_aq_a1_a_ENA_routing_wire_inst)
+    (DELAY
+      (ABSOLUTE
+        (IOPATH datain dataout (2274:2274:2274) (2561:2561:2561))
+        (IOPATH datainglitch dataout (350:350:350) (350:350:350))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "dffeas")
+    (INSTANCE registre_aq_a1_a)
+    (DELAY
+      (ABSOLUTE
+        (PORT clk (295:295:295) (291:291:291))
+        (PORT d (37:37:37) (50:50:50))
+        (PORT clrn (281:281:281) (276:276:276))
+        (PORT ena (312:312:312) (317:317:317))
+        (IOPATH (posedge clk) q (105:105:105) (105:105:105))
+        (IOPATH (negedge clrn) q (110:110:110) (110:110:110))
+      )
+    )
+    (TIMINGCHECK
+      (HOLD d (posedge clk) (84:84:84))
+      (HOLD ena (posedge clk) (84:84:84))
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneive_io_ibuf")
+    (INSTANCE SW_a2_a_ainput)
+    (DELAY
+      (ABSOLUTE
+        (IOPATH i o (253:253:253) (805:805:805))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneive_routing_wire")
+    (INSTANCE registre_aq_a2_a_CLK_routing_wire_inst)
+    (DELAY
+      (ABSOLUTE
+        (IOPATH datain dataout (296:296:296) (319:319:319))
+        (IOPATH datainglitch dataout (350:350:350) (350:350:350))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneive_routing_wire")
+    (INSTANCE registre_aq_a2_a_ASDATA_routing_wire_inst)
+    (DELAY
+      (ABSOLUTE
+        (IOPATH datain dataout (2594:2594:2594) (2900:2900:2900))
+        (IOPATH datainglitch dataout (350:350:350) (350:350:350))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneive_routing_wire")
+    (INSTANCE registre_aq_a2_a_CLRN_routing_wire_inst)
+    (DELAY
+      (ABSOLUTE
+        (IOPATH datain dataout (1895:1895:1895) (2136:2136:2136))
+        (IOPATH datainglitch dataout (350:350:350) (350:350:350))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneive_routing_wire")
+    (INSTANCE registre_aq_a2_a_ENA_routing_wire_inst)
+    (DELAY
+      (ABSOLUTE
+        (IOPATH datain dataout (2274:2274:2274) (2561:2561:2561))
+        (IOPATH datainglitch dataout (350:350:350) (350:350:350))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "dffeas")
+    (INSTANCE registre_aq_a2_a)
+    (DELAY
+      (ABSOLUTE
+        (PORT clk (295:295:295) (291:291:291))
+        (PORT asdata (177:177:177) (175:175:175))
+        (PORT clrn (281:281:281) (276:276:276))
+        (PORT ena (312:312:312) (317:317:317))
+        (IOPATH (posedge clk) q (105:105:105) (105:105:105))
+        (IOPATH (negedge clrn) q (110:110:110) (110:110:110))
+      )
+    )
+    (TIMINGCHECK
+      (HOLD asdata (posedge clk) (84:84:84))
+      (HOLD ena (posedge clk) (84:84:84))
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneive_io_ibuf")
+    (INSTANCE SW_a3_a_ainput)
+    (DELAY
+      (ABSOLUTE
+        (IOPATH i o (253:253:253) (805:805:805))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneive_routing_wire")
+    (INSTANCE registre_aq_a3_a_afeeder_DATAD_routing_wire_inst)
+    (DELAY
+      (ABSOLUTE
+        (IOPATH datain dataout (2470:2470:2470) (2780:2780:2780))
+        (IOPATH datainglitch dataout (350:350:350) (350:350:350))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneive_lcell_comb")
+    (INSTANCE registre_aq_a3_a_afeeder)
+    (DELAY
+      (ABSOLUTE
+        (IOPATH datad combout (68:68:68) (63:63:63))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneive_routing_wire")
+    (INSTANCE registre_aq_a3_a_CLK_routing_wire_inst)
+    (DELAY
+      (ABSOLUTE
+        (IOPATH datain dataout (296:296:296) (319:319:319))
+        (IOPATH datainglitch dataout (350:350:350) (350:350:350))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneive_routing_wire")
+    (INSTANCE registre_aq_a3_a_CLRN_routing_wire_inst)
+    (DELAY
+      (ABSOLUTE
+        (IOPATH datain dataout (1895:1895:1895) (2136:2136:2136))
+        (IOPATH datainglitch dataout (350:350:350) (350:350:350))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneive_routing_wire")
+    (INSTANCE registre_aq_a3_a_ENA_routing_wire_inst)
+    (DELAY
+      (ABSOLUTE
+        (IOPATH datain dataout (2274:2274:2274) (2561:2561:2561))
+        (IOPATH datainglitch dataout (350:350:350) (350:350:350))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "dffeas")
+    (INSTANCE registre_aq_a3_a)
+    (DELAY
+      (ABSOLUTE
+        (PORT clk (295:295:295) (291:291:291))
+        (PORT d (37:37:37) (50:50:50))
+        (PORT clrn (281:281:281) (276:276:276))
+        (PORT ena (312:312:312) (317:317:317))
+        (IOPATH (posedge clk) q (105:105:105) (105:105:105))
+        (IOPATH (negedge clrn) q (110:110:110) (110:110:110))
+      )
+    )
+    (TIMINGCHECK
+      (HOLD d (posedge clk) (84:84:84))
+      (HOLD ena (posedge clk) (84:84:84))
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneive_io_ibuf")
+    (INSTANCE SW_a4_a_ainput)
+    (DELAY
+      (ABSOLUTE
+        (IOPATH i o (243:243:243) (795:795:795))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneive_routing_wire")
+    (INSTANCE registre_aq_a4_a_afeeder_DATAD_routing_wire_inst)
+    (DELAY
+      (ABSOLUTE
+        (IOPATH datain dataout (2072:2072:2072) (2339:2339:2339))
+        (IOPATH datainglitch dataout (350:350:350) (350:350:350))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneive_lcell_comb")
+    (INSTANCE registre_aq_a4_a_afeeder)
+    (DELAY
+      (ABSOLUTE
+        (IOPATH datad combout (68:68:68) (63:63:63))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneive_routing_wire")
+    (INSTANCE registre_aq_a4_a_CLK_routing_wire_inst)
+    (DELAY
+      (ABSOLUTE
+        (IOPATH datain dataout (296:296:296) (319:319:319))
+        (IOPATH datainglitch dataout (350:350:350) (350:350:350))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneive_routing_wire")
+    (INSTANCE registre_aq_a4_a_CLRN_routing_wire_inst)
+    (DELAY
+      (ABSOLUTE
+        (IOPATH datain dataout (1895:1895:1895) (2136:2136:2136))
+        (IOPATH datainglitch dataout (350:350:350) (350:350:350))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneive_routing_wire")
+    (INSTANCE registre_aq_a4_a_ENA_routing_wire_inst)
+    (DELAY
+      (ABSOLUTE
+        (IOPATH datain dataout (2274:2274:2274) (2561:2561:2561))
+        (IOPATH datainglitch dataout (350:350:350) (350:350:350))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "dffeas")
+    (INSTANCE registre_aq_a4_a)
+    (DELAY
+      (ABSOLUTE
+        (PORT clk (295:295:295) (291:291:291))
+        (PORT d (37:37:37) (50:50:50))
+        (PORT clrn (281:281:281) (276:276:276))
+        (PORT ena (312:312:312) (317:317:317))
+        (IOPATH (posedge clk) q (105:105:105) (105:105:105))
+        (IOPATH (negedge clrn) q (110:110:110) (110:110:110))
+      )
+    )
+    (TIMINGCHECK
+      (HOLD d (posedge clk) (84:84:84))
+      (HOLD ena (posedge clk) (84:84:84))
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneive_io_ibuf")
+    (INSTANCE SW_a5_a_ainput)
+    (DELAY
+      (ABSOLUTE
+        (IOPATH i o (243:243:243) (795:795:795))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneive_routing_wire")
+    (INSTANCE registre_aq_a5_a_CLK_routing_wire_inst)
+    (DELAY
+      (ABSOLUTE
+        (IOPATH datain dataout (296:296:296) (319:319:319))
+        (IOPATH datainglitch dataout (350:350:350) (350:350:350))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneive_routing_wire")
+    (INSTANCE registre_aq_a5_a_ASDATA_routing_wire_inst)
+    (DELAY
+      (ABSOLUTE
+        (IOPATH datain dataout (2060:2060:2060) (2320:2320:2320))
+        (IOPATH datainglitch dataout (350:350:350) (350:350:350))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneive_routing_wire")
+    (INSTANCE registre_aq_a5_a_CLRN_routing_wire_inst)
+    (DELAY
+      (ABSOLUTE
+        (IOPATH datain dataout (1895:1895:1895) (2136:2136:2136))
+        (IOPATH datainglitch dataout (350:350:350) (350:350:350))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneive_routing_wire")
+    (INSTANCE registre_aq_a5_a_ENA_routing_wire_inst)
+    (DELAY
+      (ABSOLUTE
+        (IOPATH datain dataout (2274:2274:2274) (2561:2561:2561))
+        (IOPATH datainglitch dataout (350:350:350) (350:350:350))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "dffeas")
+    (INSTANCE registre_aq_a5_a)
+    (DELAY
+      (ABSOLUTE
+        (PORT clk (295:295:295) (291:291:291))
+        (PORT asdata (177:177:177) (175:175:175))
+        (PORT clrn (281:281:281) (276:276:276))
+        (PORT ena (312:312:312) (317:317:317))
+        (IOPATH (posedge clk) q (105:105:105) (105:105:105))
+        (IOPATH (negedge clrn) q (110:110:110) (110:110:110))
+      )
+    )
+    (TIMINGCHECK
+      (HOLD asdata (posedge clk) (84:84:84))
+      (HOLD ena (posedge clk) (84:84:84))
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneive_io_ibuf")
+    (INSTANCE SW_a6_a_ainput)
+    (DELAY
+      (ABSOLUTE
+        (IOPATH i o (253:253:253) (805:805:805))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneive_routing_wire")
+    (INSTANCE registre_aq_a6_a_afeeder_DATAD_routing_wire_inst)
+    (DELAY
+      (ABSOLUTE
+        (IOPATH datain dataout (2753:2753:2753) (3077:3077:3077))
+        (IOPATH datainglitch dataout (350:350:350) (350:350:350))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneive_lcell_comb")
+    (INSTANCE registre_aq_a6_a_afeeder)
+    (DELAY
+      (ABSOLUTE
+        (IOPATH datad combout (68:68:68) (63:63:63))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneive_routing_wire")
+    (INSTANCE registre_aq_a6_a_CLK_routing_wire_inst)
+    (DELAY
+      (ABSOLUTE
+        (IOPATH datain dataout (296:296:296) (319:319:319))
+        (IOPATH datainglitch dataout (350:350:350) (350:350:350))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneive_routing_wire")
+    (INSTANCE registre_aq_a6_a_CLRN_routing_wire_inst)
+    (DELAY
+      (ABSOLUTE
+        (IOPATH datain dataout (1895:1895:1895) (2136:2136:2136))
+        (IOPATH datainglitch dataout (350:350:350) (350:350:350))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneive_routing_wire")
+    (INSTANCE registre_aq_a6_a_ENA_routing_wire_inst)
+    (DELAY
+      (ABSOLUTE
+        (IOPATH datain dataout (2274:2274:2274) (2561:2561:2561))
+        (IOPATH datainglitch dataout (350:350:350) (350:350:350))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "dffeas")
+    (INSTANCE registre_aq_a6_a)
+    (DELAY
+      (ABSOLUTE
+        (PORT clk (295:295:295) (291:291:291))
+        (PORT d (37:37:37) (50:50:50))
+        (PORT clrn (281:281:281) (276:276:276))
+        (PORT ena (312:312:312) (317:317:317))
+        (IOPATH (posedge clk) q (105:105:105) (105:105:105))
+        (IOPATH (negedge clrn) q (110:110:110) (110:110:110))
+      )
+    )
+    (TIMINGCHECK
+      (HOLD d (posedge clk) (84:84:84))
+      (HOLD ena (posedge clk) (84:84:84))
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneive_io_ibuf")
+    (INSTANCE SW_a7_a_ainput)
+    (DELAY
+      (ABSOLUTE
+        (IOPATH i o (243:243:243) (795:795:795))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneive_routing_wire")
+    (INSTANCE registre_aq_a7_a_CLK_routing_wire_inst)
+    (DELAY
+      (ABSOLUTE
+        (IOPATH datain dataout (296:296:296) (319:319:319))
+        (IOPATH datainglitch dataout (350:350:350) (350:350:350))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneive_routing_wire")
+    (INSTANCE registre_aq_a7_a_ASDATA_routing_wire_inst)
+    (DELAY
+      (ABSOLUTE
+        (IOPATH datain dataout (2057:2057:2057) (2315:2315:2315))
+        (IOPATH datainglitch dataout (350:350:350) (350:350:350))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneive_routing_wire")
+    (INSTANCE registre_aq_a7_a_CLRN_routing_wire_inst)
+    (DELAY
+      (ABSOLUTE
+        (IOPATH datain dataout (1895:1895:1895) (2136:2136:2136))
+        (IOPATH datainglitch dataout (350:350:350) (350:350:350))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneive_routing_wire")
+    (INSTANCE registre_aq_a7_a_ENA_routing_wire_inst)
+    (DELAY
+      (ABSOLUTE
+        (IOPATH datain dataout (2274:2274:2274) (2561:2561:2561))
+        (IOPATH datainglitch dataout (350:350:350) (350:350:350))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "dffeas")
+    (INSTANCE registre_aq_a7_a)
+    (DELAY
+      (ABSOLUTE
+        (PORT clk (295:295:295) (291:291:291))
+        (PORT asdata (177:177:177) (175:175:175))
+        (PORT clrn (281:281:281) (276:276:276))
+        (PORT ena (312:312:312) (317:317:317))
+        (IOPATH (posedge clk) q (105:105:105) (105:105:105))
+        (IOPATH (negedge clrn) q (110:110:110) (110:110:110))
+      )
+    )
+    (TIMINGCHECK
+      (HOLD asdata (posedge clk) (84:84:84))
+      (HOLD ena (posedge clk) (84:84:84))
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneive_io_ibuf")
+    (INSTANCE SW_a15_a_ainput)
+    (DELAY
+      (ABSOLUTE
+        (IOPATH i o (203:203:203) (755:755:755))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneive_io_ibuf")
+    (INSTANCE SW_a14_a_ainput)
+    (DELAY
+      (ABSOLUTE
+        (IOPATH i o (193:193:193) (745:745:745))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneive_routing_wire")
+    (INSTANCE registre_dec_aq_sig_a7_a_a7_DATAA_routing_wire_inst)
+    (DELAY
+      (ABSOLUTE
+        (IOPATH datain dataout (2128:2128:2128) (2410:2410:2410))
+        (IOPATH datainglitch dataout (350:350:350) (350:350:350))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneive_routing_wire")
+    (INSTANCE registre_dec_aq_sig_a7_a_a7_DATAB_routing_wire_inst)
+    (DELAY
+      (ABSOLUTE
+        (IOPATH datain dataout (2279:2279:2279) (2578:2578:2578))
+        (IOPATH datainglitch dataout (350:350:350) (350:350:350))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneive_routing_wire")
+    (INSTANCE registre_dec_aq_sig_a7_a_a7_DATAD_routing_wire_inst)
+    (DELAY
+      (ABSOLUTE
+        (IOPATH datain dataout (203:203:203) (247:247:247))
+        (IOPATH datainglitch dataout (350:350:350) (350:350:350))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneive_lcell_comb")
+    (INSTANCE registre_dec_aq_sig_a7_a_a7)
+    (DELAY
+      (ABSOLUTE
+        (IOPATH dataa combout (165:165:165) (159:159:159))
+        (IOPATH datab combout (160:160:160) (156:156:156))
+        (IOPATH datac combout (190:190:190) (195:195:195))
+        (IOPATH datad combout (68:68:68) (63:63:63))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneive_io_ibuf")
+    (INSTANCE SW_a16_a_ainput)
+    (DELAY
+      (ABSOLUTE
+        (IOPATH i o (213:213:213) (765:765:765))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneive_routing_wire")
+    (INSTANCE registre_dec_aq_sig_a7_a_CLK_routing_wire_inst)
+    (DELAY
+      (ABSOLUTE
+        (IOPATH datain dataout (561:561:561) (610:610:610))
+        (IOPATH datainglitch dataout (350:350:350) (350:350:350))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneive_routing_wire")
+    (INSTANCE registre_dec_aq_sig_a7_a_ASDATA_routing_wire_inst)
+    (DELAY
+      (ABSOLUTE
+        (IOPATH datain dataout (2249:2249:2249) (2548:2548:2548))
+        (IOPATH datainglitch dataout (350:350:350) (350:350:350))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneive_routing_wire")
+    (INSTANCE registre_dec_aq_sig_a7_a_CLRN_routing_wire_inst)
+    (DELAY
+      (ABSOLUTE
+        (IOPATH datain dataout (2070:2070:2070) (2335:2335:2335))
+        (IOPATH datainglitch dataout (350:350:350) (350:350:350))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneive_routing_wire")
+    (INSTANCE registre_dec_aq_sig_a7_a_SLOAD_routing_wire_inst)
+    (DELAY
+      (ABSOLUTE
+        (IOPATH datain dataout (2141:2141:2141) (2412:2412:2412))
+        (IOPATH datainglitch dataout (350:350:350) (350:350:350))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "dffeas")
+    (INSTANCE registre_dec_aq_sig_a7_a)
+    (DELAY
+      (ABSOLUTE
+        (PORT clk (295:295:295) (291:291:291))
+        (PORT d (37:37:37) (50:50:50))
+        (PORT asdata (177:177:177) (175:175:175))
+        (PORT clrn (281:281:281) (276:276:276))
+        (PORT sload (293:293:293) (309:309:309))
+        (IOPATH (posedge clk) q (105:105:105) (105:105:105))
+        (IOPATH (negedge clrn) q (110:110:110) (110:110:110))
+      )
+    )
+    (TIMINGCHECK
+      (HOLD d (posedge clk) (84:84:84))
+      (HOLD sload (posedge clk) (84:84:84))
+      (HOLD asdata (posedge clk) (84:84:84))
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneive_routing_wire")
+    (INSTANCE registre_dec_aq_sig_a6_a_a6_DATAA_routing_wire_inst)
+    (DELAY
+      (ABSOLUTE
+        (IOPATH datain dataout (212:212:212) (277:277:277))
+        (IOPATH datainglitch dataout (350:350:350) (350:350:350))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneive_routing_wire")
+    (INSTANCE registre_dec_aq_sig_a6_a_a6_DATAB_routing_wire_inst)
+    (DELAY
+      (ABSOLUTE
+        (IOPATH datain dataout (2192:2192:2192) (2484:2484:2484))
+        (IOPATH datainglitch dataout (350:350:350) (350:350:350))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneive_routing_wire")
+    (INSTANCE registre_dec_aq_sig_a6_a_a6_DATAD_routing_wire_inst)
+    (DELAY
+      (ABSOLUTE
+        (IOPATH datain dataout (132:132:132) (172:172:172))
+        (IOPATH datainglitch dataout (350:350:350) (350:350:350))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneive_lcell_comb")
+    (INSTANCE registre_dec_aq_sig_a6_a_a6)
+    (DELAY
+      (ABSOLUTE
+        (IOPATH dataa combout (170:170:170) (163:163:163))
+        (IOPATH datab combout (169:169:169) (167:167:167))
+        (IOPATH datad combout (68:68:68) (63:63:63))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneive_routing_wire")
+    (INSTANCE registre_dec_aq_sig_a1_a_a9_DATAC_routing_wire_inst)
+    (DELAY
+      (ABSOLUTE
+        (IOPATH datain dataout (2120:2120:2120) (2391:2391:2391))
+        (IOPATH datainglitch dataout (350:350:350) (350:350:350))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneive_routing_wire")
+    (INSTANCE registre_dec_aq_sig_a1_a_a9_DATAD_routing_wire_inst)
+    (DELAY
+      (ABSOLUTE
+        (IOPATH datain dataout (2121:2121:2121) (2387:2387:2387))
+        (IOPATH datainglitch dataout (350:350:350) (350:350:350))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneive_lcell_comb")
+    (INSTANCE registre_dec_aq_sig_a1_a_a9)
+    (DELAY
+      (ABSOLUTE
+        (IOPATH datac combout (119:119:119) (124:124:124))
+        (IOPATH datad combout (68:68:68) (63:63:63))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneive_routing_wire")
+    (INSTANCE registre_dec_aq_sig_a6_a_CLK_routing_wire_inst)
+    (DELAY
+      (ABSOLUTE
+        (IOPATH datain dataout (578:578:578) (638:638:638))
+        (IOPATH datainglitch dataout (350:350:350) (350:350:350))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneive_routing_wire")
+    (INSTANCE registre_dec_aq_sig_a6_a_ASDATA_routing_wire_inst)
+    (DELAY
+      (ABSOLUTE
+        (IOPATH datain dataout (2693:2693:2693) (3010:3010:3010))
+        (IOPATH datainglitch dataout (350:350:350) (350:350:350))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneive_routing_wire")
+    (INSTANCE registre_dec_aq_sig_a6_a_CLRN_routing_wire_inst)
+    (DELAY
+      (ABSOLUTE
+        (IOPATH datain dataout (2052:2052:2052) (2307:2307:2307))
+        (IOPATH datainglitch dataout (350:350:350) (350:350:350))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneive_routing_wire")
+    (INSTANCE registre_dec_aq_sig_a6_a_SLOAD_routing_wire_inst)
+    (DELAY
+      (ABSOLUTE
+        (IOPATH datain dataout (2257:2257:2257) (2546:2546:2546))
+        (IOPATH datainglitch dataout (350:350:350) (350:350:350))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneive_routing_wire")
+    (INSTANCE registre_dec_aq_sig_a6_a_ENA_routing_wire_inst)
+    (DELAY
+      (ABSOLUTE
+        (IOPATH datain dataout (194:194:194) (231:231:231))
+        (IOPATH datainglitch dataout (350:350:350) (350:350:350))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "dffeas")
+    (INSTANCE registre_dec_aq_sig_a6_a)
+    (DELAY
+      (ABSOLUTE
+        (PORT clk (295:295:295) (291:291:291))
+        (PORT d (37:37:37) (50:50:50))
+        (PORT asdata (177:177:177) (175:175:175))
+        (PORT clrn (281:281:281) (276:276:276))
+        (PORT sload (293:293:293) (309:309:309))
+        (PORT ena (312:312:312) (317:317:317))
+        (IOPATH (posedge clk) q (105:105:105) (105:105:105))
+        (IOPATH (negedge clrn) q (110:110:110) (110:110:110))
+      )
+    )
+    (TIMINGCHECK
+      (HOLD d (posedge clk) (84:84:84))
+      (HOLD sload (posedge clk) (84:84:84))
+      (HOLD asdata (posedge clk) (84:84:84))
+      (HOLD ena (posedge clk) (84:84:84))
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneive_routing_wire")
+    (INSTANCE registre_dec_aq_sig_a5_a_a5_DATAA_routing_wire_inst)
+    (DELAY
+      (ABSOLUTE
+        (IOPATH datain dataout (142:142:142) (193:193:193))
+        (IOPATH datainglitch dataout (350:350:350) (350:350:350))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneive_routing_wire")
+    (INSTANCE registre_dec_aq_sig_a5_a_a5_DATAB_routing_wire_inst)
+    (DELAY
+      (ABSOLUTE
+        (IOPATH datain dataout (2191:2191:2191) (2483:2483:2483))
+        (IOPATH datainglitch dataout (350:350:350) (350:350:350))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneive_routing_wire")
+    (INSTANCE registre_dec_aq_sig_a5_a_a5_DATAD_routing_wire_inst)
+    (DELAY
+      (ABSOLUTE
+        (IOPATH datain dataout (134:134:134) (173:173:173))
+        (IOPATH datainglitch dataout (350:350:350) (350:350:350))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneive_lcell_comb")
+    (INSTANCE registre_dec_aq_sig_a5_a_a5)
+    (DELAY
+      (ABSOLUTE
+        (IOPATH dataa combout (170:170:170) (163:163:163))
+        (IOPATH datab combout (169:169:169) (167:167:167))
+        (IOPATH datad combout (68:68:68) (63:63:63))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneive_routing_wire")
+    (INSTANCE registre_dec_aq_sig_a5_a_CLK_routing_wire_inst)
+    (DELAY
+      (ABSOLUTE
+        (IOPATH datain dataout (578:578:578) (638:638:638))
+        (IOPATH datainglitch dataout (350:350:350) (350:350:350))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneive_routing_wire")
+    (INSTANCE registre_dec_aq_sig_a5_a_ASDATA_routing_wire_inst)
+    (DELAY
+      (ABSOLUTE
+        (IOPATH datain dataout (2076:2076:2076) (2343:2343:2343))
+        (IOPATH datainglitch dataout (350:350:350) (350:350:350))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneive_routing_wire")
+    (INSTANCE registre_dec_aq_sig_a5_a_CLRN_routing_wire_inst)
+    (DELAY
+      (ABSOLUTE
+        (IOPATH datain dataout (2052:2052:2052) (2307:2307:2307))
+        (IOPATH datainglitch dataout (350:350:350) (350:350:350))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneive_routing_wire")
+    (INSTANCE registre_dec_aq_sig_a5_a_SLOAD_routing_wire_inst)
+    (DELAY
+      (ABSOLUTE
+        (IOPATH datain dataout (2257:2257:2257) (2546:2546:2546))
+        (IOPATH datainglitch dataout (350:350:350) (350:350:350))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneive_routing_wire")
+    (INSTANCE registre_dec_aq_sig_a5_a_ENA_routing_wire_inst)
+    (DELAY
+      (ABSOLUTE
+        (IOPATH datain dataout (194:194:194) (231:231:231))
+        (IOPATH datainglitch dataout (350:350:350) (350:350:350))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "dffeas")
+    (INSTANCE registre_dec_aq_sig_a5_a)
+    (DELAY
+      (ABSOLUTE
+        (PORT clk (295:295:295) (291:291:291))
+        (PORT d (37:37:37) (50:50:50))
+        (PORT asdata (177:177:177) (175:175:175))
+        (PORT clrn (281:281:281) (276:276:276))
+        (PORT sload (293:293:293) (309:309:309))
+        (PORT ena (312:312:312) (317:317:317))
+        (IOPATH (posedge clk) q (105:105:105) (105:105:105))
+        (IOPATH (negedge clrn) q (110:110:110) (110:110:110))
+      )
+    )
+    (TIMINGCHECK
+      (HOLD d (posedge clk) (84:84:84))
+      (HOLD sload (posedge clk) (84:84:84))
+      (HOLD asdata (posedge clk) (84:84:84))
+      (HOLD ena (posedge clk) (84:84:84))
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneive_routing_wire")
+    (INSTANCE registre_dec_aq_sig_a4_a_a4_DATAA_routing_wire_inst)
+    (DELAY
+      (ABSOLUTE
+        (IOPATH datain dataout (2181:2181:2181) (2473:2473:2473))
+        (IOPATH datainglitch dataout (350:350:350) (350:350:350))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneive_routing_wire")
+    (INSTANCE registre_dec_aq_sig_a4_a_a4_DATAB_routing_wire_inst)
+    (DELAY
+      (ABSOLUTE
+        (IOPATH datain dataout (147:147:147) (197:197:197))
+        (IOPATH datainglitch dataout (350:350:350) (350:350:350))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneive_routing_wire")
+    (INSTANCE registre_dec_aq_sig_a4_a_a4_DATAD_routing_wire_inst)
+    (DELAY
+      (ABSOLUTE
+        (IOPATH datain dataout (134:134:134) (172:172:172))
+        (IOPATH datainglitch dataout (350:350:350) (350:350:350))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneive_lcell_comb")
+    (INSTANCE registre_dec_aq_sig_a4_a_a4)
+    (DELAY
+      (ABSOLUTE
+        (IOPATH dataa combout (172:172:172) (165:165:165))
+        (IOPATH datab combout (168:168:168) (167:167:167))
+        (IOPATH datad combout (68:68:68) (63:63:63))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneive_routing_wire")
+    (INSTANCE registre_dec_aq_sig_a4_a_CLK_routing_wire_inst)
+    (DELAY
+      (ABSOLUTE
+        (IOPATH datain dataout (578:578:578) (638:638:638))
+        (IOPATH datainglitch dataout (350:350:350) (350:350:350))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneive_routing_wire")
+    (INSTANCE registre_dec_aq_sig_a4_a_ASDATA_routing_wire_inst)
+    (DELAY
+      (ABSOLUTE
+        (IOPATH datain dataout (2253:2253:2253) (2544:2544:2544))
+        (IOPATH datainglitch dataout (350:350:350) (350:350:350))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneive_routing_wire")
+    (INSTANCE registre_dec_aq_sig_a4_a_CLRN_routing_wire_inst)
+    (DELAY
+      (ABSOLUTE
+        (IOPATH datain dataout (2052:2052:2052) (2307:2307:2307))
+        (IOPATH datainglitch dataout (350:350:350) (350:350:350))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneive_routing_wire")
+    (INSTANCE registre_dec_aq_sig_a4_a_SLOAD_routing_wire_inst)
+    (DELAY
+      (ABSOLUTE
+        (IOPATH datain dataout (2257:2257:2257) (2546:2546:2546))
+        (IOPATH datainglitch dataout (350:350:350) (350:350:350))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneive_routing_wire")
+    (INSTANCE registre_dec_aq_sig_a4_a_ENA_routing_wire_inst)
+    (DELAY
+      (ABSOLUTE
+        (IOPATH datain dataout (194:194:194) (231:231:231))
+        (IOPATH datainglitch dataout (350:350:350) (350:350:350))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "dffeas")
+    (INSTANCE registre_dec_aq_sig_a4_a)
+    (DELAY
+      (ABSOLUTE
+        (PORT clk (295:295:295) (291:291:291))
+        (PORT d (37:37:37) (50:50:50))
+        (PORT asdata (177:177:177) (175:175:175))
+        (PORT clrn (281:281:281) (276:276:276))
+        (PORT sload (293:293:293) (309:309:309))
+        (PORT ena (312:312:312) (317:317:317))
+        (IOPATH (posedge clk) q (105:105:105) (105:105:105))
+        (IOPATH (negedge clrn) q (110:110:110) (110:110:110))
+      )
+    )
+    (TIMINGCHECK
+      (HOLD d (posedge clk) (84:84:84))
+      (HOLD sload (posedge clk) (84:84:84))
+      (HOLD asdata (posedge clk) (84:84:84))
+      (HOLD ena (posedge clk) (84:84:84))
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneive_routing_wire")
+    (INSTANCE registre_dec_aq_sig_a3_a_a3_DATAA_routing_wire_inst)
+    (DELAY
+      (ABSOLUTE
+        (IOPATH datain dataout (148:148:148) (200:200:200))
+        (IOPATH datainglitch dataout (350:350:350) (350:350:350))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneive_routing_wire")
+    (INSTANCE registre_dec_aq_sig_a3_a_a3_DATAB_routing_wire_inst)
+    (DELAY
+      (ABSOLUTE
+        (IOPATH datain dataout (2190:2190:2190) (2481:2481:2481))
+        (IOPATH datainglitch dataout (350:350:350) (350:350:350))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneive_routing_wire")
+    (INSTANCE registre_dec_aq_sig_a3_a_a3_DATAD_routing_wire_inst)
+    (DELAY
+      (ABSOLUTE
+        (IOPATH datain dataout (134:134:134) (172:172:172))
+        (IOPATH datainglitch dataout (350:350:350) (350:350:350))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneive_lcell_comb")
+    (INSTANCE registre_dec_aq_sig_a3_a_a3)
+    (DELAY
+      (ABSOLUTE
+        (IOPATH dataa combout (170:170:170) (163:163:163))
+        (IOPATH datab combout (167:167:167) (158:158:158))
+        (IOPATH datad combout (68:68:68) (63:63:63))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneive_routing_wire")
+    (INSTANCE registre_dec_aq_sig_a3_a_CLK_routing_wire_inst)
+    (DELAY
+      (ABSOLUTE
+        (IOPATH datain dataout (578:578:578) (638:638:638))
+        (IOPATH datainglitch dataout (350:350:350) (350:350:350))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneive_routing_wire")
+    (INSTANCE registre_dec_aq_sig_a3_a_ASDATA_routing_wire_inst)
+    (DELAY
+      (ABSOLUTE
+        (IOPATH datain dataout (2553:2553:2553) (2884:2884:2884))
+        (IOPATH datainglitch dataout (350:350:350) (350:350:350))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneive_routing_wire")
+    (INSTANCE registre_dec_aq_sig_a3_a_CLRN_routing_wire_inst)
+    (DELAY
+      (ABSOLUTE
+        (IOPATH datain dataout (2052:2052:2052) (2307:2307:2307))
+        (IOPATH datainglitch dataout (350:350:350) (350:350:350))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneive_routing_wire")
+    (INSTANCE registre_dec_aq_sig_a3_a_SLOAD_routing_wire_inst)
+    (DELAY
+      (ABSOLUTE
+        (IOPATH datain dataout (2257:2257:2257) (2546:2546:2546))
+        (IOPATH datainglitch dataout (350:350:350) (350:350:350))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneive_routing_wire")
+    (INSTANCE registre_dec_aq_sig_a3_a_ENA_routing_wire_inst)
+    (DELAY
+      (ABSOLUTE
+        (IOPATH datain dataout (194:194:194) (231:231:231))
+        (IOPATH datainglitch dataout (350:350:350) (350:350:350))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "dffeas")
+    (INSTANCE registre_dec_aq_sig_a3_a)
+    (DELAY
+      (ABSOLUTE
+        (PORT clk (295:295:295) (291:291:291))
+        (PORT d (37:37:37) (50:50:50))
+        (PORT asdata (177:177:177) (175:175:175))
+        (PORT clrn (281:281:281) (276:276:276))
+        (PORT sload (293:293:293) (309:309:309))
+        (PORT ena (312:312:312) (317:317:317))
+        (IOPATH (posedge clk) q (105:105:105) (105:105:105))
+        (IOPATH (negedge clrn) q (110:110:110) (110:110:110))
+      )
+    )
+    (TIMINGCHECK
+      (HOLD d (posedge clk) (84:84:84))
+      (HOLD sload (posedge clk) (84:84:84))
+      (HOLD asdata (posedge clk) (84:84:84))
+      (HOLD ena (posedge clk) (84:84:84))
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneive_routing_wire")
+    (INSTANCE registre_dec_aq_sig_a2_a_a2_DATAA_routing_wire_inst)
+    (DELAY
+      (ABSOLUTE
+        (IOPATH datain dataout (148:148:148) (202:202:202))
+        (IOPATH datainglitch dataout (350:350:350) (350:350:350))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneive_routing_wire")
+    (INSTANCE registre_dec_aq_sig_a2_a_a2_DATAB_routing_wire_inst)
+    (DELAY
+      (ABSOLUTE
+        (IOPATH datain dataout (2189:2189:2189) (2481:2481:2481))
+        (IOPATH datainglitch dataout (350:350:350) (350:350:350))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneive_routing_wire")
+    (INSTANCE registre_dec_aq_sig_a2_a_a2_DATAD_routing_wire_inst)
+    (DELAY
+      (ABSOLUTE
+        (IOPATH datain dataout (133:133:133) (172:172:172))
+        (IOPATH datainglitch dataout (350:350:350) (350:350:350))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneive_lcell_comb")
+    (INSTANCE registre_dec_aq_sig_a2_a_a2)
+    (DELAY
+      (ABSOLUTE
+        (IOPATH dataa combout (170:170:170) (163:163:163))
+        (IOPATH datab combout (167:167:167) (158:158:158))
+        (IOPATH datad combout (68:68:68) (63:63:63))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneive_routing_wire")
+    (INSTANCE registre_dec_aq_sig_a2_a_CLK_routing_wire_inst)
+    (DELAY
+      (ABSOLUTE
+        (IOPATH datain dataout (578:578:578) (638:638:638))
+        (IOPATH datainglitch dataout (350:350:350) (350:350:350))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneive_routing_wire")
+    (INSTANCE registre_dec_aq_sig_a2_a_ASDATA_routing_wire_inst)
+    (DELAY
+      (ABSOLUTE
+        (IOPATH datain dataout (2505:2505:2505) (2794:2794:2794))
+        (IOPATH datainglitch dataout (350:350:350) (350:350:350))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneive_routing_wire")
+    (INSTANCE registre_dec_aq_sig_a2_a_CLRN_routing_wire_inst)
+    (DELAY
+      (ABSOLUTE
+        (IOPATH datain dataout (2052:2052:2052) (2307:2307:2307))
+        (IOPATH datainglitch dataout (350:350:350) (350:350:350))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneive_routing_wire")
+    (INSTANCE registre_dec_aq_sig_a2_a_SLOAD_routing_wire_inst)
+    (DELAY
+      (ABSOLUTE
+        (IOPATH datain dataout (2257:2257:2257) (2546:2546:2546))
+        (IOPATH datainglitch dataout (350:350:350) (350:350:350))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneive_routing_wire")
+    (INSTANCE registre_dec_aq_sig_a2_a_ENA_routing_wire_inst)
+    (DELAY
+      (ABSOLUTE
+        (IOPATH datain dataout (194:194:194) (231:231:231))
+        (IOPATH datainglitch dataout (350:350:350) (350:350:350))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "dffeas")
+    (INSTANCE registre_dec_aq_sig_a2_a)
+    (DELAY
+      (ABSOLUTE
+        (PORT clk (295:295:295) (291:291:291))
+        (PORT d (37:37:37) (50:50:50))
+        (PORT asdata (177:177:177) (175:175:175))
+        (PORT clrn (281:281:281) (276:276:276))
+        (PORT sload (293:293:293) (309:309:309))
+        (PORT ena (312:312:312) (317:317:317))
+        (IOPATH (posedge clk) q (105:105:105) (105:105:105))
+        (IOPATH (negedge clrn) q (110:110:110) (110:110:110))
+      )
+    )
+    (TIMINGCHECK
+      (HOLD d (posedge clk) (84:84:84))
+      (HOLD sload (posedge clk) (84:84:84))
+      (HOLD asdata (posedge clk) (84:84:84))
+      (HOLD ena (posedge clk) (84:84:84))
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneive_routing_wire")
+    (INSTANCE registre_dec_aq_sig_a1_a_a1_DATAA_routing_wire_inst)
+    (DELAY
+      (ABSOLUTE
+        (IOPATH datain dataout (149:149:149) (203:203:203))
+        (IOPATH datainglitch dataout (350:350:350) (350:350:350))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneive_routing_wire")
+    (INSTANCE registre_dec_aq_sig_a1_a_a1_DATAB_routing_wire_inst)
+    (DELAY
+      (ABSOLUTE
+        (IOPATH datain dataout (2185:2185:2185) (2476:2476:2476))
+        (IOPATH datainglitch dataout (350:350:350) (350:350:350))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneive_routing_wire")
+    (INSTANCE registre_dec_aq_sig_a1_a_a1_DATAD_routing_wire_inst)
+    (DELAY
+      (ABSOLUTE
+        (IOPATH datain dataout (203:203:203) (255:255:255))
+        (IOPATH datainglitch dataout (350:350:350) (350:350:350))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneive_lcell_comb")
+    (INSTANCE registre_dec_aq_sig_a1_a_a1)
+    (DELAY
+      (ABSOLUTE
+        (IOPATH dataa combout (170:170:170) (163:163:163))
+        (IOPATH datab combout (169:169:169) (167:167:167))
+        (IOPATH datad combout (68:68:68) (63:63:63))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneive_routing_wire")
+    (INSTANCE registre_dec_aq_sig_a1_a_CLK_routing_wire_inst)
+    (DELAY
+      (ABSOLUTE
+        (IOPATH datain dataout (578:578:578) (638:638:638))
+        (IOPATH datainglitch dataout (350:350:350) (350:350:350))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneive_routing_wire")
+    (INSTANCE registre_dec_aq_sig_a1_a_ASDATA_routing_wire_inst)
+    (DELAY
+      (ABSOLUTE
+        (IOPATH datain dataout (2078:2078:2078) (2344:2344:2344))
+        (IOPATH datainglitch dataout (350:350:350) (350:350:350))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneive_routing_wire")
+    (INSTANCE registre_dec_aq_sig_a1_a_CLRN_routing_wire_inst)
+    (DELAY
+      (ABSOLUTE
+        (IOPATH datain dataout (2052:2052:2052) (2307:2307:2307))
+        (IOPATH datainglitch dataout (350:350:350) (350:350:350))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneive_routing_wire")
+    (INSTANCE registre_dec_aq_sig_a1_a_SLOAD_routing_wire_inst)
+    (DELAY
+      (ABSOLUTE
+        (IOPATH datain dataout (2257:2257:2257) (2546:2546:2546))
+        (IOPATH datainglitch dataout (350:350:350) (350:350:350))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneive_routing_wire")
+    (INSTANCE registre_dec_aq_sig_a1_a_ENA_routing_wire_inst)
+    (DELAY
+      (ABSOLUTE
+        (IOPATH datain dataout (194:194:194) (231:231:231))
+        (IOPATH datainglitch dataout (350:350:350) (350:350:350))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "dffeas")
+    (INSTANCE registre_dec_aq_sig_a1_a)
+    (DELAY
+      (ABSOLUTE
+        (PORT clk (295:295:295) (291:291:291))
+        (PORT d (37:37:37) (50:50:50))
+        (PORT asdata (177:177:177) (175:175:175))
+        (PORT clrn (281:281:281) (276:276:276))
+        (PORT sload (293:293:293) (309:309:309))
+        (PORT ena (312:312:312) (317:317:317))
+        (IOPATH (posedge clk) q (105:105:105) (105:105:105))
+        (IOPATH (negedge clrn) q (110:110:110) (110:110:110))
+      )
+    )
+    (TIMINGCHECK
+      (HOLD d (posedge clk) (84:84:84))
+      (HOLD sload (posedge clk) (84:84:84))
+      (HOLD asdata (posedge clk) (84:84:84))
+      (HOLD ena (posedge clk) (84:84:84))
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneive_routing_wire")
+    (INSTANCE registre_dec_aq_sig_a8_DATAC_routing_wire_inst)
+    (DELAY
+      (ABSOLUTE
+        (IOPATH datain dataout (2171:2171:2171) (2458:2458:2458))
+        (IOPATH datainglitch dataout (350:350:350) (350:350:350))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneive_routing_wire")
+    (INSTANCE registre_dec_aq_sig_a8_DATAD_routing_wire_inst)
+    (DELAY
+      (ABSOLUTE
+        (IOPATH datain dataout (135:135:135) (175:175:175))
+        (IOPATH datainglitch dataout (350:350:350) (350:350:350))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneive_lcell_comb")
+    (INSTANCE registre_dec_aq_sig_a8)
+    (DELAY
+      (ABSOLUTE
+        (IOPATH datac combout (119:119:119) (124:124:124))
+        (IOPATH datad combout (68:68:68) (63:63:63))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneive_routing_wire")
+    (INSTANCE registre_dec_aq_sig_a0_a_a0_DATAB_routing_wire_inst)
+    (DELAY
+      (ABSOLUTE
+        (IOPATH datain dataout (2132:2132:2132) (2410:2410:2410))
+        (IOPATH datainglitch dataout (350:350:350) (350:350:350))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneive_routing_wire")
+    (INSTANCE registre_dec_aq_sig_a0_a_a0_DATAD_routing_wire_inst)
+    (DELAY
+      (ABSOLUTE
+        (IOPATH datain dataout (172:172:172) (202:202:202))
+        (IOPATH datainglitch dataout (350:350:350) (350:350:350))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneive_lcell_comb")
+    (INSTANCE registre_dec_aq_sig_a0_a_a0)
+    (DELAY
+      (ABSOLUTE
+        (IOPATH datab combout (166:166:166) (176:176:176))
+        (IOPATH datac combout (190:190:190) (195:195:195))
+        (IOPATH datad combout (68:68:68) (63:63:63))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneive_routing_wire")
+    (INSTANCE registre_dec_aq_sig_a0_a_CLK_routing_wire_inst)
+    (DELAY
+      (ABSOLUTE
+        (IOPATH datain dataout (561:561:561) (610:610:610))
+        (IOPATH datainglitch dataout (350:350:350) (350:350:350))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneive_routing_wire")
+    (INSTANCE registre_dec_aq_sig_a0_a_ASDATA_routing_wire_inst)
+    (DELAY
+      (ABSOLUTE
+        (IOPATH datain dataout (2045:2045:2045) (2296:2296:2296))
+        (IOPATH datainglitch dataout (350:350:350) (350:350:350))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneive_routing_wire")
+    (INSTANCE registre_dec_aq_sig_a0_a_CLRN_routing_wire_inst)
+    (DELAY
+      (ABSOLUTE
+        (IOPATH datain dataout (2070:2070:2070) (2335:2335:2335))
+        (IOPATH datainglitch dataout (350:350:350) (350:350:350))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "cycloneive_routing_wire")
+    (INSTANCE registre_dec_aq_sig_a0_a_SLOAD_routing_wire_inst)
+    (DELAY
+      (ABSOLUTE
+        (IOPATH datain dataout (2141:2141:2141) (2412:2412:2412))
+        (IOPATH datainglitch dataout (350:350:350) (350:350:350))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "dffeas")
+    (INSTANCE registre_dec_aq_sig_a0_a)
+    (DELAY
+      (ABSOLUTE
+        (PORT clk (295:295:295) (291:291:291))
+        (PORT d (37:37:37) (50:50:50))
+        (PORT asdata (177:177:177) (175:175:175))
+        (PORT clrn (281:281:281) (276:276:276))
+        (PORT sload (293:293:293) (309:309:309))
+        (IOPATH (posedge clk) q (105:105:105) (105:105:105))
+        (IOPATH (negedge clrn) q (110:110:110) (110:110:110))
+      )
+    )
+    (TIMINGCHECK
+      (HOLD d (posedge clk) (84:84:84))
+      (HOLD sload (posedge clk) (84:84:84))
+      (HOLD asdata (posedge clk) (84:84:84))
+    )
+  )
+)

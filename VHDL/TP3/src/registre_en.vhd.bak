@@ -1,0 +1,33 @@
+entity registre_en is 
+port (  clk, load, resetn : in std_logic;
+              e : in std_logic_vector(7 downto 0 );
+              q : out std_logic_vector(7 downto 0) );
+end entity
+
+architecture arch_registre of registre_en is
+signal : q_sig std_logic_vector(7 downto 0) 
+
+begin
+q_sig<=(others = '0' );
+process(clk, resetn)
+	begin
+	  if resetn = 0 then
+		q_sig<=(others = '0' );
+	  
+	  elsif load = '1' then 
+		   if rising_edge(clk) then
+				q_sig (7) <= e(0);
+				q_sig (6) <=q_sig (7);
+				q_sig (5) <= q_sig (6);
+				q_sig (4) <=q_sig (5);
+				q_sig (3) <= q_sig (4);
+				q_sig (2) <= q_sig (3);
+				q_sig (1) <=q_sig (2);
+				q_sig (0) <= q_sig (1);
+			end if;
+		end if;
+	
+end process
+q <= q_sig
+
+end architecture
