@@ -1,5 +1,5 @@
 Analysis & Synthesis report for DE2_115
-Wed Oct  4 16:24:48 2023
+Wed Oct  4 21:26:30 2023
 Quartus Prime Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition
 
 
@@ -37,10 +37,10 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                        ;
 +------------------------------------+------------------------------------------------+
-; Analysis & Synthesis Status        ; Failed - Wed Oct  4 16:24:48 2023              ;
+; Analysis & Synthesis Status        ; Failed - Wed Oct  4 21:26:30 2023              ;
 ; Quartus Prime Version              ; 22.1std.2 Build 922 07/20/2023 SC Lite Edition ;
 ; Revision Name                      ; DE2_115                                        ;
-; Top-level Entity Name              ; cpteur_auto                                    ;
+; Top-level Entity Name              ; up_down_counter                                ;
 ; Family                             ; Cyclone IV E                                   ;
 ; Total logic elements               ; N/A until Partition Merge                      ;
 ;     Total combinational functions  ; N/A until Partition Merge                      ;
@@ -60,7 +60,7 @@ https://fpgasoftware.intel.com/eula.
 ; Option                                                           ; Setting            ; Default Value      ;
 +------------------------------------------------------------------+--------------------+--------------------+
 ; Device                                                           ; EP4CE115F29C7      ;                    ;
-; Top-level entity name                                            ; cpteur_auto        ; DE2_115            ;
+; Top-level entity name                                            ; up_down_counter    ; DE2_115            ;
 ; Family name                                                      ; Cyclone IV E       ; Cyclone V          ;
 ; Use smart compilation                                            ; Off                ; Off                ;
 ; Enable parallel Assembler and Timing Analyzer during compilation ; On                 ; On                 ;
@@ -162,42 +162,29 @@ https://fpgasoftware.intel.com/eula.
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition
-    Info: Processing started: Wed Oct  4 16:24:40 2023
+    Info: Processing started: Wed Oct  4 21:26:21 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off DE2_115 -c DE2_115
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
-Info (12021): Found 2 design units, including 1 entities, in source file src/cpteur_auto_tb.vhd
-    Info (12022): Found design unit 1: compteur_auto_tb-arch_compteur_auto_tb File: C:/Users/gross/Github/Code_learning/VHDL/TP3/src/cpteur_auto_tb.vhd Line: 8
-    Info (12023): Found entity 1: compteur_auto_tb File: C:/Users/gross/Github/Code_learning/VHDL/TP3/src/cpteur_auto_tb.vhd Line: 5
-Info (12021): Found 2 design units, including 1 entities, in source file src/cpteur_auto.vhd
-    Info (12022): Found design unit 1: cpteur_auto-arch_cpteur_auto File: C:/Users/gross/Github/Code_learning/VHDL/TP3/src/cpteur_auto.vhd Line: 13
-    Info (12023): Found entity 1: cpteur_auto File: C:/Users/gross/Github/Code_learning/VHDL/TP3/src/cpteur_auto.vhd Line: 5
-Info (12021): Found 2 design units, including 1 entities, in source file src/deco7seg.vhd
-    Info (12022): Found design unit 1: deco7seg-ar File: C:/Users/gross/Github/Code_learning/VHDL/TP3/src/deco7seg.vhd Line: 12
-    Info (12023): Found entity 1: deco7seg File: C:/Users/gross/Github/Code_learning/VHDL/TP3/src/deco7seg.vhd Line: 5
-Info (12021): Found 2 design units, including 1 entities, in source file src/registre_en.vhd
-    Info (12022): Found design unit 1: registre_en-arch_registre_en File: C:/Users/gross/Github/Code_learning/VHDL/TP3/src/registre_en.vhd Line: 10
-    Info (12023): Found entity 1: registre_en File: C:/Users/gross/Github/Code_learning/VHDL/TP3/src/registre_en.vhd Line: 4
-Info (12021): Found 2 design units, including 1 entities, in source file src/carte_de2_115.vhd
-    Info (12022): Found design unit 1: Carte_DE2_115-arch_Carte_DE2_115 File: C:/Users/gross/Github/Code_learning/VHDL/TP3/src/Carte_DE2_115.vhd Line: 15
-    Info (12023): Found entity 1: Carte_DE2_115 File: C:/Users/gross/Github/Code_learning/VHDL/TP3/src/Carte_DE2_115.vhd Line: 4
-Info (12021): Found 2 design units, including 1 entities, in source file src/registre_dec.vhd
-    Info (12022): Found design unit 1: registre_dec-arch_registre_dec File: C:/Users/gross/Github/Code_learning/VHDL/TP3/src/registre_dec.vhd Line: 10
-    Info (12023): Found entity 1: registre_dec File: C:/Users/gross/Github/Code_learning/VHDL/TP3/src/registre_dec.vhd Line: 4
-Info (12021): Found 2 design units, including 1 entities, in source file src/registre_dec_tb.vhd
-    Info (12022): Found design unit 1: registre_dec_tb-arch_registre_dec_tb File: C:/Users/gross/Github/Code_learning/VHDL/TP3/src/registre_dec_tb.vhd Line: 7
-    Info (12023): Found entity 1: registre_dec_tb File: C:/Users/gross/Github/Code_learning/VHDL/TP3/src/registre_dec_tb.vhd Line: 4
-Info (12021): Found 2 design units, including 1 entities, in source file src/cpteur.vhd
-    Info (12022): Found design unit 1: cpteur-arch_cpteur File: C:/Users/gross/Github/Code_learning/VHDL/TP3/src/cpteur.vhd Line: 11
-    Info (12023): Found entity 1: cpteur File: C:/Users/gross/Github/Code_learning/VHDL/TP3/src/cpteur.vhd Line: 5
-Info (12021): Found 2 design units, including 1 entities, in source file src/compteur_tb.vhd
-    Info (12022): Found design unit 1: compteur_tb-arch_compteur_tb File: C:/Users/gross/Github/Code_learning/VHDL/TP3/src/compteur_tb.vhd Line: 8
-    Info (12023): Found entity 1: compteur_tb File: C:/Users/gross/Github/Code_learning/VHDL/TP3/src/compteur_tb.vhd Line: 5
-Error (10568): VHDL error at cpteur_auto.vhd(40): can't write to interface object "compt" of mode IN File: C:/Users/gross/Github/Code_learning/VHDL/TP3/src/cpteur_auto.vhd Line: 40
-Error: Quartus Prime Analysis & Synthesis was unsuccessful. 1 error, 1 warning
-    Error: Peak virtual memory: 4781 megabytes
-    Error: Processing ended: Wed Oct  4 16:24:48 2023
-    Error: Elapsed time: 00:00:08
-    Error: Total CPU time (on all processors): 00:00:09
+Info (12021): Found 2 design units, including 1 entities, in source file src/up_down_counter.vhd
+    Info (12022): Found design unit 1: up_down_counter-arch_up_down_counter File: C:/Users/gross/Github/Code_learning/VHDL/TP3/src/up_down_counter.vhd Line: 17
+    Info (12023): Found entity 1: up_down_counter File: C:/Users/gross/Github/Code_learning/VHDL/TP3/src/up_down_counter.vhd Line: 5
+Info (12127): Elaborating entity "up_down_counter" for the top level hierarchy
+Warning (10631): VHDL Process Statement warning at up_down_counter.vhd(25): inferring latch(es) for signal or variable "data_out", which holds its previous value in one or more paths through the process File: C:/Users/gross/Github/Code_learning/VHDL/TP3/src/up_down_counter.vhd Line: 25
+Info (10041): Inferred latch for "data_out[0]" at up_down_counter.vhd(25) File: C:/Users/gross/Github/Code_learning/VHDL/TP3/src/up_down_counter.vhd Line: 25
+Info (10041): Inferred latch for "data_out[1]" at up_down_counter.vhd(25) File: C:/Users/gross/Github/Code_learning/VHDL/TP3/src/up_down_counter.vhd Line: 25
+Info (10041): Inferred latch for "data_out[2]" at up_down_counter.vhd(25) File: C:/Users/gross/Github/Code_learning/VHDL/TP3/src/up_down_counter.vhd Line: 25
+Info (10041): Inferred latch for "data_out[3]" at up_down_counter.vhd(25) File: C:/Users/gross/Github/Code_learning/VHDL/TP3/src/up_down_counter.vhd Line: 25
+Error (10028): Can't resolve multiple constant drivers for net "data_out[3]" at up_down_counter.vhd(56) File: C:/Users/gross/Github/Code_learning/VHDL/TP3/src/up_down_counter.vhd Line: 56
+Error (10029): Constant driver at up_down_counter.vhd(25) File: C:/Users/gross/Github/Code_learning/VHDL/TP3/src/up_down_counter.vhd Line: 25
+Error (10028): Can't resolve multiple constant drivers for net "data_out[2]" at up_down_counter.vhd(56) File: C:/Users/gross/Github/Code_learning/VHDL/TP3/src/up_down_counter.vhd Line: 56
+Error (10028): Can't resolve multiple constant drivers for net "data_out[1]" at up_down_counter.vhd(56) File: C:/Users/gross/Github/Code_learning/VHDL/TP3/src/up_down_counter.vhd Line: 56
+Error (10028): Can't resolve multiple constant drivers for net "data_out[0]" at up_down_counter.vhd(56) File: C:/Users/gross/Github/Code_learning/VHDL/TP3/src/up_down_counter.vhd Line: 56
+Error (12153): Can't elaborate top-level user hierarchy
+Error: Quartus Prime Analysis & Synthesis was unsuccessful. 6 errors, 2 warnings
+    Error: Peak virtual memory: 4789 megabytes
+    Error: Processing ended: Wed Oct  4 21:26:30 2023
+    Error: Elapsed time: 00:00:09
+    Error: Total CPU time (on all processors): 00:00:12
 
 
