@@ -17,28 +17,28 @@ class DeviceCollection():
         if device.name in self.devices:
             self.devices.pop(device.name)
         else:
-            print(f"Device {device.name} does not exist !")    
+            print(f"Device {device.name} does not exist !")
 
     def getDeviceCollection(self):
         result = {}
         for devName, device in self.devices.items():
             result[devName] = device.getRepresentation()
         return result
-    
+
     def getDeviceList(self):
         result = {
-            "sensors" : self.getDeviceListByType(Sensor),
-            "actuators" : self.getDeviceListByType(Actuator)
+            "sensors": self.getDeviceListByType(Sensor),
+            "actuators": self.getDeviceListByType(Actuator)
         }
         return result
-    
+
     def getDeviceListByType(self, type):
         result = []
         for devName, device in self.devices.items():
             if isinstance(device, type):
                 result.append(devName)
         return result
-   
+
     def getDevice(self, deviceName):
         result = {}
         if deviceName in self.devices:
