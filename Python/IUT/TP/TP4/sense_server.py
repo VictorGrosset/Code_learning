@@ -12,7 +12,7 @@ devs.addDevice(LedActuator(0,0))
 devs.addDevice(LedActuator(0,7))
 devs.addDevice(LedActuator(7,0))
 devs.addDevice(LedActuator(7,7))
-devs.addDevice(TemperatureSensor("temp", "Temeprature Sensor of SenseHAT"))
+devs.addDevice(TemperatureSensor("temp", "Temperature Sensor of SenseHAT"))
 devs.addDevice(HumiditySensor("hum", "Humidity Sensor of SenseHAT"))
 devs.addDevice(PressureSensor("pres", "Pressure Sensor of SenseHAT"))
 

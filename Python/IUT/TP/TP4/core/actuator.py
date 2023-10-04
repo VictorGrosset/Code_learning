@@ -34,6 +34,9 @@ class LedActuator(Actuator):
             # TO-DO : Exécuter l'action sur la LED
             # Un objet de la classe SenseHat est déja accéssible ici : IoTDevice.sense
             # ici le paramètre params est une liste [R, G, B]
+            # les deux fonctionnent ?
+            # super().sense.set_pixel(self.position["x"], self.position["y"], self.color)
+            IoTDevice.sense.set_pixel(self.position["x"], self.position["y"], self.color)
         elif action == "off":
             self.color = params
             self.last_action = "off"
@@ -41,6 +44,7 @@ class LedActuator(Actuator):
             # TO-DO : Exécuter l'action sur la LED
             # Un objet de la classe SenseHat est déja accéssible ici : IoTDevice.sense
             # ici le paramètre params est une liste [R, G, B]
+            IoTDevice.sense.clear(self.position["x"], self.position["y"], 0)
 
     def getRepresentation(self):
         result = super().getRepresentation()

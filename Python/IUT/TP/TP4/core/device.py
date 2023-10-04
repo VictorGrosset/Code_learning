@@ -11,6 +11,6 @@ class IoTDevice:
     def getRepresentation(self):
         result = {
             "name": self.name,
-            "description": self.description  #nom à changer ou ça passe lors de l'override
+            "description": self.description  # nom à changer ou est-ce que ça passe lors de l'override ?
         }
         return result
