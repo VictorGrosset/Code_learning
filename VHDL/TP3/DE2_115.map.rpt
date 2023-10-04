@@ -1,5 +1,5 @@
 Analysis & Synthesis report for DE2_115
-Sun Oct  1 21:13:04 2023
+Wed Oct  4 16:24:48 2023
 Quartus Prime Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition
 
 
@@ -10,14 +10,7 @@ Quartus Prime Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition
   2. Analysis & Synthesis Summary
   3. Analysis & Synthesis Settings
   4. Parallel Compilation
-  5. Analysis & Synthesis Source Files Read
-  6. Analysis & Synthesis Resource Usage Summary
-  7. Analysis & Synthesis Resource Utilization by Entity
-  8. General Register Statistics
-  9. Multiplexer Restructuring Statistics (Restructuring Performed)
- 10. Post-Synthesis Netlist Statistics for Top Partition
- 11. Elapsed Time Per Partition
- 12. Analysis & Synthesis Messages
+  5. Analysis & Synthesis Messages
 
 
 
@@ -44,20 +37,20 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                        ;
 +------------------------------------+------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Sun Oct  1 21:13:04 2023          ;
+; Analysis & Synthesis Status        ; Failed - Wed Oct  4 16:24:48 2023              ;
 ; Quartus Prime Version              ; 22.1std.2 Build 922 07/20/2023 SC Lite Edition ;
 ; Revision Name                      ; DE2_115                                        ;
-; Top-level Entity Name              ; compteur                                       ;
+; Top-level Entity Name              ; cpteur_auto                                    ;
 ; Family                             ; Cyclone IV E                                   ;
-; Total logic elements               ; 7                                              ;
-;     Total combinational functions  ; 7                                              ;
-;     Dedicated logic registers      ; 4                                              ;
-; Total registers                    ; 4                                              ;
-; Total pins                         ; 12                                             ;
-; Total virtual pins                 ; 0                                              ;
-; Total memory bits                  ; 0                                              ;
-; Embedded Multiplier 9-bit elements ; 0                                              ;
-; Total PLLs                         ; 0                                              ;
+; Total logic elements               ; N/A until Partition Merge                      ;
+;     Total combinational functions  ; N/A until Partition Merge                      ;
+;     Dedicated logic registers      ; N/A until Partition Merge                      ;
+; Total registers                    ; N/A until Partition Merge                      ;
+; Total pins                         ; N/A until Partition Merge                      ;
+; Total virtual pins                 ; N/A until Partition Merge                      ;
+; Total memory bits                  ; N/A until Partition Merge                      ;
+; Embedded Multiplier 9-bit elements ; N/A until Partition Merge                      ;
+; Total PLLs                         ; N/A until Partition Merge                      ;
 +------------------------------------+------------------------------------------------+
 
 
@@ -67,7 +60,7 @@ https://fpgasoftware.intel.com/eula.
 ; Option                                                           ; Setting            ; Default Value      ;
 +------------------------------------------------------------------+--------------------+--------------------+
 ; Device                                                           ; EP4CE115F29C7      ;                    ;
-; Top-level entity name                                            ; compteur           ; DE2_115            ;
+; Top-level entity name                                            ; cpteur_auto        ; DE2_115            ;
 ; Family name                                                      ; Cyclone IV E       ; Cyclone V          ;
 ; Use smart compilation                                            ; Off                ; Off                ;
 ; Enable parallel Assembler and Timing Analyzer during compilation ; On                 ; On                 ;
@@ -156,115 +149,11 @@ https://fpgasoftware.intel.com/eula.
 ; Maximum allowed            ; 4           ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
-; Maximum used               ; 4           ;
+; Maximum used               ; 1           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processors 2-4         ;   0.0%      ;
 +----------------------------+-------------+
-
-
-+------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                         ;
-+----------------------------------+-----------------+-----------------+---------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                  ; Library ;
-+----------------------------------+-----------------+-----------------+---------------------------------------------------------------+---------+
-; src/compteur.vhd                 ; yes             ; User VHDL File  ; C:/Users/gross/Github/Code_learning/VHDL/TP3/src/compteur.vhd ;         ;
-+----------------------------------+-----------------+-----------------+---------------------------------------------------------------+---------+
-
-
-+----------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary              ;
-+---------------------------------------------+------------+
-; Resource                                    ; Usage      ;
-+---------------------------------------------+------------+
-; Estimated Total logic elements              ; 7          ;
-;                                             ;            ;
-; Total combinational functions               ; 7          ;
-; Logic element usage by number of LUT inputs ;            ;
-;     -- 4 input functions                    ; 4          ;
-;     -- 3 input functions                    ; 2          ;
-;     -- <=2 input functions                  ; 1          ;
-;                                             ;            ;
-; Logic elements by mode                      ;            ;
-;     -- normal mode                          ; 7          ;
-;     -- arithmetic mode                      ; 0          ;
-;                                             ;            ;
-; Total registers                             ; 4          ;
-;     -- Dedicated logic registers            ; 4          ;
-;     -- I/O registers                        ; 0          ;
-;                                             ;            ;
-; I/O pins                                    ; 12         ;
-;                                             ;            ;
-; Embedded Multiplier 9-bit elements          ; 0          ;
-;                                             ;            ;
-; Maximum fan-out node                        ; load~input ;
-; Maximum fan-out                             ; 7          ;
-; Total fan-out                               ; 56         ;
-; Average fan-out                             ; 1.60       ;
-+---------------------------------------------+------------+
-
-
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                      ;
-+----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+-------------+--------------+
-; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name ; Entity Name ; Library Name ;
-+----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+-------------+--------------+
-; |compteur                  ; 7 (7)               ; 4 (4)                     ; 0           ; 0            ; 0       ; 0         ; 12   ; 0            ; |compteur           ; compteur    ; work         ;
-+----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+-------------+--------------+
-Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
-
-
-+------------------------------------------------------+
-; General Register Statistics                          ;
-+----------------------------------------------+-------+
-; Statistic                                    ; Value ;
-+----------------------------------------------+-------+
-; Total registers                              ; 4     ;
-; Number of registers using Synchronous Clear  ; 0     ;
-; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 4     ;
-; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 4     ;
-; Number of registers using Preset             ; 0     ;
-+----------------------------------------------+-------+
-
-
-+------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                           ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
-; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |compteur|i_output[0]      ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
-
-
-+-----------------------------------------------------+
-; Post-Synthesis Netlist Statistics for Top Partition ;
-+-----------------------+-----------------------------+
-; Type                  ; Count                       ;
-+-----------------------+-----------------------------+
-; boundary_port         ; 12                          ;
-; cycloneiii_ff         ; 4                           ;
-;     ENA CLR           ; 4                           ;
-; cycloneiii_lcell_comb ; 7                           ;
-;     normal            ; 7                           ;
-;         2 data inputs ; 1                           ;
-;         3 data inputs ; 2                           ;
-;         4 data inputs ; 4                           ;
-;                       ;                             ;
-; Max LUT depth         ; 2.00                        ;
-; Average LUT depth     ; 1.37                        ;
-+-----------------------+-----------------------------+
-
-
-+-------------------------------+
-; Elapsed Time Per Partition    ;
-+----------------+--------------+
-; Partition Name ; Elapsed Time ;
-+----------------+--------------+
-; Top            ; 00:00:00     ;
-+----------------+--------------+
 
 
 +-------------------------------+
@@ -273,10 +162,19 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition
-    Info: Processing started: Sun Oct  1 21:12:53 2023
+    Info: Processing started: Wed Oct  4 16:24:40 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off DE2_115 -c DE2_115
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (12021): Found 2 design units, including 1 entities, in source file src/cpteur_auto_tb.vhd
+    Info (12022): Found design unit 1: compteur_auto_tb-arch_compteur_auto_tb File: C:/Users/gross/Github/Code_learning/VHDL/TP3/src/cpteur_auto_tb.vhd Line: 8
+    Info (12023): Found entity 1: compteur_auto_tb File: C:/Users/gross/Github/Code_learning/VHDL/TP3/src/cpteur_auto_tb.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file src/cpteur_auto.vhd
+    Info (12022): Found design unit 1: cpteur_auto-arch_cpteur_auto File: C:/Users/gross/Github/Code_learning/VHDL/TP3/src/cpteur_auto.vhd Line: 13
+    Info (12023): Found entity 1: cpteur_auto File: C:/Users/gross/Github/Code_learning/VHDL/TP3/src/cpteur_auto.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file src/deco7seg.vhd
+    Info (12022): Found design unit 1: deco7seg-ar File: C:/Users/gross/Github/Code_learning/VHDL/TP3/src/deco7seg.vhd Line: 12
+    Info (12023): Found entity 1: deco7seg File: C:/Users/gross/Github/Code_learning/VHDL/TP3/src/deco7seg.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file src/registre_en.vhd
     Info (12022): Found design unit 1: registre_en-arch_registre_en File: C:/Users/gross/Github/Code_learning/VHDL/TP3/src/registre_en.vhd Line: 10
     Info (12023): Found entity 1: registre_en File: C:/Users/gross/Github/Code_learning/VHDL/TP3/src/registre_en.vhd Line: 4
@@ -289,21 +187,17 @@ Info (12021): Found 2 design units, including 1 entities, in source file src/reg
 Info (12021): Found 2 design units, including 1 entities, in source file src/registre_dec_tb.vhd
     Info (12022): Found design unit 1: registre_dec_tb-arch_registre_dec_tb File: C:/Users/gross/Github/Code_learning/VHDL/TP3/src/registre_dec_tb.vhd Line: 7
     Info (12023): Found entity 1: registre_dec_tb File: C:/Users/gross/Github/Code_learning/VHDL/TP3/src/registre_dec_tb.vhd Line: 4
-Info (12021): Found 2 design units, including 1 entities, in source file src/compteur.vhd
-    Info (12022): Found design unit 1: compteur-ar_compteur File: C:/Users/gross/Github/Code_learning/VHDL/TP3/src/compteur.vhd Line: 16
-    Info (12023): Found entity 1: compteur File: C:/Users/gross/Github/Code_learning/VHDL/TP3/src/compteur.vhd Line: 5
-Info (12127): Elaborating entity "compteur" for the top level hierarchy
-Info (286030): Timing-Driven Synthesis is running
-Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
-    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 19 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 8 input pins
-    Info (21059): Implemented 4 output pins
-    Info (21061): Implemented 7 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 4843 megabytes
-    Info: Processing ended: Sun Oct  1 21:13:04 2023
-    Info: Elapsed time: 00:00:11
-    Info: Total CPU time (on all processors): 00:00:16
+Info (12021): Found 2 design units, including 1 entities, in source file src/cpteur.vhd
+    Info (12022): Found design unit 1: cpteur-arch_cpteur File: C:/Users/gross/Github/Code_learning/VHDL/TP3/src/cpteur.vhd Line: 11
+    Info (12023): Found entity 1: cpteur File: C:/Users/gross/Github/Code_learning/VHDL/TP3/src/cpteur.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file src/compteur_tb.vhd
+    Info (12022): Found design unit 1: compteur_tb-arch_compteur_tb File: C:/Users/gross/Github/Code_learning/VHDL/TP3/src/compteur_tb.vhd Line: 8
+    Info (12023): Found entity 1: compteur_tb File: C:/Users/gross/Github/Code_learning/VHDL/TP3/src/compteur_tb.vhd Line: 5
+Error (10568): VHDL error at cpteur_auto.vhd(40): can't write to interface object "compt" of mode IN File: C:/Users/gross/Github/Code_learning/VHDL/TP3/src/cpteur_auto.vhd Line: 40
+Error: Quartus Prime Analysis & Synthesis was unsuccessful. 1 error, 1 warning
+    Error: Peak virtual memory: 4781 megabytes
+    Error: Processing ended: Wed Oct  4 16:24:48 2023
+    Error: Elapsed time: 00:00:08
+    Error: Total CPU time (on all processors): 00:00:09
 
 

@@ -8,82 +8,86 @@ z2
 !i10f 100
 cModel Technology
 Z0 dH:/VHDL/TP_3/TP_3/simulation/modelsim
-Eregistre_dec
-Z1 w1695996040
-Z2 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
-Z3 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+Ecompteur_tb
+Z1 w1696423596
+Z2 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
+Z3 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z4 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
 R0
-Z4 8H:/VHDL/TP_3/TP_3/src/registre_dec.vhd
-Z5 FH:/VHDL/TP_3/TP_3/src/registre_dec.vhd
+Z5 8H:/VHDL/TP_3/TP_3/src/compteur_tb.vhd
+Z6 FH:/VHDL/TP_3/TP_3/src/compteur_tb.vhd
 l0
-L4
-V58ZM;N7TJd35bI^7QW_bR1
-!s100 BROJ9<^noSChiAGAa:SY41
-Z6 OV;C;10.5b;63
-31
-Z7 !s110 1695998051
+L5
+Vz:L`AIF6;Z9Z`z5gI;W6S0
+!s100 Za67?EjSkzUSi^WOYofVS2
+Z7 OV;C;10.5b;63
+32
+Z8 !s110 1696423599
 !i10b 1
-Z8 !s108 1695998051.000000
-Z9 !s90 -reportprogress|300|-93|-work|work|H:/VHDL/TP_3/TP_3/src/registre_dec.vhd|
-Z10 !s107 H:/VHDL/TP_3/TP_3/src/registre_dec.vhd|
+Z9 !s108 1696423599.000000
+Z10 !s90 -reportprogress|300|-work|work|H:/VHDL/TP_3/TP_3/src/compteur_tb.vhd|
+Z11 !s107 H:/VHDL/TP_3/TP_3/src/compteur_tb.vhd|
 !i113 1
-Z11 o-93 -work work
-Z12 tExplicit 1 CvgOpt 0
-Aarch_registre_dec
+Z12 o-work work
+Z13 tExplicit 1 CvgOpt 0
+Aarch_compteur_tb
+Z14 DEx4 work 6 cpteur 0 22 QmBf@BC;g;0e4hkR`SbFK1
 R2
 R3
-Z13 DEx4 work 12 registre_dec 0 22 58ZM;N7TJd35bI^7QW_bR1
-l14
-L10
-V:7@n_X<SKRQ3UIbEM[J[>0
-!s100 2B>RYnEOC?7EmSa>CM>YZ3
-R6
-31
+R4
+Z15 DEx4 work 11 compteur_tb 0 22 z:L`AIF6;Z9Z`z5gI;W6S0
+l12
+L8
+V79<FEbnaWdYa81FaShz9T0
+!s100 gSCBO[g9g<mzm]GPm6Nb43
 R7
-!i10b 1
+32
 R8
+!i10b 1
 R9
 R10
-!i113 1
 R11
-R12
-Eregistre_dec_tb
-Z14 w1695998690
-R2
-R3
-R0
-Z15 8H:/VHDL/TP_3/TP_3/src/registre_dec_tb.vhd
-Z16 FH:/VHDL/TP_3/TP_3/src/registre_dec_tb.vhd
-l0
-L4
-V;U@SKe7@De]I8BRlEEh]J1
-!s100 ljg^<UbRE`ndT9PX>mTQ71
-R6
-32
-Z17 !s110 1695998741
-!i10b 1
-Z18 !s108 1695998740.000000
-Z19 !s90 -reportprogress|300|-work|work|H:/VHDL/TP_3/TP_3/src/registre_dec_tb.vhd|
-Z20 !s107 H:/VHDL/TP_3/TP_3/src/registre_dec_tb.vhd|
 !i113 1
-Z21 o-work work
 R12
-Aarch_registre_dec_tb
 R13
+Ecpteur
+Z16 w1696419725
 R2
 R3
-Z22 DEx4 work 15 registre_dec_tb 0 22 ;U@SKe7@De]I8BRlEEh]J1
-l13
-L7
-VD]H[EzHn2lge2fG]KTI7N0
-!s100 6>2gSfo@WigRcnOHMbbBF0
-R6
-32
-R17
+R4
+R0
+Z17 8H:/VHDL/TP_3/TP_3/src/cpteur.vhd
+Z18 FH:/VHDL/TP_3/TP_3/src/cpteur.vhd
+l0
+L5
+VQmBf@BC;g;0e4hkR`SbFK1
+!s100 oRnV<NeRHGORVWPW4]05T3
+R7
+31
+Z19 !s110 1696420886
 !i10b 1
-R18
-R19
-R20
+Z20 !s108 1696420885.000000
+Z21 !s90 -reportprogress|300|-93|-work|work|H:/VHDL/TP_3/TP_3/src/cpteur.vhd|
+Z22 !s107 H:/VHDL/TP_3/TP_3/src/cpteur.vhd|
 !i113 1
+Z23 o-93 -work work
+R13
+Aarch_cpteur
+R2
+R3
+R4
+R14
+l14
+L11
+Voi>SkW51[oLLzI;lD38511
+!s100 P9V2lb39G8JI?]`@DU;Cj3
+R7
+31
+R19
+!i10b 1
+R20
 R21
-R12
+R22
+!i113 1
+R23
+R13

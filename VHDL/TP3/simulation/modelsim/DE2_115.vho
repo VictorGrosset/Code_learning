@@ -16,7 +16,7 @@
 -- PROGRAM "Quartus Prime"
 -- VERSION "Version 18.1.0 Build 625 09/12/2018 SJ Standard Edition"
 
--- DATE "09/29/2023 16:59:37"
+-- DATE "10/04/2023 15:10:00"
 
 -- 
 -- Device: Altera EP4CE115F29C7 Package FBGA780
@@ -93,8 +93,6 @@ END Carte_DE2_115;
 -- SW[9]	=>  Location: PIN_AB25,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
 -- SW[10]	=>  Location: PIN_AC24,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
 -- SW[11]	=>  Location: PIN_AB24,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
--- SW[12]	=>  Location: PIN_AB23,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
--- SW[13]	=>  Location: PIN_AA24,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
 -- Key[2]	=>  Location: PIN_N21,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
 -- Key[3]	=>  Location: PIN_R24,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
 -- LEDR[0]	=>  Location: PIN_G19,	 I/O Standard: 2.5 V,	 Current Strength: Default
@@ -141,9 +139,11 @@ END Carte_DE2_115;
 -- SW[5]	=>  Location: PIN_AC26,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
 -- SW[6]	=>  Location: PIN_AD26,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
 -- SW[7]	=>  Location: PIN_AB26,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
--- SW[14]	=>  Location: PIN_AA23,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
 -- SW[15]	=>  Location: PIN_AA22,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
+-- SW[14]	=>  Location: PIN_AA23,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
 -- SW[16]	=>  Location: PIN_Y24,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
+-- SW[12]	=>  Location: PIN_AB23,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
+-- SW[13]	=>  Location: PIN_AA24,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
 
 
 ARCHITECTURE structure OF Carte_DE2_115 IS
@@ -165,8 +165,6 @@ SIGNAL SW_a8_a_ainput_o : std_logic;
 SIGNAL SW_a9_a_ainput_o : std_logic;
 SIGNAL SW_a10_a_ainput_o : std_logic;
 SIGNAL SW_a11_a_ainput_o : std_logic;
-SIGNAL SW_a12_a_ainput_o : std_logic;
-SIGNAL SW_a13_a_ainput_o : std_logic;
 SIGNAL Key_a2_a_ainput_o : std_logic;
 SIGNAL Key_a3_a_ainput_o : std_logic;
 SIGNAL LEDR_a0_a_aoutput_o : std_logic;
@@ -208,31 +206,48 @@ SIGNAL registre_aq_a0_a_afeeder_combout : std_logic;
 SIGNAL Key_a1_a_ainput_o : std_logic;
 SIGNAL SW_a17_a_ainput_o : std_logic;
 SIGNAL SW_a1_a_ainput_o : std_logic;
-SIGNAL registre_aq_a1_a_afeeder_combout : std_logic;
 SIGNAL SW_a2_a_ainput_o : std_logic;
+SIGNAL registre_aq_a2_a_afeeder_combout : std_logic;
 SIGNAL SW_a3_a_ainput_o : std_logic;
-SIGNAL registre_aq_a3_a_afeeder_combout : std_logic;
 SIGNAL SW_a4_a_ainput_o : std_logic;
 SIGNAL registre_aq_a4_a_afeeder_combout : std_logic;
 SIGNAL SW_a5_a_ainput_o : std_logic;
 SIGNAL SW_a6_a_ainput_o : std_logic;
-SIGNAL registre_aq_a6_a_afeeder_combout : std_logic;
 SIGNAL SW_a7_a_ainput_o : std_logic;
-SIGNAL SW_a15_a_ainput_o : std_logic;
+SIGNAL registre_aq_a7_a_afeeder_combout : std_logic;
 SIGNAL SW_a14_a_ainput_o : std_logic;
+SIGNAL SW_a15_a_ainput_o : std_logic;
+SIGNAL registre_dec_aq_sig_a9_combout : std_logic;
 SIGNAL registre_dec_aq_sig_a7_a_a7_combout : std_logic;
 SIGNAL SW_a16_a_ainput_o : std_logic;
 SIGNAL registre_dec_aq_sig_a6_a_a6_combout : std_logic;
-SIGNAL registre_dec_aq_sig_a1_a_a9_combout : std_logic;
+SIGNAL registre_dec_aq_sig_a1_a_a8_combout : std_logic;
 SIGNAL registre_dec_aq_sig_a5_a_a5_combout : std_logic;
 SIGNAL registre_dec_aq_sig_a4_a_a4_combout : std_logic;
 SIGNAL registre_dec_aq_sig_a3_a_a3_combout : std_logic;
 SIGNAL registre_dec_aq_sig_a2_a_a2_combout : std_logic;
 SIGNAL registre_dec_aq_sig_a1_a_a1_combout : std_logic;
-SIGNAL registre_dec_aq_sig_a8_combout : std_logic;
 SIGNAL registre_dec_aq_sig_a0_a_a0_combout : std_logic;
+SIGNAL SW_a12_a_ainput_o : std_logic;
+SIGNAL compteur_aq_sig_a3_combout : std_logic;
+SIGNAL SW_a13_a_ainput_o : std_logic;
+SIGNAL compteur_aq_sig_a1_a_a5_cout : std_logic;
+SIGNAL compteur_aq_sig_a1_a_a6_combout : std_logic;
+SIGNAL compteur_aq_sig_a1_a_a7 : std_logic;
+SIGNAL compteur_aq_sig_a2_a_a8_combout : std_logic;
+SIGNAL compteur_aq_sig_a2_a_a9 : std_logic;
+SIGNAL compteur_aq_sig_a3_a_a10_combout : std_logic;
+SIGNAL deco7seg_aMux6_a0_combout : std_logic;
+SIGNAL deco7seg_aMux5_a0_combout : std_logic;
+SIGNAL deco7seg_aMux4_a0_combout : std_logic;
+SIGNAL deco7seg_aMux3_a0_combout : std_logic;
+SIGNAL deco7seg_aMux2_a0_combout : std_logic;
+SIGNAL deco7seg_aMux1_a0_combout : std_logic;
+SIGNAL deco7seg_aMux0_a0_combout : std_logic;
 SIGNAL registre_dec_aq_sig : std_logic_vector(7 DOWNTO 0);
+SIGNAL compteur_aq_sig : std_logic_vector(3 DOWNTO 0);
 SIGNAL registre_aq : std_logic_vector(7 DOWNTO 0);
+SIGNAL ALT_INV_deco7seg_aMux0_a0_combout : std_logic;
 SIGNAL LEDR_a0_a_aoutput_I_driver : std_logic;
 SIGNAL LEDR_a1_a_aoutput_I_driver : std_logic;
 SIGNAL LEDR_a2_a_aoutput_I_driver : std_logic;
@@ -249,6 +264,17 @@ SIGNAL LEDR_a12_a_aoutput_I_driver : std_logic;
 SIGNAL LEDR_a13_a_aoutput_I_driver : std_logic;
 SIGNAL LEDR_a14_a_aoutput_I_driver : std_logic;
 SIGNAL LEDR_a15_a_aoutput_I_driver : std_logic;
+SIGNAL LEDG_a0_a_aoutput_I_driver : std_logic;
+SIGNAL LEDG_a1_a_aoutput_I_driver : std_logic;
+SIGNAL LEDG_a2_a_aoutput_I_driver : std_logic;
+SIGNAL LEDG_a3_a_aoutput_I_driver : std_logic;
+SIGNAL Hex0_a0_a_aoutput_I_driver : std_logic;
+SIGNAL Hex0_a1_a_aoutput_I_driver : std_logic;
+SIGNAL Hex0_a2_a_aoutput_I_driver : std_logic;
+SIGNAL Hex0_a3_a_aoutput_I_driver : std_logic;
+SIGNAL Hex0_a4_a_aoutput_I_driver : std_logic;
+SIGNAL Hex0_a5_a_aoutput_I_driver : std_logic;
+SIGNAL Hex0_a6_a_aoutput_I_driver : std_logic;
 SIGNAL Key_a0_a_ainput_I_driver : std_logic;
 SIGNAL SW_a0_a_ainput_I_driver : std_logic;
 SIGNAL registre_aq_a0_a_afeeder_DATAD_driver : std_logic;
@@ -259,20 +285,19 @@ SIGNAL registre_aq_a0_a_D_driver : std_logic;
 SIGNAL registre_aq_a0_a_CLRN_driver : std_logic;
 SIGNAL registre_aq_a0_a_ENA_driver : std_logic;
 SIGNAL SW_a1_a_ainput_I_driver : std_logic;
-SIGNAL registre_aq_a1_a_afeeder_DATAD_driver : std_logic;
 SIGNAL registre_aq_a1_a_CLK_driver : std_logic;
-SIGNAL registre_aq_a1_a_D_driver : std_logic;
+SIGNAL registre_aq_a1_a_ASDATA_driver : std_logic;
 SIGNAL registre_aq_a1_a_CLRN_driver : std_logic;
 SIGNAL registre_aq_a1_a_ENA_driver : std_logic;
 SIGNAL SW_a2_a_ainput_I_driver : std_logic;
+SIGNAL registre_aq_a2_a_afeeder_DATAD_driver : std_logic;
 SIGNAL registre_aq_a2_a_CLK_driver : std_logic;
-SIGNAL registre_aq_a2_a_ASDATA_driver : std_logic;
+SIGNAL registre_aq_a2_a_D_driver : std_logic;
 SIGNAL registre_aq_a2_a_CLRN_driver : std_logic;
 SIGNAL registre_aq_a2_a_ENA_driver : std_logic;
 SIGNAL SW_a3_a_ainput_I_driver : std_logic;
-SIGNAL registre_aq_a3_a_afeeder_DATAD_driver : std_logic;
 SIGNAL registre_aq_a3_a_CLK_driver : std_logic;
-SIGNAL registre_aq_a3_a_D_driver : std_logic;
+SIGNAL registre_aq_a3_a_ASDATA_driver : std_logic;
 SIGNAL registre_aq_a3_a_CLRN_driver : std_logic;
 SIGNAL registre_aq_a3_a_ENA_driver : std_logic;
 SIGNAL SW_a4_a_ainput_I_driver : std_logic;
@@ -287,19 +312,20 @@ SIGNAL registre_aq_a5_a_ASDATA_driver : std_logic;
 SIGNAL registre_aq_a5_a_CLRN_driver : std_logic;
 SIGNAL registre_aq_a5_a_ENA_driver : std_logic;
 SIGNAL SW_a6_a_ainput_I_driver : std_logic;
-SIGNAL registre_aq_a6_a_afeeder_DATAD_driver : std_logic;
 SIGNAL registre_aq_a6_a_CLK_driver : std_logic;
-SIGNAL registre_aq_a6_a_D_driver : std_logic;
+SIGNAL registre_aq_a6_a_ASDATA_driver : std_logic;
 SIGNAL registre_aq_a6_a_CLRN_driver : std_logic;
 SIGNAL registre_aq_a6_a_ENA_driver : std_logic;
 SIGNAL SW_a7_a_ainput_I_driver : std_logic;
+SIGNAL registre_aq_a7_a_afeeder_DATAD_driver : std_logic;
 SIGNAL registre_aq_a7_a_CLK_driver : std_logic;
-SIGNAL registre_aq_a7_a_ASDATA_driver : std_logic;
+SIGNAL registre_aq_a7_a_D_driver : std_logic;
 SIGNAL registre_aq_a7_a_CLRN_driver : std_logic;
 SIGNAL registre_aq_a7_a_ENA_driver : std_logic;
-SIGNAL SW_a15_a_ainput_I_driver : std_logic;
 SIGNAL SW_a14_a_ainput_I_driver : std_logic;
-SIGNAL registre_dec_aq_sig_a7_a_a7_DATAA_driver : std_logic;
+SIGNAL SW_a15_a_ainput_I_driver : std_logic;
+SIGNAL registre_dec_aq_sig_a9_DATAA_driver : std_logic;
+SIGNAL registre_dec_aq_sig_a9_DATAD_driver : std_logic;
 SIGNAL registre_dec_aq_sig_a7_a_a7_DATAB_driver : std_logic;
 SIGNAL registre_dec_aq_sig_a7_a_a7_DATAC_driver : std_logic;
 SIGNAL registre_dec_aq_sig_a7_a_a7_DATAD_driver : std_logic;
@@ -312,8 +338,8 @@ SIGNAL registre_dec_aq_sig_a7_a_SLOAD_driver : std_logic;
 SIGNAL registre_dec_aq_sig_a6_a_a6_DATAA_driver : std_logic;
 SIGNAL registre_dec_aq_sig_a6_a_a6_DATAB_driver : std_logic;
 SIGNAL registre_dec_aq_sig_a6_a_a6_DATAD_driver : std_logic;
-SIGNAL registre_dec_aq_sig_a1_a_a9_DATAC_driver : std_logic;
-SIGNAL registre_dec_aq_sig_a1_a_a9_DATAD_driver : std_logic;
+SIGNAL registre_dec_aq_sig_a1_a_a8_DATAA_driver : std_logic;
+SIGNAL registre_dec_aq_sig_a1_a_a8_DATAD_driver : std_logic;
 SIGNAL registre_dec_aq_sig_a6_a_CLK_driver : std_logic;
 SIGNAL registre_dec_aq_sig_a6_a_D_driver : std_logic;
 SIGNAL registre_dec_aq_sig_a6_a_ASDATA_driver : std_logic;
@@ -365,8 +391,7 @@ SIGNAL registre_dec_aq_sig_a1_a_ASDATA_driver : std_logic;
 SIGNAL registre_dec_aq_sig_a1_a_CLRN_driver : std_logic;
 SIGNAL registre_dec_aq_sig_a1_a_SLOAD_driver : std_logic;
 SIGNAL registre_dec_aq_sig_a1_a_ENA_driver : std_logic;
-SIGNAL registre_dec_aq_sig_a8_DATAC_driver : std_logic;
-SIGNAL registre_dec_aq_sig_a8_DATAD_driver : std_logic;
+SIGNAL registre_dec_aq_sig_a0_a_a0_DATAA_driver : std_logic;
 SIGNAL registre_dec_aq_sig_a0_a_a0_DATAB_driver : std_logic;
 SIGNAL registre_dec_aq_sig_a0_a_a0_DATAC_driver : std_logic;
 SIGNAL registre_dec_aq_sig_a0_a_a0_DATAD_driver : std_logic;
@@ -375,12 +400,71 @@ SIGNAL registre_dec_aq_sig_a0_a_D_driver : std_logic;
 SIGNAL registre_dec_aq_sig_a0_a_ASDATA_driver : std_logic;
 SIGNAL registre_dec_aq_sig_a0_a_CLRN_driver : std_logic;
 SIGNAL registre_dec_aq_sig_a0_a_SLOAD_driver : std_logic;
+SIGNAL SW_a12_a_ainput_I_driver : std_logic;
+SIGNAL compteur_aq_sig_a3_DATAB_driver : std_logic;
+SIGNAL compteur_aq_sig_a3_DATAC_driver : std_logic;
+SIGNAL compteur_aq_sig_a3_DATAD_driver : std_logic;
+SIGNAL compteur_aq_sig_a0_a_CLK_driver : std_logic;
+SIGNAL compteur_aq_sig_a0_a_D_driver : std_logic;
+SIGNAL compteur_aq_sig_a0_a_CLRN_driver : std_logic;
+SIGNAL SW_a13_a_ainput_I_driver : std_logic;
+SIGNAL compteur_aq_sig_a1_a_a5_DATAA_driver : std_logic;
+SIGNAL compteur_aq_sig_a1_a_a6_DATAA_driver : std_logic;
+SIGNAL compteur_aq_sig_a1_a_a6_DATAB_driver : std_logic;
+SIGNAL compteur_aq_sig_a1_a_a6_CIN_driver : std_logic;
+SIGNAL compteur_aq_sig_a1_a_CLK_driver : std_logic;
+SIGNAL compteur_aq_sig_a1_a_D_driver : std_logic;
+SIGNAL compteur_aq_sig_a1_a_ASDATA_driver : std_logic;
+SIGNAL compteur_aq_sig_a1_a_CLRN_driver : std_logic;
+SIGNAL compteur_aq_sig_a1_a_SLOAD_driver : std_logic;
+SIGNAL compteur_aq_sig_a2_a_a8_DATAA_driver : std_logic;
+SIGNAL compteur_aq_sig_a2_a_a8_DATAB_driver : std_logic;
+SIGNAL compteur_aq_sig_a2_a_a8_CIN_driver : std_logic;
+SIGNAL compteur_aq_sig_a2_a_CLK_driver : std_logic;
+SIGNAL compteur_aq_sig_a2_a_D_driver : std_logic;
+SIGNAL compteur_aq_sig_a2_a_ASDATA_driver : std_logic;
+SIGNAL compteur_aq_sig_a2_a_CLRN_driver : std_logic;
+SIGNAL compteur_aq_sig_a2_a_SLOAD_driver : std_logic;
+SIGNAL compteur_aq_sig_a3_a_a10_DATAB_driver : std_logic;
+SIGNAL compteur_aq_sig_a3_a_a10_DATAD_driver : std_logic;
+SIGNAL compteur_aq_sig_a3_a_a10_CIN_driver : std_logic;
+SIGNAL compteur_aq_sig_a3_a_CLK_driver : std_logic;
+SIGNAL compteur_aq_sig_a3_a_D_driver : std_logic;
+SIGNAL compteur_aq_sig_a3_a_ASDATA_driver : std_logic;
+SIGNAL compteur_aq_sig_a3_a_CLRN_driver : std_logic;
+SIGNAL compteur_aq_sig_a3_a_SLOAD_driver : std_logic;
+SIGNAL deco7seg_aMux6_a0_DATAA_driver : std_logic;
+SIGNAL deco7seg_aMux6_a0_DATAB_driver : std_logic;
+SIGNAL deco7seg_aMux6_a0_DATAC_driver : std_logic;
+SIGNAL deco7seg_aMux6_a0_DATAD_driver : std_logic;
+SIGNAL deco7seg_aMux5_a0_DATAA_driver : std_logic;
+SIGNAL deco7seg_aMux5_a0_DATAB_driver : std_logic;
+SIGNAL deco7seg_aMux5_a0_DATAC_driver : std_logic;
+SIGNAL deco7seg_aMux5_a0_DATAD_driver : std_logic;
+SIGNAL deco7seg_aMux4_a0_DATAA_driver : std_logic;
+SIGNAL deco7seg_aMux4_a0_DATAB_driver : std_logic;
+SIGNAL deco7seg_aMux4_a0_DATAC_driver : std_logic;
+SIGNAL deco7seg_aMux4_a0_DATAD_driver : std_logic;
+SIGNAL deco7seg_aMux3_a0_DATAA_driver : std_logic;
+SIGNAL deco7seg_aMux3_a0_DATAB_driver : std_logic;
+SIGNAL deco7seg_aMux3_a0_DATAC_driver : std_logic;
+SIGNAL deco7seg_aMux3_a0_DATAD_driver : std_logic;
+SIGNAL deco7seg_aMux2_a0_DATAA_driver : std_logic;
+SIGNAL deco7seg_aMux2_a0_DATAB_driver : std_logic;
+SIGNAL deco7seg_aMux2_a0_DATAC_driver : std_logic;
+SIGNAL deco7seg_aMux2_a0_DATAD_driver : std_logic;
+SIGNAL deco7seg_aMux1_a0_DATAA_driver : std_logic;
+SIGNAL deco7seg_aMux1_a0_DATAB_driver : std_logic;
+SIGNAL deco7seg_aMux1_a0_DATAC_driver : std_logic;
+SIGNAL deco7seg_aMux1_a0_DATAD_driver : std_logic;
+SIGNAL deco7seg_aMux0_a0_DATAA_driver : std_logic;
+SIGNAL deco7seg_aMux0_a0_DATAB_driver : std_logic;
+SIGNAL deco7seg_aMux0_a0_DATAC_driver : std_logic;
+SIGNAL deco7seg_aMux0_a0_DATAD_driver : std_logic;
 SIGNAL SW_a8_a_ainput_I_driver : std_logic;
 SIGNAL SW_a9_a_ainput_I_driver : std_logic;
 SIGNAL SW_a10_a_ainput_I_driver : std_logic;
 SIGNAL SW_a11_a_ainput_I_driver : std_logic;
-SIGNAL SW_a12_a_ainput_I_driver : std_logic;
-SIGNAL SW_a13_a_ainput_I_driver : std_logic;
 SIGNAL Key_a2_a_ainput_I_driver : std_logic;
 SIGNAL Key_a3_a_ainput_I_driver : std_logic;
 
@@ -401,6 +485,7 @@ Hex0 <= ww_Hex0;
 ww_devoe <= devoe;
 ww_devclrn <= devclrn;
 ww_devpor <= devpor;
+ALT_INV_deco7seg_aMux0_a0_combout <= NOT deco7seg_aMux0_a0_combout;
 auto_generated_inst : hard_block
 PORT MAP (
 	devoe => ww_devoe,
@@ -703,6 +788,11 @@ PORT MAP (
 	devoe => ww_devoe,
 	o => LEDR_a17_a_aoutput_o);
 
+LEDG_a0_a_aoutput_I_routing_wire_inst : cycloneive_routing_wire
+PORT MAP (
+	datain => compteur_aq_sig(0),
+	dataout => LEDG_a0_a_aoutput_I_driver);
+
 -- Location: IOOBUF_X107_Y73_N9
 LEDG_a0_a_aoutput : cycloneive_io_obuf
 -- pragma translate_off
@@ -711,9 +801,14 @@ GENERIC MAP (
 	open_drain_output => "false")
 -- pragma translate_on
 PORT MAP (
-	i => GND,
+	i => LEDG_a0_a_aoutput_I_driver,
 	devoe => ww_devoe,
 	o => LEDG_a0_a_aoutput_o);
+
+LEDG_a1_a_aoutput_I_routing_wire_inst : cycloneive_routing_wire
+PORT MAP (
+	datain => compteur_aq_sig(1),
+	dataout => LEDG_a1_a_aoutput_I_driver);
 
 -- Location: IOOBUF_X111_Y73_N9
 LEDG_a1_a_aoutput : cycloneive_io_obuf
@@ -723,9 +818,14 @@ GENERIC MAP (
 	open_drain_output => "false")
 -- pragma translate_on
 PORT MAP (
-	i => GND,
+	i => LEDG_a1_a_aoutput_I_driver,
 	devoe => ww_devoe,
 	o => LEDG_a1_a_aoutput_o);
+
+LEDG_a2_a_aoutput_I_routing_wire_inst : cycloneive_routing_wire
+PORT MAP (
+	datain => compteur_aq_sig(2),
+	dataout => LEDG_a2_a_aoutput_I_driver);
 
 -- Location: IOOBUF_X83_Y73_N2
 LEDG_a2_a_aoutput : cycloneive_io_obuf
@@ -735,9 +835,14 @@ GENERIC MAP (
 	open_drain_output => "false")
 -- pragma translate_on
 PORT MAP (
-	i => GND,
+	i => LEDG_a2_a_aoutput_I_driver,
 	devoe => ww_devoe,
 	o => LEDG_a2_a_aoutput_o);
+
+LEDG_a3_a_aoutput_I_routing_wire_inst : cycloneive_routing_wire
+PORT MAP (
+	datain => compteur_aq_sig(3),
+	dataout => LEDG_a3_a_aoutput_I_driver);
 
 -- Location: IOOBUF_X85_Y73_N23
 LEDG_a3_a_aoutput : cycloneive_io_obuf
@@ -747,7 +852,7 @@ GENERIC MAP (
 	open_drain_output => "false")
 -- pragma translate_on
 PORT MAP (
-	i => GND,
+	i => LEDG_a3_a_aoutput_I_driver,
 	devoe => ww_devoe,
 	o => LEDG_a3_a_aoutput_o);
 
@@ -799,6 +904,11 @@ PORT MAP (
 	devoe => ww_devoe,
 	o => LEDG_a7_a_aoutput_o);
 
+Hex0_a0_a_aoutput_I_routing_wire_inst : cycloneive_routing_wire
+PORT MAP (
+	datain => deco7seg_aMux6_a0_combout,
+	dataout => Hex0_a0_a_aoutput_I_driver);
+
 -- Location: IOOBUF_X69_Y73_N23
 Hex0_a0_a_aoutput : cycloneive_io_obuf
 -- pragma translate_off
@@ -807,9 +917,14 @@ GENERIC MAP (
 	open_drain_output => "false")
 -- pragma translate_on
 PORT MAP (
-	i => GND,
+	i => Hex0_a0_a_aoutput_I_driver,
 	devoe => ww_devoe,
 	o => Hex0_a0_a_aoutput_o);
+
+Hex0_a1_a_aoutput_I_routing_wire_inst : cycloneive_routing_wire
+PORT MAP (
+	datain => deco7seg_aMux5_a0_combout,
+	dataout => Hex0_a1_a_aoutput_I_driver);
 
 -- Location: IOOBUF_X107_Y73_N23
 Hex0_a1_a_aoutput : cycloneive_io_obuf
@@ -819,9 +934,14 @@ GENERIC MAP (
 	open_drain_output => "false")
 -- pragma translate_on
 PORT MAP (
-	i => GND,
+	i => Hex0_a1_a_aoutput_I_driver,
 	devoe => ww_devoe,
 	o => Hex0_a1_a_aoutput_o);
+
+Hex0_a2_a_aoutput_I_routing_wire_inst : cycloneive_routing_wire
+PORT MAP (
+	datain => deco7seg_aMux4_a0_combout,
+	dataout => Hex0_a2_a_aoutput_I_driver);
 
 -- Location: IOOBUF_X67_Y73_N23
 Hex0_a2_a_aoutput : cycloneive_io_obuf
@@ -831,9 +951,14 @@ GENERIC MAP (
 	open_drain_output => "false")
 -- pragma translate_on
 PORT MAP (
-	i => GND,
+	i => Hex0_a2_a_aoutput_I_driver,
 	devoe => ww_devoe,
 	o => Hex0_a2_a_aoutput_o);
+
+Hex0_a3_a_aoutput_I_routing_wire_inst : cycloneive_routing_wire
+PORT MAP (
+	datain => deco7seg_aMux3_a0_combout,
+	dataout => Hex0_a3_a_aoutput_I_driver);
 
 -- Location: IOOBUF_X115_Y50_N2
 Hex0_a3_a_aoutput : cycloneive_io_obuf
@@ -843,9 +968,14 @@ GENERIC MAP (
 	open_drain_output => "false")
 -- pragma translate_on
 PORT MAP (
-	i => GND,
+	i => Hex0_a3_a_aoutput_I_driver,
 	devoe => ww_devoe,
 	o => Hex0_a3_a_aoutput_o);
+
+Hex0_a4_a_aoutput_I_routing_wire_inst : cycloneive_routing_wire
+PORT MAP (
+	datain => deco7seg_aMux2_a0_combout,
+	dataout => Hex0_a4_a_aoutput_I_driver);
 
 -- Location: IOOBUF_X115_Y54_N16
 Hex0_a4_a_aoutput : cycloneive_io_obuf
@@ -855,9 +985,14 @@ GENERIC MAP (
 	open_drain_output => "false")
 -- pragma translate_on
 PORT MAP (
-	i => GND,
+	i => Hex0_a4_a_aoutput_I_driver,
 	devoe => ww_devoe,
 	o => Hex0_a4_a_aoutput_o);
+
+Hex0_a5_a_aoutput_I_routing_wire_inst : cycloneive_routing_wire
+PORT MAP (
+	datain => deco7seg_aMux1_a0_combout,
+	dataout => Hex0_a5_a_aoutput_I_driver);
 
 -- Location: IOOBUF_X115_Y67_N16
 Hex0_a5_a_aoutput : cycloneive_io_obuf
@@ -867,9 +1002,14 @@ GENERIC MAP (
 	open_drain_output => "false")
 -- pragma translate_on
 PORT MAP (
-	i => GND,
+	i => Hex0_a5_a_aoutput_I_driver,
 	devoe => ww_devoe,
 	o => Hex0_a5_a_aoutput_o);
+
+Hex0_a6_a_aoutput_I_routing_wire_inst : cycloneive_routing_wire
+PORT MAP (
+	datain => ALT_INV_deco7seg_aMux0_a0_combout,
+	dataout => Hex0_a6_a_aoutput_I_driver);
 
 -- Location: IOOBUF_X115_Y69_N2
 Hex0_a6_a_aoutput : cycloneive_io_obuf
@@ -879,7 +1019,7 @@ GENERIC MAP (
 	open_drain_output => "false")
 -- pragma translate_on
 PORT MAP (
-	i => GND,
+	i => Hex0_a6_a_aoutput_I_driver,
 	devoe => ww_devoe,
 	o => Hex0_a6_a_aoutput_o);
 
@@ -920,7 +1060,7 @@ PORT MAP (
 	datain => SW_a0_a_ainput_o,
 	dataout => registre_aq_a0_a_afeeder_DATAD_driver);
 
--- Location: LCCOMB_X114_Y40_N12
+-- Location: LCCOMB_X114_Y41_N20
 registre_aq_a0_a_afeeder : cycloneive_lcell_comb
 -- Equation(s):
 -- registre_aq_a0_a_afeeder_combout = SW_a0_a_ainput_o
@@ -986,7 +1126,7 @@ PORT MAP (
 	datain => SW_a17_a_ainput_o,
 	dataout => registre_aq_a0_a_ENA_driver);
 
--- Location: FF_X114_Y40_N13
+-- Location: FF_X114_Y41_N21
 registre_aq_a0_a : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -1018,34 +1158,15 @@ PORT MAP (
 	i => SW_a1_a_ainput_I_driver,
 	o => SW_a1_a_ainput_o);
 
-registre_aq_a1_a_afeeder_DATAD_routing_wire_inst : cycloneive_routing_wire
-PORT MAP (
-	datain => SW_a1_a_ainput_o,
-	dataout => registre_aq_a1_a_afeeder_DATAD_driver);
-
--- Location: LCCOMB_X114_Y40_N10
-registre_aq_a1_a_afeeder : cycloneive_lcell_comb
--- Equation(s):
--- registre_aq_a1_a_afeeder_combout = SW_a1_a_ainput_o
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1111111100000000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	datad => registre_aq_a1_a_afeeder_DATAD_driver,
-	combout => registre_aq_a1_a_afeeder_combout);
-
 registre_aq_a1_a_CLK_routing_wire_inst : cycloneive_routing_wire
 PORT MAP (
 	datain => Key_a0_a_ainput_o,
 	dataout => registre_aq_a1_a_CLK_driver);
 
-registre_aq_a1_a_D_routing_wire_inst : cycloneive_routing_wire
+registre_aq_a1_a_ASDATA_routing_wire_inst : cycloneive_routing_wire
 PORT MAP (
-	datain => registre_aq_a1_a_afeeder_combout,
-	dataout => registre_aq_a1_a_D_driver);
+	datain => SW_a1_a_ainput_o,
+	dataout => registre_aq_a1_a_ASDATA_driver);
 
 registre_aq_a1_a_CLRN_routing_wire_inst : cycloneive_routing_wire
 PORT MAP (
@@ -1057,7 +1178,7 @@ PORT MAP (
 	datain => SW_a17_a_ainput_o,
 	dataout => registre_aq_a1_a_ENA_driver);
 
--- Location: FF_X114_Y40_N11
+-- Location: FF_X114_Y41_N7
 registre_aq_a1_a : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -1066,8 +1187,9 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	clk => registre_aq_a1_a_CLK_driver,
-	d => registre_aq_a1_a_D_driver,
+	asdata => registre_aq_a1_a_ASDATA_driver,
 	clrn => registre_aq_a1_a_CLRN_driver,
+	sload => VCC,
 	ena => registre_aq_a1_a_ENA_driver,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
@@ -1089,15 +1211,34 @@ PORT MAP (
 	i => SW_a2_a_ainput_I_driver,
 	o => SW_a2_a_ainput_o);
 
+registre_aq_a2_a_afeeder_DATAD_routing_wire_inst : cycloneive_routing_wire
+PORT MAP (
+	datain => SW_a2_a_ainput_o,
+	dataout => registre_aq_a2_a_afeeder_DATAD_driver);
+
+-- Location: LCCOMB_X114_Y41_N12
+registre_aq_a2_a_afeeder : cycloneive_lcell_comb
+-- Equation(s):
+-- registre_aq_a2_a_afeeder_combout = SW_a2_a_ainput_o
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1111111100000000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	datad => registre_aq_a2_a_afeeder_DATAD_driver,
+	combout => registre_aq_a2_a_afeeder_combout);
+
 registre_aq_a2_a_CLK_routing_wire_inst : cycloneive_routing_wire
 PORT MAP (
 	datain => Key_a0_a_ainput_o,
 	dataout => registre_aq_a2_a_CLK_driver);
 
-registre_aq_a2_a_ASDATA_routing_wire_inst : cycloneive_routing_wire
+registre_aq_a2_a_D_routing_wire_inst : cycloneive_routing_wire
 PORT MAP (
-	datain => SW_a2_a_ainput_o,
-	dataout => registre_aq_a2_a_ASDATA_driver);
+	datain => registre_aq_a2_a_afeeder_combout,
+	dataout => registre_aq_a2_a_D_driver);
 
 registre_aq_a2_a_CLRN_routing_wire_inst : cycloneive_routing_wire
 PORT MAP (
@@ -1109,7 +1250,7 @@ PORT MAP (
 	datain => SW_a17_a_ainput_o,
 	dataout => registre_aq_a2_a_ENA_driver);
 
--- Location: FF_X114_Y40_N1
+-- Location: FF_X114_Y41_N13
 registre_aq_a2_a : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -1118,9 +1259,8 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	clk => registre_aq_a2_a_CLK_driver,
-	asdata => registre_aq_a2_a_ASDATA_driver,
+	d => registre_aq_a2_a_D_driver,
 	clrn => registre_aq_a2_a_CLRN_driver,
-	sload => VCC,
 	ena => registre_aq_a2_a_ENA_driver,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
@@ -1142,34 +1282,15 @@ PORT MAP (
 	i => SW_a3_a_ainput_I_driver,
 	o => SW_a3_a_ainput_o);
 
-registre_aq_a3_a_afeeder_DATAD_routing_wire_inst : cycloneive_routing_wire
-PORT MAP (
-	datain => SW_a3_a_ainput_o,
-	dataout => registre_aq_a3_a_afeeder_DATAD_driver);
-
--- Location: LCCOMB_X114_Y40_N14
-registre_aq_a3_a_afeeder : cycloneive_lcell_comb
--- Equation(s):
--- registre_aq_a3_a_afeeder_combout = SW_a3_a_ainput_o
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1111111100000000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	datad => registre_aq_a3_a_afeeder_DATAD_driver,
-	combout => registre_aq_a3_a_afeeder_combout);
-
 registre_aq_a3_a_CLK_routing_wire_inst : cycloneive_routing_wire
 PORT MAP (
 	datain => Key_a0_a_ainput_o,
 	dataout => registre_aq_a3_a_CLK_driver);
 
-registre_aq_a3_a_D_routing_wire_inst : cycloneive_routing_wire
+registre_aq_a3_a_ASDATA_routing_wire_inst : cycloneive_routing_wire
 PORT MAP (
-	datain => registre_aq_a3_a_afeeder_combout,
-	dataout => registre_aq_a3_a_D_driver);
+	datain => SW_a3_a_ainput_o,
+	dataout => registre_aq_a3_a_ASDATA_driver);
 
 registre_aq_a3_a_CLRN_routing_wire_inst : cycloneive_routing_wire
 PORT MAP (
@@ -1181,7 +1302,7 @@ PORT MAP (
 	datain => SW_a17_a_ainput_o,
 	dataout => registre_aq_a3_a_ENA_driver);
 
--- Location: FF_X114_Y40_N15
+-- Location: FF_X114_Y41_N3
 registre_aq_a3_a : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -1190,8 +1311,9 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	clk => registre_aq_a3_a_CLK_driver,
-	d => registre_aq_a3_a_D_driver,
+	asdata => registre_aq_a3_a_ASDATA_driver,
 	clrn => registre_aq_a3_a_CLRN_driver,
+	sload => VCC,
 	ena => registre_aq_a3_a_ENA_driver,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
@@ -1218,7 +1340,7 @@ PORT MAP (
 	datain => SW_a4_a_ainput_o,
 	dataout => registre_aq_a4_a_afeeder_DATAD_driver);
 
--- Location: LCCOMB_X114_Y40_N4
+-- Location: LCCOMB_X114_Y41_N8
 registre_aq_a4_a_afeeder : cycloneive_lcell_comb
 -- Equation(s):
 -- registre_aq_a4_a_afeeder_combout = SW_a4_a_ainput_o
@@ -1252,7 +1374,7 @@ PORT MAP (
 	datain => SW_a17_a_ainput_o,
 	dataout => registre_aq_a4_a_ENA_driver);
 
--- Location: FF_X114_Y40_N5
+-- Location: FF_X114_Y41_N9
 registre_aq_a4_a : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -1304,7 +1426,7 @@ PORT MAP (
 	datain => SW_a17_a_ainput_o,
 	dataout => registre_aq_a5_a_ENA_driver);
 
--- Location: FF_X114_Y40_N3
+-- Location: FF_X114_Y41_N23
 registre_aq_a5_a : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -1337,34 +1459,15 @@ PORT MAP (
 	i => SW_a6_a_ainput_I_driver,
 	o => SW_a6_a_ainput_o);
 
-registre_aq_a6_a_afeeder_DATAD_routing_wire_inst : cycloneive_routing_wire
-PORT MAP (
-	datain => SW_a6_a_ainput_o,
-	dataout => registre_aq_a6_a_afeeder_DATAD_driver);
-
--- Location: LCCOMB_X114_Y40_N28
-registre_aq_a6_a_afeeder : cycloneive_lcell_comb
--- Equation(s):
--- registre_aq_a6_a_afeeder_combout = SW_a6_a_ainput_o
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1111111100000000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	datad => registre_aq_a6_a_afeeder_DATAD_driver,
-	combout => registre_aq_a6_a_afeeder_combout);
-
 registre_aq_a6_a_CLK_routing_wire_inst : cycloneive_routing_wire
 PORT MAP (
 	datain => Key_a0_a_ainput_o,
 	dataout => registre_aq_a6_a_CLK_driver);
 
-registre_aq_a6_a_D_routing_wire_inst : cycloneive_routing_wire
+registre_aq_a6_a_ASDATA_routing_wire_inst : cycloneive_routing_wire
 PORT MAP (
-	datain => registre_aq_a6_a_afeeder_combout,
-	dataout => registre_aq_a6_a_D_driver);
+	datain => SW_a6_a_ainput_o,
+	dataout => registre_aq_a6_a_ASDATA_driver);
 
 registre_aq_a6_a_CLRN_routing_wire_inst : cycloneive_routing_wire
 PORT MAP (
@@ -1376,7 +1479,7 @@ PORT MAP (
 	datain => SW_a17_a_ainput_o,
 	dataout => registre_aq_a6_a_ENA_driver);
 
--- Location: FF_X114_Y40_N29
+-- Location: FF_X114_Y41_N25
 registre_aq_a6_a : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -1385,8 +1488,9 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	clk => registre_aq_a6_a_CLK_driver,
-	d => registre_aq_a6_a_D_driver,
+	asdata => registre_aq_a6_a_ASDATA_driver,
 	clrn => registre_aq_a6_a_CLRN_driver,
+	sload => VCC,
 	ena => registre_aq_a6_a_ENA_driver,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
@@ -1408,15 +1512,34 @@ PORT MAP (
 	i => SW_a7_a_ainput_I_driver,
 	o => SW_a7_a_ainput_o);
 
+registre_aq_a7_a_afeeder_DATAD_routing_wire_inst : cycloneive_routing_wire
+PORT MAP (
+	datain => SW_a7_a_ainput_o,
+	dataout => registre_aq_a7_a_afeeder_DATAD_driver);
+
+-- Location: LCCOMB_X114_Y41_N10
+registre_aq_a7_a_afeeder : cycloneive_lcell_comb
+-- Equation(s):
+-- registre_aq_a7_a_afeeder_combout = SW_a7_a_ainput_o
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1111111100000000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	datad => registre_aq_a7_a_afeeder_DATAD_driver,
+	combout => registre_aq_a7_a_afeeder_combout);
+
 registre_aq_a7_a_CLK_routing_wire_inst : cycloneive_routing_wire
 PORT MAP (
 	datain => Key_a0_a_ainput_o,
 	dataout => registre_aq_a7_a_CLK_driver);
 
-registre_aq_a7_a_ASDATA_routing_wire_inst : cycloneive_routing_wire
+registre_aq_a7_a_D_routing_wire_inst : cycloneive_routing_wire
 PORT MAP (
-	datain => SW_a7_a_ainput_o,
-	dataout => registre_aq_a7_a_ASDATA_driver);
+	datain => registre_aq_a7_a_afeeder_combout,
+	dataout => registre_aq_a7_a_D_driver);
 
 registre_aq_a7_a_CLRN_routing_wire_inst : cycloneive_routing_wire
 PORT MAP (
@@ -1428,7 +1551,7 @@ PORT MAP (
 	datain => SW_a17_a_ainput_o,
 	dataout => registre_aq_a7_a_ENA_driver);
 
--- Location: FF_X114_Y40_N19
+-- Location: FF_X114_Y41_N11
 registre_aq_a7_a : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -1437,29 +1560,12 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	clk => registre_aq_a7_a_CLK_driver,
-	asdata => registre_aq_a7_a_ASDATA_driver,
+	d => registre_aq_a7_a_D_driver,
 	clrn => registre_aq_a7_a_CLRN_driver,
-	sload => VCC,
 	ena => registre_aq_a7_a_ENA_driver,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
 	q => registre_aq(7));
-
-SW_a15_a_ainput_I_routing_wire_inst : cycloneive_routing_wire
-PORT MAP (
-	datain => ww_SW(15),
-	dataout => SW_a15_a_ainput_I_driver);
-
--- Location: IOIBUF_X115_Y6_N15
-SW_a15_a_ainput : cycloneive_io_ibuf
--- pragma translate_off
-GENERIC MAP (
-	bus_hold => "false",
-	simulate_z_as => "z")
--- pragma translate_on
-PORT MAP (
-	i => SW_a15_a_ainput_I_driver,
-	o => SW_a15_a_ainput_o);
 
 SW_a14_a_ainput_I_routing_wire_inst : cycloneive_routing_wire
 PORT MAP (
@@ -1477,14 +1583,50 @@ PORT MAP (
 	i => SW_a14_a_ainput_I_driver,
 	o => SW_a14_a_ainput_o);
 
-registre_dec_aq_sig_a7_a_a7_DATAA_routing_wire_inst : cycloneive_routing_wire
+SW_a15_a_ainput_I_routing_wire_inst : cycloneive_routing_wire
 PORT MAP (
-	datain => SW_a15_a_ainput_o,
-	dataout => registre_dec_aq_sig_a7_a_a7_DATAA_driver);
+	datain => ww_SW(15),
+	dataout => SW_a15_a_ainput_I_driver);
+
+-- Location: IOIBUF_X115_Y6_N15
+SW_a15_a_ainput : cycloneive_io_ibuf
+-- pragma translate_off
+GENERIC MAP (
+	bus_hold => "false",
+	simulate_z_as => "z")
+-- pragma translate_on
+PORT MAP (
+	i => SW_a15_a_ainput_I_driver,
+	o => SW_a15_a_ainput_o);
+
+registre_dec_aq_sig_a9_DATAA_routing_wire_inst : cycloneive_routing_wire
+PORT MAP (
+	datain => SW_a14_a_ainput_o,
+	dataout => registre_dec_aq_sig_a9_DATAA_driver);
+
+registre_dec_aq_sig_a9_DATAD_routing_wire_inst : cycloneive_routing_wire
+PORT MAP (
+	datain => registre_dec_aq_sig(6),
+	dataout => registre_dec_aq_sig_a9_DATAD_driver);
+
+-- Location: LCCOMB_X114_Y38_N24
+registre_dec_aq_sig_a9 : cycloneive_lcell_comb
+-- Equation(s):
+-- registre_dec_aq_sig_a9_combout = (!SW_a14_a_ainput_o & registre_dec_aq_sig(6))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0101010100000000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => registre_dec_aq_sig_a9_DATAA_driver,
+	datad => registre_dec_aq_sig_a9_DATAD_driver,
+	combout => registre_dec_aq_sig_a9_combout);
 
 registre_dec_aq_sig_a7_a_a7_DATAB_routing_wire_inst : cycloneive_routing_wire
 PORT MAP (
-	datain => SW_a14_a_ainput_o,
+	datain => SW_a15_a_ainput_o,
 	dataout => registre_dec_aq_sig_a7_a_a7_DATAB_driver);
 
 registre_dec_aq_sig_a7_a_a7_DATAC_routing_wire_inst : cycloneive_routing_wire
@@ -1494,21 +1636,20 @@ PORT MAP (
 
 registre_dec_aq_sig_a7_a_a7_DATAD_routing_wire_inst : cycloneive_routing_wire
 PORT MAP (
-	datain => registre_dec_aq_sig(6),
+	datain => registre_dec_aq_sig_a9_combout,
 	dataout => registre_dec_aq_sig_a7_a_a7_DATAD_driver);
 
--- Location: LCCOMB_X112_Y36_N2
+-- Location: LCCOMB_X113_Y38_N14
 registre_dec_aq_sig_a7_a_a7 : cycloneive_lcell_comb
 -- Equation(s):
--- registre_dec_aq_sig_a7_a_a7_combout = (SW_a15_a_ainput_o & (!SW_a14_a_ainput_o & ((registre_dec_aq_sig(6))))) # (!SW_a15_a_ainput_o & (((registre_dec_aq_sig(7)))))
+-- registre_dec_aq_sig_a7_a_a7_combout = (SW_a15_a_ainput_o & ((registre_dec_aq_sig_a9_combout))) # (!SW_a15_a_ainput_o & (registre_dec_aq_sig(7)))
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "0111001001010000",
+	lut_mask => "1111110000110000",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => registre_dec_aq_sig_a7_a_a7_DATAA_driver,
 	datab => registre_dec_aq_sig_a7_a_a7_DATAB_driver,
 	datac => registre_dec_aq_sig_a7_a_a7_DATAC_driver,
 	datad => registre_dec_aq_sig_a7_a_a7_DATAD_driver,
@@ -1555,7 +1696,7 @@ PORT MAP (
 	datain => SW_a16_a_ainput_o,
 	dataout => registre_dec_aq_sig_a7_a_SLOAD_driver);
 
--- Location: FF_X112_Y36_N3
+-- Location: FF_X113_Y38_N15
 registre_dec_aq_sig_a7_a : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -1574,27 +1715,27 @@ PORT MAP (
 
 registre_dec_aq_sig_a6_a_a6_DATAA_routing_wire_inst : cycloneive_routing_wire
 PORT MAP (
-	datain => registre_dec_aq_sig(7),
+	datain => SW_a14_a_ainput_o,
 	dataout => registre_dec_aq_sig_a6_a_a6_DATAA_driver);
 
 registre_dec_aq_sig_a6_a_a6_DATAB_routing_wire_inst : cycloneive_routing_wire
 PORT MAP (
-	datain => SW_a14_a_ainput_o,
+	datain => registre_dec_aq_sig(5),
 	dataout => registre_dec_aq_sig_a6_a_a6_DATAB_driver);
 
 registre_dec_aq_sig_a6_a_a6_DATAD_routing_wire_inst : cycloneive_routing_wire
 PORT MAP (
-	datain => registre_dec_aq_sig(5),
+	datain => registre_dec_aq_sig(7),
 	dataout => registre_dec_aq_sig_a6_a_a6_DATAD_driver);
 
--- Location: LCCOMB_X111_Y36_N30
+-- Location: LCCOMB_X114_Y38_N18
 registre_dec_aq_sig_a6_a_a6 : cycloneive_lcell_comb
 -- Equation(s):
--- registre_dec_aq_sig_a6_a_a6_combout = (SW_a14_a_ainput_o & (registre_dec_aq_sig(7))) # (!SW_a14_a_ainput_o & ((registre_dec_aq_sig(5))))
+-- registre_dec_aq_sig_a6_a_a6_combout = (SW_a14_a_ainput_o & ((registre_dec_aq_sig(7)))) # (!SW_a14_a_ainput_o & (registre_dec_aq_sig(5)))
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "1011101110001000",
+	lut_mask => "1110111001000100",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
@@ -1603,30 +1744,30 @@ PORT MAP (
 	datad => registre_dec_aq_sig_a6_a_a6_DATAD_driver,
 	combout => registre_dec_aq_sig_a6_a_a6_combout);
 
-registre_dec_aq_sig_a1_a_a9_DATAC_routing_wire_inst : cycloneive_routing_wire
-PORT MAP (
-	datain => SW_a15_a_ainput_o,
-	dataout => registre_dec_aq_sig_a1_a_a9_DATAC_driver);
-
-registre_dec_aq_sig_a1_a_a9_DATAD_routing_wire_inst : cycloneive_routing_wire
+registre_dec_aq_sig_a1_a_a8_DATAA_routing_wire_inst : cycloneive_routing_wire
 PORT MAP (
 	datain => SW_a16_a_ainput_o,
-	dataout => registre_dec_aq_sig_a1_a_a9_DATAD_driver);
+	dataout => registre_dec_aq_sig_a1_a_a8_DATAA_driver);
 
--- Location: LCCOMB_X112_Y36_N24
-registre_dec_aq_sig_a1_a_a9 : cycloneive_lcell_comb
+registre_dec_aq_sig_a1_a_a8_DATAD_routing_wire_inst : cycloneive_routing_wire
+PORT MAP (
+	datain => SW_a15_a_ainput_o,
+	dataout => registre_dec_aq_sig_a1_a_a8_DATAD_driver);
+
+-- Location: LCCOMB_X113_Y38_N4
+registre_dec_aq_sig_a1_a_a8 : cycloneive_lcell_comb
 -- Equation(s):
--- registre_dec_aq_sig_a1_a_a9_combout = (SW_a15_a_ainput_o) # (SW_a16_a_ainput_o)
+-- registre_dec_aq_sig_a1_a_a8_combout = (SW_a16_a_ainput_o) # (SW_a15_a_ainput_o)
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "1111111111110000",
+	lut_mask => "1111111110101010",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	datac => registre_dec_aq_sig_a1_a_a9_DATAC_driver,
-	datad => registre_dec_aq_sig_a1_a_a9_DATAD_driver,
-	combout => registre_dec_aq_sig_a1_a_a9_combout);
+	dataa => registre_dec_aq_sig_a1_a_a8_DATAA_driver,
+	datad => registre_dec_aq_sig_a1_a_a8_DATAD_driver,
+	combout => registre_dec_aq_sig_a1_a_a8_combout);
 
 registre_dec_aq_sig_a6_a_CLK_routing_wire_inst : cycloneive_routing_wire
 PORT MAP (
@@ -1655,10 +1796,10 @@ PORT MAP (
 
 registre_dec_aq_sig_a6_a_ENA_routing_wire_inst : cycloneive_routing_wire
 PORT MAP (
-	datain => registre_dec_aq_sig_a1_a_a9_combout,
+	datain => registre_dec_aq_sig_a1_a_a8_combout,
 	dataout => registre_dec_aq_sig_a6_a_ENA_driver);
 
--- Location: FF_X111_Y36_N31
+-- Location: FF_X114_Y38_N19
 registre_dec_aq_sig_a6_a : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -1678,12 +1819,12 @@ PORT MAP (
 
 registre_dec_aq_sig_a5_a_a5_DATAA_routing_wire_inst : cycloneive_routing_wire
 PORT MAP (
-	datain => registre_dec_aq_sig(6),
+	datain => SW_a14_a_ainput_o,
 	dataout => registre_dec_aq_sig_a5_a_a5_DATAA_driver);
 
 registre_dec_aq_sig_a5_a_a5_DATAB_routing_wire_inst : cycloneive_routing_wire
 PORT MAP (
-	datain => SW_a14_a_ainput_o,
+	datain => registre_dec_aq_sig(6),
 	dataout => registre_dec_aq_sig_a5_a_a5_DATAB_driver);
 
 registre_dec_aq_sig_a5_a_a5_DATAD_routing_wire_inst : cycloneive_routing_wire
@@ -1691,14 +1832,14 @@ PORT MAP (
 	datain => registre_dec_aq_sig(4),
 	dataout => registre_dec_aq_sig_a5_a_a5_DATAD_driver);
 
--- Location: LCCOMB_X111_Y36_N28
+-- Location: LCCOMB_X114_Y38_N16
 registre_dec_aq_sig_a5_a_a5 : cycloneive_lcell_comb
 -- Equation(s):
 -- registre_dec_aq_sig_a5_a_a5_combout = (SW_a14_a_ainput_o & (registre_dec_aq_sig(6))) # (!SW_a14_a_ainput_o & ((registre_dec_aq_sig(4))))
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "1011101110001000",
+	lut_mask => "1101110110001000",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
@@ -1734,10 +1875,10 @@ PORT MAP (
 
 registre_dec_aq_sig_a5_a_ENA_routing_wire_inst : cycloneive_routing_wire
 PORT MAP (
-	datain => registre_dec_aq_sig_a1_a_a9_combout,
+	datain => registre_dec_aq_sig_a1_a_a8_combout,
 	dataout => registre_dec_aq_sig_a5_a_ENA_driver);
 
--- Location: FF_X111_Y36_N29
+-- Location: FF_X114_Y38_N17
 registre_dec_aq_sig_a5_a : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -1762,22 +1903,22 @@ PORT MAP (
 
 registre_dec_aq_sig_a4_a_a4_DATAB_routing_wire_inst : cycloneive_routing_wire
 PORT MAP (
-	datain => registre_dec_aq_sig(5),
+	datain => registre_dec_aq_sig(3),
 	dataout => registre_dec_aq_sig_a4_a_a4_DATAB_driver);
 
 registre_dec_aq_sig_a4_a_a4_DATAD_routing_wire_inst : cycloneive_routing_wire
 PORT MAP (
-	datain => registre_dec_aq_sig(3),
+	datain => registre_dec_aq_sig(5),
 	dataout => registre_dec_aq_sig_a4_a_a4_DATAD_driver);
 
--- Location: LCCOMB_X111_Y36_N18
+-- Location: LCCOMB_X114_Y38_N2
 registre_dec_aq_sig_a4_a_a4 : cycloneive_lcell_comb
 -- Equation(s):
--- registre_dec_aq_sig_a4_a_a4_combout = (SW_a14_a_ainput_o & (registre_dec_aq_sig(5))) # (!SW_a14_a_ainput_o & ((registre_dec_aq_sig(3))))
+-- registre_dec_aq_sig_a4_a_a4_combout = (SW_a14_a_ainput_o & ((registre_dec_aq_sig(5)))) # (!SW_a14_a_ainput_o & (registre_dec_aq_sig(3)))
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "1101110110001000",
+	lut_mask => "1110111001000100",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
@@ -1813,10 +1954,10 @@ PORT MAP (
 
 registre_dec_aq_sig_a4_a_ENA_routing_wire_inst : cycloneive_routing_wire
 PORT MAP (
-	datain => registre_dec_aq_sig_a1_a_a9_combout,
+	datain => registre_dec_aq_sig_a1_a_a8_combout,
 	dataout => registre_dec_aq_sig_a4_a_ENA_driver);
 
--- Location: FF_X111_Y36_N19
+-- Location: FF_X114_Y38_N3
 registre_dec_aq_sig_a4_a : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -1849,7 +1990,7 @@ PORT MAP (
 	datain => registre_dec_aq_sig(4),
 	dataout => registre_dec_aq_sig_a3_a_a3_DATAD_driver);
 
--- Location: LCCOMB_X111_Y36_N24
+-- Location: LCCOMB_X114_Y38_N20
 registre_dec_aq_sig_a3_a_a3 : cycloneive_lcell_comb
 -- Equation(s):
 -- registre_dec_aq_sig_a3_a_a3_combout = (SW_a14_a_ainput_o & ((registre_dec_aq_sig(4)))) # (!SW_a14_a_ainput_o & (registre_dec_aq_sig(2)))
@@ -1892,10 +2033,10 @@ PORT MAP (
 
 registre_dec_aq_sig_a3_a_ENA_routing_wire_inst : cycloneive_routing_wire
 PORT MAP (
-	datain => registre_dec_aq_sig_a1_a_a9_combout,
+	datain => registre_dec_aq_sig_a1_a_a8_combout,
 	dataout => registre_dec_aq_sig_a3_a_ENA_driver);
 
--- Location: FF_X111_Y36_N25
+-- Location: FF_X114_Y38_N21
 registre_dec_aq_sig_a3_a : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -1915,27 +2056,27 @@ PORT MAP (
 
 registre_dec_aq_sig_a2_a_a2_DATAA_routing_wire_inst : cycloneive_routing_wire
 PORT MAP (
-	datain => registre_dec_aq_sig(1),
+	datain => SW_a14_a_ainput_o,
 	dataout => registre_dec_aq_sig_a2_a_a2_DATAA_driver);
 
 registre_dec_aq_sig_a2_a_a2_DATAB_routing_wire_inst : cycloneive_routing_wire
 PORT MAP (
-	datain => SW_a14_a_ainput_o,
+	datain => registre_dec_aq_sig(3),
 	dataout => registre_dec_aq_sig_a2_a_a2_DATAB_driver);
 
 registre_dec_aq_sig_a2_a_a2_DATAD_routing_wire_inst : cycloneive_routing_wire
 PORT MAP (
-	datain => registre_dec_aq_sig(3),
+	datain => registre_dec_aq_sig(1),
 	dataout => registre_dec_aq_sig_a2_a_a2_DATAD_driver);
 
--- Location: LCCOMB_X111_Y36_N22
+-- Location: LCCOMB_X114_Y38_N22
 registre_dec_aq_sig_a2_a_a2 : cycloneive_lcell_comb
 -- Equation(s):
--- registre_dec_aq_sig_a2_a_a2_combout = (SW_a14_a_ainput_o & ((registre_dec_aq_sig(3)))) # (!SW_a14_a_ainput_o & (registre_dec_aq_sig(1)))
+-- registre_dec_aq_sig_a2_a_a2_combout = (SW_a14_a_ainput_o & (registre_dec_aq_sig(3))) # (!SW_a14_a_ainput_o & ((registre_dec_aq_sig(1))))
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "1110111000100010",
+	lut_mask => "1101110110001000",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
@@ -1971,10 +2112,10 @@ PORT MAP (
 
 registre_dec_aq_sig_a2_a_ENA_routing_wire_inst : cycloneive_routing_wire
 PORT MAP (
-	datain => registre_dec_aq_sig_a1_a_a9_combout,
+	datain => registre_dec_aq_sig_a1_a_a8_combout,
 	dataout => registre_dec_aq_sig_a2_a_ENA_driver);
 
--- Location: FF_X111_Y36_N23
+-- Location: FF_X114_Y38_N23
 registre_dec_aq_sig_a2_a : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -1994,12 +2135,12 @@ PORT MAP (
 
 registre_dec_aq_sig_a1_a_a1_DATAA_routing_wire_inst : cycloneive_routing_wire
 PORT MAP (
-	datain => registre_dec_aq_sig(2),
+	datain => SW_a14_a_ainput_o,
 	dataout => registre_dec_aq_sig_a1_a_a1_DATAA_driver);
 
 registre_dec_aq_sig_a1_a_a1_DATAB_routing_wire_inst : cycloneive_routing_wire
 PORT MAP (
-	datain => SW_a14_a_ainput_o,
+	datain => registre_dec_aq_sig(2),
 	dataout => registre_dec_aq_sig_a1_a_a1_DATAB_driver);
 
 registre_dec_aq_sig_a1_a_a1_DATAD_routing_wire_inst : cycloneive_routing_wire
@@ -2007,14 +2148,14 @@ PORT MAP (
 	datain => registre_dec_aq_sig(0),
 	dataout => registre_dec_aq_sig_a1_a_a1_DATAD_driver);
 
--- Location: LCCOMB_X111_Y36_N12
+-- Location: LCCOMB_X114_Y38_N28
 registre_dec_aq_sig_a1_a_a1 : cycloneive_lcell_comb
 -- Equation(s):
 -- registre_dec_aq_sig_a1_a_a1_combout = (SW_a14_a_ainput_o & (registre_dec_aq_sig(2))) # (!SW_a14_a_ainput_o & ((registre_dec_aq_sig(0))))
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "1011101110001000",
+	lut_mask => "1101110110001000",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
@@ -2050,10 +2191,10 @@ PORT MAP (
 
 registre_dec_aq_sig_a1_a_ENA_routing_wire_inst : cycloneive_routing_wire
 PORT MAP (
-	datain => registre_dec_aq_sig_a1_a_a9_combout,
+	datain => registre_dec_aq_sig_a1_a_a8_combout,
 	dataout => registre_dec_aq_sig_a1_a_ENA_driver);
 
--- Location: FF_X111_Y36_N13
+-- Location: FF_X114_Y38_N29
 registre_dec_aq_sig_a1_a : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -2071,30 +2212,10 @@ PORT MAP (
 	devpor => ww_devpor,
 	q => registre_dec_aq_sig(1));
 
-registre_dec_aq_sig_a8_DATAC_routing_wire_inst : cycloneive_routing_wire
+registre_dec_aq_sig_a0_a_a0_DATAA_routing_wire_inst : cycloneive_routing_wire
 PORT MAP (
 	datain => SW_a14_a_ainput_o,
-	dataout => registre_dec_aq_sig_a8_DATAC_driver);
-
-registre_dec_aq_sig_a8_DATAD_routing_wire_inst : cycloneive_routing_wire
-PORT MAP (
-	datain => registre_dec_aq_sig(1),
-	dataout => registre_dec_aq_sig_a8_DATAD_driver);
-
--- Location: LCCOMB_X111_Y36_N20
-registre_dec_aq_sig_a8 : cycloneive_lcell_comb
--- Equation(s):
--- registre_dec_aq_sig_a8_combout = (SW_a14_a_ainput_o & registre_dec_aq_sig(1))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "1111000000000000",
-	sum_lutc_input => "datac")
--- pragma translate_on
-PORT MAP (
-	datac => registre_dec_aq_sig_a8_DATAC_driver,
-	datad => registre_dec_aq_sig_a8_DATAD_driver,
-	combout => registre_dec_aq_sig_a8_combout);
+	dataout => registre_dec_aq_sig_a0_a_a0_DATAA_driver);
 
 registre_dec_aq_sig_a0_a_a0_DATAB_routing_wire_inst : cycloneive_routing_wire
 PORT MAP (
@@ -2108,20 +2229,21 @@ PORT MAP (
 
 registre_dec_aq_sig_a0_a_a0_DATAD_routing_wire_inst : cycloneive_routing_wire
 PORT MAP (
-	datain => registre_dec_aq_sig_a8_combout,
+	datain => registre_dec_aq_sig(1),
 	dataout => registre_dec_aq_sig_a0_a_a0_DATAD_driver);
 
--- Location: LCCOMB_X112_Y36_N4
+-- Location: LCCOMB_X113_Y38_N20
 registre_dec_aq_sig_a0_a_a0 : cycloneive_lcell_comb
 -- Equation(s):
--- registre_dec_aq_sig_a0_a_a0_combout = (SW_a15_a_ainput_o & ((registre_dec_aq_sig_a8_combout))) # (!SW_a15_a_ainput_o & (registre_dec_aq_sig(0)))
+-- registre_dec_aq_sig_a0_a_a0_combout = (SW_a15_a_ainput_o & (SW_a14_a_ainput_o & ((registre_dec_aq_sig(1))))) # (!SW_a15_a_ainput_o & (((registre_dec_aq_sig(0)))))
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "1111110000110000",
+	lut_mask => "1011100000110000",
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
+	dataa => registre_dec_aq_sig_a0_a_a0_DATAA_driver,
 	datab => registre_dec_aq_sig_a0_a_a0_DATAB_driver,
 	datac => registre_dec_aq_sig_a0_a_a0_DATAC_driver,
 	datad => registre_dec_aq_sig_a0_a_a0_DATAD_driver,
@@ -2152,7 +2274,7 @@ PORT MAP (
 	datain => SW_a16_a_ainput_o,
 	dataout => registre_dec_aq_sig_a0_a_SLOAD_driver);
 
--- Location: FF_X112_Y36_N5
+-- Location: FF_X113_Y38_N21
 registre_dec_aq_sig_a0_a : dffeas
 -- pragma translate_off
 GENERIC MAP (
@@ -2168,6 +2290,605 @@ PORT MAP (
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
 	q => registre_dec_aq_sig(0));
+
+SW_a12_a_ainput_I_routing_wire_inst : cycloneive_routing_wire
+PORT MAP (
+	datain => ww_SW(12),
+	dataout => SW_a12_a_ainput_I_driver);
+
+-- Location: IOIBUF_X115_Y7_N15
+SW_a12_a_ainput : cycloneive_io_ibuf
+-- pragma translate_off
+GENERIC MAP (
+	bus_hold => "false",
+	simulate_z_as => "z")
+-- pragma translate_on
+PORT MAP (
+	i => SW_a12_a_ainput_I_driver,
+	o => SW_a12_a_ainput_o);
+
+compteur_aq_sig_a3_DATAB_routing_wire_inst : cycloneive_routing_wire
+PORT MAP (
+	datain => SW_a12_a_ainput_o,
+	dataout => compteur_aq_sig_a3_DATAB_driver);
+
+compteur_aq_sig_a3_DATAC_routing_wire_inst : cycloneive_routing_wire
+PORT MAP (
+	datain => compteur_aq_sig(0),
+	dataout => compteur_aq_sig_a3_DATAC_driver);
+
+compteur_aq_sig_a3_DATAD_routing_wire_inst : cycloneive_routing_wire
+PORT MAP (
+	datain => SW_a0_a_ainput_o,
+	dataout => compteur_aq_sig_a3_DATAD_driver);
+
+-- Location: LCCOMB_X114_Y40_N12
+compteur_aq_sig_a3 : cycloneive_lcell_comb
+-- Equation(s):
+-- compteur_aq_sig_a3_combout = (SW_a12_a_ainput_o & ((SW_a0_a_ainput_o))) # (!SW_a12_a_ainput_o & (!compteur_aq_sig(0)))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1100111100000011",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	datab => compteur_aq_sig_a3_DATAB_driver,
+	datac => compteur_aq_sig_a3_DATAC_driver,
+	datad => compteur_aq_sig_a3_DATAD_driver,
+	combout => compteur_aq_sig_a3_combout);
+
+compteur_aq_sig_a0_a_CLK_routing_wire_inst : cycloneive_routing_wire
+PORT MAP (
+	datain => Key_a0_a_ainput_o,
+	dataout => compteur_aq_sig_a0_a_CLK_driver);
+
+compteur_aq_sig_a0_a_D_routing_wire_inst : cycloneive_routing_wire
+PORT MAP (
+	datain => compteur_aq_sig_a3_combout,
+	dataout => compteur_aq_sig_a0_a_D_driver);
+
+compteur_aq_sig_a0_a_CLRN_routing_wire_inst : cycloneive_routing_wire
+PORT MAP (
+	datain => Key_a1_a_ainput_o,
+	dataout => compteur_aq_sig_a0_a_CLRN_driver);
+
+-- Location: FF_X114_Y40_N13
+compteur_aq_sig_a0_a : dffeas
+-- pragma translate_off
+GENERIC MAP (
+	is_wysiwyg => "true",
+	power_up => "low")
+-- pragma translate_on
+PORT MAP (
+	clk => compteur_aq_sig_a0_a_CLK_driver,
+	d => compteur_aq_sig_a0_a_D_driver,
+	clrn => compteur_aq_sig_a0_a_CLRN_driver,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	q => compteur_aq_sig(0));
+
+SW_a13_a_ainput_I_routing_wire_inst : cycloneive_routing_wire
+PORT MAP (
+	datain => ww_SW(13),
+	dataout => SW_a13_a_ainput_I_driver);
+
+-- Location: IOIBUF_X115_Y9_N22
+SW_a13_a_ainput : cycloneive_io_ibuf
+-- pragma translate_off
+GENERIC MAP (
+	bus_hold => "false",
+	simulate_z_as => "z")
+-- pragma translate_on
+PORT MAP (
+	i => SW_a13_a_ainput_I_driver,
+	o => SW_a13_a_ainput_o);
+
+compteur_aq_sig_a1_a_a5_DATAA_routing_wire_inst : cycloneive_routing_wire
+PORT MAP (
+	datain => compteur_aq_sig(0),
+	dataout => compteur_aq_sig_a1_a_a5_DATAA_driver);
+
+-- Location: LCCOMB_X114_Y40_N18
+compteur_aq_sig_a1_a_a5 : cycloneive_lcell_comb
+-- Equation(s):
+-- compteur_aq_sig_a1_a_a5_cout = CARRY(compteur_aq_sig(0))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0000000010101010",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => compteur_aq_sig_a1_a_a5_DATAA_driver,
+	datad => VCC,
+	cout => compteur_aq_sig_a1_a_a5_cout);
+
+compteur_aq_sig_a1_a_a6_DATAA_routing_wire_inst : cycloneive_routing_wire
+PORT MAP (
+	datain => SW_a13_a_ainput_o,
+	dataout => compteur_aq_sig_a1_a_a6_DATAA_driver);
+
+compteur_aq_sig_a1_a_a6_DATAB_routing_wire_inst : cycloneive_routing_wire
+PORT MAP (
+	datain => compteur_aq_sig(1),
+	dataout => compteur_aq_sig_a1_a_a6_DATAB_driver);
+
+compteur_aq_sig_a1_a_a6_CIN_routing_wire_inst : cycloneive_routing_wire
+PORT MAP (
+	datain => compteur_aq_sig_a1_a_a5_cout,
+	dataout => compteur_aq_sig_a1_a_a6_CIN_driver);
+
+-- Location: LCCOMB_X114_Y40_N20
+compteur_aq_sig_a1_a_a6 : cycloneive_lcell_comb
+-- Equation(s):
+-- compteur_aq_sig_a1_a_a6_combout = (SW_a13_a_ainput_o & ((compteur_aq_sig(1) & (!compteur_aq_sig_a1_a_a5_cout)) # (!compteur_aq_sig(1) & ((compteur_aq_sig_a1_a_a5_cout) # (GND))))) # (!SW_a13_a_ainput_o & ((compteur_aq_sig(1) & 
+-- (compteur_aq_sig_a1_a_a5_cout & VCC)) # (!compteur_aq_sig(1) & (!compteur_aq_sig_a1_a_a5_cout))))
+-- compteur_aq_sig_a1_a_a7 = CARRY((SW_a13_a_ainput_o & ((!compteur_aq_sig_a1_a_a5_cout) # (!compteur_aq_sig(1)))) # (!SW_a13_a_ainput_o & (!compteur_aq_sig(1) & !compteur_aq_sig_a1_a_a5_cout)))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0110100100101011",
+	sum_lutc_input => "cin")
+-- pragma translate_on
+PORT MAP (
+	dataa => compteur_aq_sig_a1_a_a6_DATAA_driver,
+	datab => compteur_aq_sig_a1_a_a6_DATAB_driver,
+	datad => VCC,
+	cin => compteur_aq_sig_a1_a_a6_CIN_driver,
+	combout => compteur_aq_sig_a1_a_a6_combout,
+	cout => compteur_aq_sig_a1_a_a7);
+
+compteur_aq_sig_a1_a_CLK_routing_wire_inst : cycloneive_routing_wire
+PORT MAP (
+	datain => Key_a0_a_ainput_o,
+	dataout => compteur_aq_sig_a1_a_CLK_driver);
+
+compteur_aq_sig_a1_a_D_routing_wire_inst : cycloneive_routing_wire
+PORT MAP (
+	datain => compteur_aq_sig_a1_a_a6_combout,
+	dataout => compteur_aq_sig_a1_a_D_driver);
+
+compteur_aq_sig_a1_a_ASDATA_routing_wire_inst : cycloneive_routing_wire
+PORT MAP (
+	datain => SW_a1_a_ainput_o,
+	dataout => compteur_aq_sig_a1_a_ASDATA_driver);
+
+compteur_aq_sig_a1_a_CLRN_routing_wire_inst : cycloneive_routing_wire
+PORT MAP (
+	datain => Key_a1_a_ainput_o,
+	dataout => compteur_aq_sig_a1_a_CLRN_driver);
+
+compteur_aq_sig_a1_a_SLOAD_routing_wire_inst : cycloneive_routing_wire
+PORT MAP (
+	datain => SW_a12_a_ainput_o,
+	dataout => compteur_aq_sig_a1_a_SLOAD_driver);
+
+-- Location: FF_X114_Y40_N21
+compteur_aq_sig_a1_a : dffeas
+-- pragma translate_off
+GENERIC MAP (
+	is_wysiwyg => "true",
+	power_up => "low")
+-- pragma translate_on
+PORT MAP (
+	clk => compteur_aq_sig_a1_a_CLK_driver,
+	d => compteur_aq_sig_a1_a_D_driver,
+	asdata => compteur_aq_sig_a1_a_ASDATA_driver,
+	clrn => compteur_aq_sig_a1_a_CLRN_driver,
+	sload => compteur_aq_sig_a1_a_SLOAD_driver,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	q => compteur_aq_sig(1));
+
+compteur_aq_sig_a2_a_a8_DATAA_routing_wire_inst : cycloneive_routing_wire
+PORT MAP (
+	datain => compteur_aq_sig(2),
+	dataout => compteur_aq_sig_a2_a_a8_DATAA_driver);
+
+compteur_aq_sig_a2_a_a8_DATAB_routing_wire_inst : cycloneive_routing_wire
+PORT MAP (
+	datain => SW_a13_a_ainput_o,
+	dataout => compteur_aq_sig_a2_a_a8_DATAB_driver);
+
+compteur_aq_sig_a2_a_a8_CIN_routing_wire_inst : cycloneive_routing_wire
+PORT MAP (
+	datain => compteur_aq_sig_a1_a_a7,
+	dataout => compteur_aq_sig_a2_a_a8_CIN_driver);
+
+-- Location: LCCOMB_X114_Y40_N22
+compteur_aq_sig_a2_a_a8 : cycloneive_lcell_comb
+-- Equation(s):
+-- compteur_aq_sig_a2_a_a8_combout = ((compteur_aq_sig(2) $ (SW_a13_a_ainput_o $ (compteur_aq_sig_a1_a_a7)))) # (GND)
+-- compteur_aq_sig_a2_a_a9 = CARRY((compteur_aq_sig(2) & ((!compteur_aq_sig_a1_a_a7) # (!SW_a13_a_ainput_o))) # (!compteur_aq_sig(2) & (!SW_a13_a_ainput_o & !compteur_aq_sig_a1_a_a7)))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1001011000101011",
+	sum_lutc_input => "cin")
+-- pragma translate_on
+PORT MAP (
+	dataa => compteur_aq_sig_a2_a_a8_DATAA_driver,
+	datab => compteur_aq_sig_a2_a_a8_DATAB_driver,
+	datad => VCC,
+	cin => compteur_aq_sig_a2_a_a8_CIN_driver,
+	combout => compteur_aq_sig_a2_a_a8_combout,
+	cout => compteur_aq_sig_a2_a_a9);
+
+compteur_aq_sig_a2_a_CLK_routing_wire_inst : cycloneive_routing_wire
+PORT MAP (
+	datain => Key_a0_a_ainput_o,
+	dataout => compteur_aq_sig_a2_a_CLK_driver);
+
+compteur_aq_sig_a2_a_D_routing_wire_inst : cycloneive_routing_wire
+PORT MAP (
+	datain => compteur_aq_sig_a2_a_a8_combout,
+	dataout => compteur_aq_sig_a2_a_D_driver);
+
+compteur_aq_sig_a2_a_ASDATA_routing_wire_inst : cycloneive_routing_wire
+PORT MAP (
+	datain => SW_a2_a_ainput_o,
+	dataout => compteur_aq_sig_a2_a_ASDATA_driver);
+
+compteur_aq_sig_a2_a_CLRN_routing_wire_inst : cycloneive_routing_wire
+PORT MAP (
+	datain => Key_a1_a_ainput_o,
+	dataout => compteur_aq_sig_a2_a_CLRN_driver);
+
+compteur_aq_sig_a2_a_SLOAD_routing_wire_inst : cycloneive_routing_wire
+PORT MAP (
+	datain => SW_a12_a_ainput_o,
+	dataout => compteur_aq_sig_a2_a_SLOAD_driver);
+
+-- Location: FF_X114_Y40_N23
+compteur_aq_sig_a2_a : dffeas
+-- pragma translate_off
+GENERIC MAP (
+	is_wysiwyg => "true",
+	power_up => "low")
+-- pragma translate_on
+PORT MAP (
+	clk => compteur_aq_sig_a2_a_CLK_driver,
+	d => compteur_aq_sig_a2_a_D_driver,
+	asdata => compteur_aq_sig_a2_a_ASDATA_driver,
+	clrn => compteur_aq_sig_a2_a_CLRN_driver,
+	sload => compteur_aq_sig_a2_a_SLOAD_driver,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	q => compteur_aq_sig(2));
+
+compteur_aq_sig_a3_a_a10_DATAB_routing_wire_inst : cycloneive_routing_wire
+PORT MAP (
+	datain => SW_a13_a_ainput_o,
+	dataout => compteur_aq_sig_a3_a_a10_DATAB_driver);
+
+compteur_aq_sig_a3_a_a10_DATAD_routing_wire_inst : cycloneive_routing_wire
+PORT MAP (
+	datain => compteur_aq_sig(3),
+	dataout => compteur_aq_sig_a3_a_a10_DATAD_driver);
+
+compteur_aq_sig_a3_a_a10_CIN_routing_wire_inst : cycloneive_routing_wire
+PORT MAP (
+	datain => compteur_aq_sig_a2_a_a9,
+	dataout => compteur_aq_sig_a3_a_a10_CIN_driver);
+
+-- Location: LCCOMB_X114_Y40_N24
+compteur_aq_sig_a3_a_a10 : cycloneive_lcell_comb
+-- Equation(s):
+-- compteur_aq_sig_a3_a_a10_combout = SW_a13_a_ainput_o $ (compteur_aq_sig_a2_a_a9 $ (!compteur_aq_sig(3)))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0011110011000011",
+	sum_lutc_input => "cin")
+-- pragma translate_on
+PORT MAP (
+	datab => compteur_aq_sig_a3_a_a10_DATAB_driver,
+	datad => compteur_aq_sig_a3_a_a10_DATAD_driver,
+	cin => compteur_aq_sig_a3_a_a10_CIN_driver,
+	combout => compteur_aq_sig_a3_a_a10_combout);
+
+compteur_aq_sig_a3_a_CLK_routing_wire_inst : cycloneive_routing_wire
+PORT MAP (
+	datain => Key_a0_a_ainput_o,
+	dataout => compteur_aq_sig_a3_a_CLK_driver);
+
+compteur_aq_sig_a3_a_D_routing_wire_inst : cycloneive_routing_wire
+PORT MAP (
+	datain => compteur_aq_sig_a3_a_a10_combout,
+	dataout => compteur_aq_sig_a3_a_D_driver);
+
+compteur_aq_sig_a3_a_ASDATA_routing_wire_inst : cycloneive_routing_wire
+PORT MAP (
+	datain => SW_a3_a_ainput_o,
+	dataout => compteur_aq_sig_a3_a_ASDATA_driver);
+
+compteur_aq_sig_a3_a_CLRN_routing_wire_inst : cycloneive_routing_wire
+PORT MAP (
+	datain => Key_a1_a_ainput_o,
+	dataout => compteur_aq_sig_a3_a_CLRN_driver);
+
+compteur_aq_sig_a3_a_SLOAD_routing_wire_inst : cycloneive_routing_wire
+PORT MAP (
+	datain => SW_a12_a_ainput_o,
+	dataout => compteur_aq_sig_a3_a_SLOAD_driver);
+
+-- Location: FF_X114_Y40_N25
+compteur_aq_sig_a3_a : dffeas
+-- pragma translate_off
+GENERIC MAP (
+	is_wysiwyg => "true",
+	power_up => "low")
+-- pragma translate_on
+PORT MAP (
+	clk => compteur_aq_sig_a3_a_CLK_driver,
+	d => compteur_aq_sig_a3_a_D_driver,
+	asdata => compteur_aq_sig_a3_a_ASDATA_driver,
+	clrn => compteur_aq_sig_a3_a_CLRN_driver,
+	sload => compteur_aq_sig_a3_a_SLOAD_driver,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	q => compteur_aq_sig(3));
+
+deco7seg_aMux6_a0_DATAA_routing_wire_inst : cycloneive_routing_wire
+PORT MAP (
+	datain => compteur_aq_sig(0),
+	dataout => deco7seg_aMux6_a0_DATAA_driver);
+
+deco7seg_aMux6_a0_DATAB_routing_wire_inst : cycloneive_routing_wire
+PORT MAP (
+	datain => compteur_aq_sig(2),
+	dataout => deco7seg_aMux6_a0_DATAB_driver);
+
+deco7seg_aMux6_a0_DATAC_routing_wire_inst : cycloneive_routing_wire
+PORT MAP (
+	datain => compteur_aq_sig(1),
+	dataout => deco7seg_aMux6_a0_DATAC_driver);
+
+deco7seg_aMux6_a0_DATAD_routing_wire_inst : cycloneive_routing_wire
+PORT MAP (
+	datain => compteur_aq_sig(3),
+	dataout => deco7seg_aMux6_a0_DATAD_driver);
+
+-- Location: LCCOMB_X107_Y72_N28
+deco7seg_aMux6_a0 : cycloneive_lcell_comb
+-- Equation(s):
+-- deco7seg_aMux6_a0_combout = (compteur_aq_sig(2) & (!compteur_aq_sig(1) & (compteur_aq_sig(0) $ (!compteur_aq_sig(3))))) # (!compteur_aq_sig(2) & (compteur_aq_sig(0) & (compteur_aq_sig(1) $ (!compteur_aq_sig(3)))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0010100000000110",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => deco7seg_aMux6_a0_DATAA_driver,
+	datab => deco7seg_aMux6_a0_DATAB_driver,
+	datac => deco7seg_aMux6_a0_DATAC_driver,
+	datad => deco7seg_aMux6_a0_DATAD_driver,
+	combout => deco7seg_aMux6_a0_combout);
+
+deco7seg_aMux5_a0_DATAA_routing_wire_inst : cycloneive_routing_wire
+PORT MAP (
+	datain => compteur_aq_sig(0),
+	dataout => deco7seg_aMux5_a0_DATAA_driver);
+
+deco7seg_aMux5_a0_DATAB_routing_wire_inst : cycloneive_routing_wire
+PORT MAP (
+	datain => compteur_aq_sig(2),
+	dataout => deco7seg_aMux5_a0_DATAB_driver);
+
+deco7seg_aMux5_a0_DATAC_routing_wire_inst : cycloneive_routing_wire
+PORT MAP (
+	datain => compteur_aq_sig(1),
+	dataout => deco7seg_aMux5_a0_DATAC_driver);
+
+deco7seg_aMux5_a0_DATAD_routing_wire_inst : cycloneive_routing_wire
+PORT MAP (
+	datain => compteur_aq_sig(3),
+	dataout => deco7seg_aMux5_a0_DATAD_driver);
+
+-- Location: LCCOMB_X107_Y72_N2
+deco7seg_aMux5_a0 : cycloneive_lcell_comb
+-- Equation(s):
+-- deco7seg_aMux5_a0_combout = (compteur_aq_sig(1) & ((compteur_aq_sig(0) & ((compteur_aq_sig(3)))) # (!compteur_aq_sig(0) & (compteur_aq_sig(2))))) # (!compteur_aq_sig(1) & (compteur_aq_sig(2) & (compteur_aq_sig(0) $ (compteur_aq_sig(3)))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1110010001001000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => deco7seg_aMux5_a0_DATAA_driver,
+	datab => deco7seg_aMux5_a0_DATAB_driver,
+	datac => deco7seg_aMux5_a0_DATAC_driver,
+	datad => deco7seg_aMux5_a0_DATAD_driver,
+	combout => deco7seg_aMux5_a0_combout);
+
+deco7seg_aMux4_a0_DATAA_routing_wire_inst : cycloneive_routing_wire
+PORT MAP (
+	datain => compteur_aq_sig(0),
+	dataout => deco7seg_aMux4_a0_DATAA_driver);
+
+deco7seg_aMux4_a0_DATAB_routing_wire_inst : cycloneive_routing_wire
+PORT MAP (
+	datain => compteur_aq_sig(2),
+	dataout => deco7seg_aMux4_a0_DATAB_driver);
+
+deco7seg_aMux4_a0_DATAC_routing_wire_inst : cycloneive_routing_wire
+PORT MAP (
+	datain => compteur_aq_sig(1),
+	dataout => deco7seg_aMux4_a0_DATAC_driver);
+
+deco7seg_aMux4_a0_DATAD_routing_wire_inst : cycloneive_routing_wire
+PORT MAP (
+	datain => compteur_aq_sig(3),
+	dataout => deco7seg_aMux4_a0_DATAD_driver);
+
+-- Location: LCCOMB_X107_Y72_N0
+deco7seg_aMux4_a0 : cycloneive_lcell_comb
+-- Equation(s):
+-- deco7seg_aMux4_a0_combout = (compteur_aq_sig(2) & (compteur_aq_sig(3) & ((compteur_aq_sig(1)) # (!compteur_aq_sig(0))))) # (!compteur_aq_sig(2) & (!compteur_aq_sig(0) & (compteur_aq_sig(1) & !compteur_aq_sig(3))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1100010000010000",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => deco7seg_aMux4_a0_DATAA_driver,
+	datab => deco7seg_aMux4_a0_DATAB_driver,
+	datac => deco7seg_aMux4_a0_DATAC_driver,
+	datad => deco7seg_aMux4_a0_DATAD_driver,
+	combout => deco7seg_aMux4_a0_combout);
+
+deco7seg_aMux3_a0_DATAA_routing_wire_inst : cycloneive_routing_wire
+PORT MAP (
+	datain => compteur_aq_sig(0),
+	dataout => deco7seg_aMux3_a0_DATAA_driver);
+
+deco7seg_aMux3_a0_DATAB_routing_wire_inst : cycloneive_routing_wire
+PORT MAP (
+	datain => compteur_aq_sig(2),
+	dataout => deco7seg_aMux3_a0_DATAB_driver);
+
+deco7seg_aMux3_a0_DATAC_routing_wire_inst : cycloneive_routing_wire
+PORT MAP (
+	datain => compteur_aq_sig(1),
+	dataout => deco7seg_aMux3_a0_DATAC_driver);
+
+deco7seg_aMux3_a0_DATAD_routing_wire_inst : cycloneive_routing_wire
+PORT MAP (
+	datain => compteur_aq_sig(3),
+	dataout => deco7seg_aMux3_a0_DATAD_driver);
+
+-- Location: LCCOMB_X114_Y40_N2
+deco7seg_aMux3_a0 : cycloneive_lcell_comb
+-- Equation(s):
+-- deco7seg_aMux3_a0_combout = (compteur_aq_sig(1) & ((compteur_aq_sig(0) & (compteur_aq_sig(2))) # (!compteur_aq_sig(0) & (!compteur_aq_sig(2) & compteur_aq_sig(3))))) # (!compteur_aq_sig(1) & (!compteur_aq_sig(3) & (compteur_aq_sig(0) $ 
+-- (compteur_aq_sig(2)))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1001000010000110",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => deco7seg_aMux3_a0_DATAA_driver,
+	datab => deco7seg_aMux3_a0_DATAB_driver,
+	datac => deco7seg_aMux3_a0_DATAC_driver,
+	datad => deco7seg_aMux3_a0_DATAD_driver,
+	combout => deco7seg_aMux3_a0_combout);
+
+deco7seg_aMux2_a0_DATAA_routing_wire_inst : cycloneive_routing_wire
+PORT MAP (
+	datain => compteur_aq_sig(0),
+	dataout => deco7seg_aMux2_a0_DATAA_driver);
+
+deco7seg_aMux2_a0_DATAB_routing_wire_inst : cycloneive_routing_wire
+PORT MAP (
+	datain => compteur_aq_sig(2),
+	dataout => deco7seg_aMux2_a0_DATAB_driver);
+
+deco7seg_aMux2_a0_DATAC_routing_wire_inst : cycloneive_routing_wire
+PORT MAP (
+	datain => compteur_aq_sig(1),
+	dataout => deco7seg_aMux2_a0_DATAC_driver);
+
+deco7seg_aMux2_a0_DATAD_routing_wire_inst : cycloneive_routing_wire
+PORT MAP (
+	datain => compteur_aq_sig(3),
+	dataout => deco7seg_aMux2_a0_DATAD_driver);
+
+-- Location: LCCOMB_X114_Y40_N16
+deco7seg_aMux2_a0 : cycloneive_lcell_comb
+-- Equation(s):
+-- deco7seg_aMux2_a0_combout = (compteur_aq_sig(1) & (compteur_aq_sig(0) & ((!compteur_aq_sig(3))))) # (!compteur_aq_sig(1) & ((compteur_aq_sig(2) & ((!compteur_aq_sig(3)))) # (!compteur_aq_sig(2) & (compteur_aq_sig(0)))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0000001010101110",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => deco7seg_aMux2_a0_DATAA_driver,
+	datab => deco7seg_aMux2_a0_DATAB_driver,
+	datac => deco7seg_aMux2_a0_DATAC_driver,
+	datad => deco7seg_aMux2_a0_DATAD_driver,
+	combout => deco7seg_aMux2_a0_combout);
+
+deco7seg_aMux1_a0_DATAA_routing_wire_inst : cycloneive_routing_wire
+PORT MAP (
+	datain => compteur_aq_sig(0),
+	dataout => deco7seg_aMux1_a0_DATAA_driver);
+
+deco7seg_aMux1_a0_DATAB_routing_wire_inst : cycloneive_routing_wire
+PORT MAP (
+	datain => compteur_aq_sig(2),
+	dataout => deco7seg_aMux1_a0_DATAB_driver);
+
+deco7seg_aMux1_a0_DATAC_routing_wire_inst : cycloneive_routing_wire
+PORT MAP (
+	datain => compteur_aq_sig(1),
+	dataout => deco7seg_aMux1_a0_DATAC_driver);
+
+deco7seg_aMux1_a0_DATAD_routing_wire_inst : cycloneive_routing_wire
+PORT MAP (
+	datain => compteur_aq_sig(3),
+	dataout => deco7seg_aMux1_a0_DATAD_driver);
+
+-- Location: LCCOMB_X107_Y72_N30
+deco7seg_aMux1_a0 : cycloneive_lcell_comb
+-- Equation(s):
+-- deco7seg_aMux1_a0_combout = (compteur_aq_sig(0) & (compteur_aq_sig(3) $ (((compteur_aq_sig(1)) # (!compteur_aq_sig(2)))))) # (!compteur_aq_sig(0) & (!compteur_aq_sig(2) & (compteur_aq_sig(1) & !compteur_aq_sig(3))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0000100010110010",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => deco7seg_aMux1_a0_DATAA_driver,
+	datab => deco7seg_aMux1_a0_DATAB_driver,
+	datac => deco7seg_aMux1_a0_DATAC_driver,
+	datad => deco7seg_aMux1_a0_DATAD_driver,
+	combout => deco7seg_aMux1_a0_combout);
+
+deco7seg_aMux0_a0_DATAA_routing_wire_inst : cycloneive_routing_wire
+PORT MAP (
+	datain => compteur_aq_sig(0),
+	dataout => deco7seg_aMux0_a0_DATAA_driver);
+
+deco7seg_aMux0_a0_DATAB_routing_wire_inst : cycloneive_routing_wire
+PORT MAP (
+	datain => compteur_aq_sig(2),
+	dataout => deco7seg_aMux0_a0_DATAB_driver);
+
+deco7seg_aMux0_a0_DATAC_routing_wire_inst : cycloneive_routing_wire
+PORT MAP (
+	datain => compteur_aq_sig(1),
+	dataout => deco7seg_aMux0_a0_DATAC_driver);
+
+deco7seg_aMux0_a0_DATAD_routing_wire_inst : cycloneive_routing_wire
+PORT MAP (
+	datain => compteur_aq_sig(3),
+	dataout => deco7seg_aMux0_a0_DATAD_driver);
+
+-- Location: LCCOMB_X107_Y72_N12
+deco7seg_aMux0_a0 : cycloneive_lcell_comb
+-- Equation(s):
+-- deco7seg_aMux0_a0_combout = (compteur_aq_sig(0) & ((compteur_aq_sig(3)) # (compteur_aq_sig(2) $ (compteur_aq_sig(1))))) # (!compteur_aq_sig(0) & ((compteur_aq_sig(1)) # (compteur_aq_sig(2) $ (compteur_aq_sig(3)))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1111101101111100",
+	sum_lutc_input => "datac")
+-- pragma translate_on
+PORT MAP (
+	dataa => deco7seg_aMux0_a0_DATAA_driver,
+	datab => deco7seg_aMux0_a0_DATAB_driver,
+	datac => deco7seg_aMux0_a0_DATAC_driver,
+	datad => deco7seg_aMux0_a0_DATAD_driver,
+	combout => deco7seg_aMux0_a0_combout);
 
 SW_a8_a_ainput_I_routing_wire_inst : cycloneive_routing_wire
 PORT MAP (
@@ -2232,38 +2953,6 @@ GENERIC MAP (
 PORT MAP (
 	i => SW_a11_a_ainput_I_driver,
 	o => SW_a11_a_ainput_o);
-
-SW_a12_a_ainput_I_routing_wire_inst : cycloneive_routing_wire
-PORT MAP (
-	datain => ww_SW(12),
-	dataout => SW_a12_a_ainput_I_driver);
-
--- Location: IOIBUF_X115_Y7_N15
-SW_a12_a_ainput : cycloneive_io_ibuf
--- pragma translate_off
-GENERIC MAP (
-	bus_hold => "false",
-	simulate_z_as => "z")
--- pragma translate_on
-PORT MAP (
-	i => SW_a12_a_ainput_I_driver,
-	o => SW_a12_a_ainput_o);
-
-SW_a13_a_ainput_I_routing_wire_inst : cycloneive_routing_wire
-PORT MAP (
-	datain => ww_SW(13),
-	dataout => SW_a13_a_ainput_I_driver);
-
--- Location: IOIBUF_X115_Y9_N22
-SW_a13_a_ainput : cycloneive_io_ibuf
--- pragma translate_off
-GENERIC MAP (
-	bus_hold => "false",
-	simulate_z_as => "z")
--- pragma translate_on
-PORT MAP (
-	i => SW_a13_a_ainput_I_driver,
-	o => SW_a13_a_ainput_o);
 
 Key_a2_a_ainput_I_routing_wire_inst : cycloneive_routing_wire
 PORT MAP (

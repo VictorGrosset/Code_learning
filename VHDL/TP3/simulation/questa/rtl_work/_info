@@ -1,0 +1,93 @@
+m255
+K4
+z2
+!s11e vcom 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/gross/Github/Code_learning/VHDL/TP3/simulation/questa
+Edeco7seg
+Z1 w1694762448
+Z2 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z3 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
+!i122 0
+R0
+Z4 8C:/Users/gross/Github/Code_learning/VHDL/TP3/src/deco7seg.vhd
+Z5 FC:/Users/gross/Github/Code_learning/VHDL/TP3/src/deco7seg.vhd
+l0
+L5 1
+VCDP0YLIPm2[U]W99Qmllc2
+!s100 FSOa]1UPWOccSO1YS4AOJ0
+Z6 OV;C;2020.1;71
+31
+Z7 !s110 1696427004
+!i10b 1
+Z8 !s108 1696427004.000000
+Z9 !s90 -reportprogress|300|-93|-work|work|C:/Users/gross/Github/Code_learning/VHDL/TP3/src/deco7seg.vhd|
+Z10 !s107 C:/Users/gross/Github/Code_learning/VHDL/TP3/src/deco7seg.vhd|
+!i113 1
+Z11 o-93 -work work
+Z12 tExplicit 1 CvgOpt 0
+Aar
+R2
+R3
+DEx4 work 8 deco7seg 0 22 CDP0YLIPm2[U]W99Qmllc2
+!i122 0
+l13
+L12 22
+V1FkaGii=Nz3F9m]eIbiC01
+!s100 z>`HX7zMD@EedOO>]`=^01
+R6
+31
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12
+Eregistre_en
+Z13 w1695991935
+R2
+R3
+!i122 1
+R0
+Z14 8C:/Users/gross/Github/Code_learning/VHDL/TP3/src/registre_en.vhd
+Z15 FC:/Users/gross/Github/Code_learning/VHDL/TP3/src/registre_en.vhd
+l0
+L4 1
+V?=F0>b6R`f>U`6@zzLkDD0
+!s100 AnD[Ece5;PRXz6<aabbd01
+R6
+31
+Z16 !s110 1696427005
+!i10b 1
+R8
+Z17 !s90 -reportprogress|300|-93|-work|work|C:/Users/gross/Github/Code_learning/VHDL/TP3/src/registre_en.vhd|
+Z18 !s107 C:/Users/gross/Github/Code_learning/VHDL/TP3/src/registre_en.vhd|
+!i113 1
+R11
+R12
+Aarch_registre_en
+R2
+R3
+DEx4 work 11 registre_en 0 22 ?=F0>b6R`f>U`6@zzLkDD0
+!i122 1
+l13
+L10 19
+V0M^_OD59Rzhb?CNJhVH<_1
+!s100 j`1ZV?IIER2]@RO<VX=Jo1
+R6
+31
+R16
+!i10b 1
+R8
+R17
+R18
+!i113 1
+R11
+R12

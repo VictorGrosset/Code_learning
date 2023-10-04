@@ -1,5 +1,5 @@
 Timing Analyzer report for DE2_115
-Fri Sep 29 16:59:32 2023
+Wed Oct 04 15:09:56 2023
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Standard Edition
 
 
@@ -96,17 +96,18 @@ refer to the applicable agreement for further details.
 +----------------------------+-------------+
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
-; Number detected on machine ; 4           ;
-; Maximum allowed            ; 4           ;
+; Number detected on machine ; 12          ;
+; Maximum allowed            ; 6           ;
 ;                            ;             ;
 ; Average used               ; 1.01        ;
-; Maximum used               ; 4           ;
+; Maximum used               ; 6           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   0.3%      ;
-;     Processor 3            ;   0.3%      ;
+;     Processor 2            ;   0.2%      ;
+;     Processor 3            ;   0.1%      ;
 ;     Processor 4            ;   0.1%      ;
+;     Processors 5-6         ;   0.1%      ;
 +----------------------------+-------------+
 
 
@@ -115,7 +116,7 @@ refer to the applicable agreement for further details.
 +---------------+--------+--------------------------+
 ; SDC File Path ; Status ; Read at                  ;
 +---------------+--------+--------------------------+
-; DE2_115.sdc   ; OK     ; Fri Sep 29 16:59:26 2023 ;
+; DE2_115.sdc   ; OK     ; Wed Oct 04 15:09:52 2023 ;
 +---------------+--------+--------------------------+
 
 
@@ -133,7 +134,7 @@ refer to the applicable agreement for further details.
 +------------+-----------------+------------+---------------------------------------------------------------+
 ; Fmax       ; Restricted Fmax ; Clock Name ; Note                                                          ;
 +------------+-----------------+------------+---------------------------------------------------------------+
-; 690.61 MHz ; 250.0 MHz       ; Key[0]     ; limit due to minimum period restriction (max I/O toggle rate) ;
+; 557.72 MHz ; 250.0 MHz       ; Key[0]     ; limit due to minimum period restriction (max I/O toggle rate) ;
 +------------+-----------------+------------+---------------------------------------------------------------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
@@ -149,7 +150,7 @@ HTML report is unavailable in plain text report export.
 +--------+--------+-------------------+
 ; Clock  ; Slack  ; End Point TNS     ;
 +--------+--------+-------------------+
-; Key[0] ; -0.448 ; -1.778            ;
+; Key[0] ; -0.793 ; -3.802            ;
 +--------+--------+-------------------+
 
 
@@ -158,7 +159,7 @@ HTML report is unavailable in plain text report export.
 +--------+-------+-------------------+
 ; Clock  ; Slack ; End Point TNS     ;
 +--------+-------+-------------------+
-; Key[0] ; 0.440 ; 0.000             ;
+; Key[0] ; 0.400 ; 0.000             ;
 +--------+-------+-------------------+
 
 
@@ -179,7 +180,7 @@ No paths to report.
 +--------+--------+---------------------------------+
 ; Clock  ; Slack  ; End Point TNS                   ;
 +--------+--------+---------------------------------+
-; Key[0] ; -3.000 ; -23.560                         ;
+; Key[0] ; -3.000 ; -28.700                         ;
 +--------+--------+---------------------------------+
 
 
@@ -188,20 +189,30 @@ No paths to report.
 +--------+------------------------------------+------------------------------------+--------------+-------------+--------------+------------+------------+
 ; Slack  ; From Node                          ; To Node                            ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
 +--------+------------------------------------+------------------------------------+--------------+-------------+--------------+------------+------------+
-; -0.448 ; registre_dec:registre_dec|q_sig[1] ; registre_dec:registre_dec|q_sig[0] ; Key[0]       ; Key[0]      ; 1.000        ; -0.113     ; 1.353      ;
-; -0.315 ; registre_dec:registre_dec|q_sig[7] ; registre_dec:registre_dec|q_sig[6] ; Key[0]       ; Key[0]      ; 1.000        ; -0.024     ; 1.309      ;
-; -0.206 ; registre_dec:registre_dec|q_sig[2] ; registre_dec:registre_dec|q_sig[1] ; Key[0]       ; Key[0]      ; 1.000        ; -0.047     ; 1.177      ;
-; -0.196 ; registre_dec:registre_dec|q_sig[5] ; registre_dec:registre_dec|q_sig[4] ; Key[0]       ; Key[0]      ; 1.000        ; -0.047     ; 1.167      ;
-; -0.190 ; registre_dec:registre_dec|q_sig[6] ; registre_dec:registre_dec|q_sig[5] ; Key[0]       ; Key[0]      ; 1.000        ; -0.047     ; 1.161      ;
-; -0.185 ; registre_dec:registre_dec|q_sig[2] ; registre_dec:registre_dec|q_sig[3] ; Key[0]       ; Key[0]      ; 1.000        ; -0.047     ; 1.156      ;
-; -0.184 ; registre_dec:registre_dec|q_sig[1] ; registre_dec:registre_dec|q_sig[2] ; Key[0]       ; Key[0]      ; 1.000        ; -0.047     ; 1.155      ;
-; -0.054 ; registre_dec:registre_dec|q_sig[6] ; registre_dec:registre_dec|q_sig[7] ; Key[0]       ; Key[0]      ; 1.000        ; -0.113     ; 0.959      ;
-; 0.017  ; registre_dec:registre_dec|q_sig[0] ; registre_dec:registre_dec|q_sig[1] ; Key[0]       ; Key[0]      ; 1.000        ; -0.024     ; 0.977      ;
-; 0.147  ; registre_dec:registre_dec|q_sig[4] ; registre_dec:registre_dec|q_sig[5] ; Key[0]       ; Key[0]      ; 1.000        ; -0.047     ; 0.824      ;
-; 0.147  ; registre_dec:registre_dec|q_sig[4] ; registre_dec:registre_dec|q_sig[3] ; Key[0]       ; Key[0]      ; 1.000        ; -0.047     ; 0.824      ;
-; 0.148  ; registre_dec:registre_dec|q_sig[5] ; registre_dec:registre_dec|q_sig[6] ; Key[0]       ; Key[0]      ; 1.000        ; -0.047     ; 0.823      ;
-; 0.148  ; registre_dec:registre_dec|q_sig[3] ; registre_dec:registre_dec|q_sig[4] ; Key[0]       ; Key[0]      ; 1.000        ; -0.047     ; 0.823      ;
-; 0.148  ; registre_dec:registre_dec|q_sig[3] ; registre_dec:registre_dec|q_sig[2] ; Key[0]       ; Key[0]      ; 1.000        ; -0.047     ; 0.823      ;
+; -0.793 ; cpteur:compteur|q_sig[0]           ; cpteur:compteur|q_sig[3]           ; Key[0]       ; Key[0]      ; 1.000        ; -0.047     ; 1.764      ;
+; -0.786 ; cpteur:compteur|q_sig[1]           ; cpteur:compteur|q_sig[2]           ; Key[0]       ; Key[0]      ; 1.000        ; -0.047     ; 1.757      ;
+; -0.767 ; cpteur:compteur|q_sig[1]           ; cpteur:compteur|q_sig[3]           ; Key[0]       ; Key[0]      ; 1.000        ; -0.047     ; 1.738      ;
+; -0.701 ; cpteur:compteur|q_sig[0]           ; cpteur:compteur|q_sig[2]           ; Key[0]       ; Key[0]      ; 1.000        ; -0.047     ; 1.672      ;
+; -0.661 ; cpteur:compteur|q_sig[0]           ; cpteur:compteur|q_sig[1]           ; Key[0]       ; Key[0]      ; 1.000        ; -0.047     ; 1.632      ;
+; -0.661 ; cpteur:compteur|q_sig[2]           ; cpteur:compteur|q_sig[3]           ; Key[0]       ; Key[0]      ; 1.000        ; -0.047     ; 1.632      ;
+; -0.352 ; registre_dec:registre_dec|q_sig[2] ; registre_dec:registre_dec|q_sig[1] ; Key[0]       ; Key[0]      ; 1.000        ; -0.048     ; 1.322      ;
+; -0.260 ; registre_dec:registre_dec|q_sig[0] ; registre_dec:registre_dec|q_sig[1] ; Key[0]       ; Key[0]      ; 1.000        ; -0.305     ; 0.973      ;
+; -0.227 ; registre_dec:registre_dec|q_sig[7] ; registre_dec:registre_dec|q_sig[6] ; Key[0]       ; Key[0]      ; 1.000        ; -0.305     ; 0.940      ;
+; -0.214 ; registre_dec:registre_dec|q_sig[6] ; registre_dec:registre_dec|q_sig[7] ; Key[0]       ; Key[0]      ; 1.000        ; 0.124      ; 1.356      ;
+; -0.198 ; registre_dec:registre_dec|q_sig[3] ; registre_dec:registre_dec|q_sig[2] ; Key[0]       ; Key[0]      ; 1.000        ; -0.048     ; 1.168      ;
+; -0.197 ; registre_dec:registre_dec|q_sig[6] ; registre_dec:registre_dec|q_sig[5] ; Key[0]       ; Key[0]      ; 1.000        ; -0.048     ; 1.167      ;
+; -0.195 ; registre_dec:registre_dec|q_sig[2] ; registre_dec:registre_dec|q_sig[3] ; Key[0]       ; Key[0]      ; 1.000        ; -0.048     ; 1.165      ;
+; -0.186 ; cpteur:compteur|q_sig[2]           ; cpteur:compteur|q_sig[2]           ; Key[0]       ; Key[0]      ; 1.000        ; -0.043     ; 1.161      ;
+; -0.179 ; registre_dec:registre_dec|q_sig[3] ; registre_dec:registre_dec|q_sig[4] ; Key[0]       ; Key[0]      ; 1.000        ; -0.048     ; 1.149      ;
+; -0.176 ; registre_dec:registre_dec|q_sig[5] ; registre_dec:registre_dec|q_sig[6] ; Key[0]       ; Key[0]      ; 1.000        ; -0.048     ; 1.146      ;
+; -0.160 ; cpteur:compteur|q_sig[1]           ; cpteur:compteur|q_sig[1]           ; Key[0]       ; Key[0]      ; 1.000        ; -0.043     ; 1.135      ;
+; 0.135  ; cpteur:compteur|q_sig[3]           ; cpteur:compteur|q_sig[3]           ; Key[0]       ; Key[0]      ; 1.000        ; -0.043     ; 0.840      ;
+; 0.144  ; registre_dec:registre_dec|q_sig[5] ; registre_dec:registre_dec|q_sig[4] ; Key[0]       ; Key[0]      ; 1.000        ; -0.048     ; 0.826      ;
+; 0.145  ; registre_dec:registre_dec|q_sig[4] ; registre_dec:registre_dec|q_sig[3] ; Key[0]       ; Key[0]      ; 1.000        ; -0.048     ; 0.825      ;
+; 0.146  ; registre_dec:registre_dec|q_sig[4] ; registre_dec:registre_dec|q_sig[5] ; Key[0]       ; Key[0]      ; 1.000        ; -0.048     ; 0.824      ;
+; 0.158  ; registre_dec:registre_dec|q_sig[1] ; registre_dec:registre_dec|q_sig[2] ; Key[0]       ; Key[0]      ; 1.000        ; -0.048     ; 0.812      ;
+; 0.168  ; registre_dec:registre_dec|q_sig[1] ; registre_dec:registre_dec|q_sig[0] ; Key[0]       ; Key[0]      ; 1.000        ; 0.124      ; 0.974      ;
+; 0.210  ; cpteur:compteur|q_sig[0]           ; cpteur:compteur|q_sig[0]           ; Key[0]       ; Key[0]      ; 1.000        ; -0.043     ; 0.765      ;
 ; 0.241  ; registre_dec:registre_dec|q_sig[7] ; registre_dec:registre_dec|q_sig[7] ; Key[0]       ; Key[0]      ; 1.000        ; -0.043     ; 0.734      ;
 ; 0.241  ; registre_dec:registre_dec|q_sig[0] ; registre_dec:registre_dec|q_sig[0] ; Key[0]       ; Key[0]      ; 1.000        ; -0.043     ; 0.734      ;
 +--------+------------------------------------+------------------------------------+--------------+-------------+--------------+------------+------------+
@@ -212,22 +223,32 @@ No paths to report.
 +-------+------------------------------------+------------------------------------+--------------+-------------+--------------+------------+------------+
 ; Slack ; From Node                          ; To Node                            ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
 +-------+------------------------------------+------------------------------------+--------------+-------------+--------------+------------+------------+
+; 0.400 ; registre_dec:registre_dec|q_sig[1] ; registre_dec:registre_dec|q_sig[0] ; Key[0]       ; Key[0]      ; 0.000        ; 0.305      ; 0.891      ;
 ; 0.440 ; registre_dec:registre_dec|q_sig[7] ; registre_dec:registre_dec|q_sig[7] ; Key[0]       ; Key[0]      ; 0.000        ; 0.043      ; 0.669      ;
 ; 0.440 ; registre_dec:registre_dec|q_sig[0] ; registre_dec:registre_dec|q_sig[0] ; Key[0]       ; Key[0]      ; 0.000        ; 0.043      ; 0.669      ;
-; 0.491 ; registre_dec:registre_dec|q_sig[5] ; registre_dec:registre_dec|q_sig[6] ; Key[0]       ; Key[0]      ; 0.000        ; 0.047      ; 0.724      ;
-; 0.492 ; registre_dec:registre_dec|q_sig[3] ; registre_dec:registre_dec|q_sig[2] ; Key[0]       ; Key[0]      ; 0.000        ; 0.047      ; 0.725      ;
-; 0.492 ; registre_dec:registre_dec|q_sig[3] ; registre_dec:registre_dec|q_sig[4] ; Key[0]       ; Key[0]      ; 0.000        ; 0.047      ; 0.725      ;
-; 0.493 ; registre_dec:registre_dec|q_sig[4] ; registre_dec:registre_dec|q_sig[3] ; Key[0]       ; Key[0]      ; 0.000        ; 0.047      ; 0.726      ;
-; 0.493 ; registre_dec:registre_dec|q_sig[4] ; registre_dec:registre_dec|q_sig[5] ; Key[0]       ; Key[0]      ; 0.000        ; 0.047      ; 0.726      ;
-; 0.596 ; registre_dec:registre_dec|q_sig[0] ; registre_dec:registre_dec|q_sig[1] ; Key[0]       ; Key[0]      ; 0.000        ; 0.113      ; 0.895      ;
-; 0.672 ; registre_dec:registre_dec|q_sig[6] ; registre_dec:registre_dec|q_sig[7] ; Key[0]       ; Key[0]      ; 0.000        ; 0.024      ; 0.882      ;
-; 0.691 ; registre_dec:registre_dec|q_sig[6] ; registre_dec:registre_dec|q_sig[5] ; Key[0]       ; Key[0]      ; 0.000        ; 0.047      ; 0.924      ;
-; 0.701 ; registre_dec:registre_dec|q_sig[2] ; registre_dec:registre_dec|q_sig[1] ; Key[0]       ; Key[0]      ; 0.000        ; 0.047      ; 0.934      ;
-; 0.702 ; registre_dec:registre_dec|q_sig[5] ; registre_dec:registre_dec|q_sig[4] ; Key[0]       ; Key[0]      ; 0.000        ; 0.047      ; 0.935      ;
-; 0.718 ; registre_dec:registre_dec|q_sig[2] ; registre_dec:registre_dec|q_sig[3] ; Key[0]       ; Key[0]      ; 0.000        ; 0.047      ; 0.951      ;
-; 0.720 ; registre_dec:registre_dec|q_sig[1] ; registre_dec:registre_dec|q_sig[2] ; Key[0]       ; Key[0]      ; 0.000        ; 0.047      ; 0.953      ;
-; 0.781 ; registre_dec:registre_dec|q_sig[7] ; registre_dec:registre_dec|q_sig[6] ; Key[0]       ; Key[0]      ; 0.000        ; 0.113      ; 1.080      ;
-; 1.048 ; registre_dec:registre_dec|q_sig[1] ; registre_dec:registre_dec|q_sig[0] ; Key[0]       ; Key[0]      ; 0.000        ; 0.024      ; 1.258      ;
+; 0.445 ; cpteur:compteur|q_sig[0]           ; cpteur:compteur|q_sig[0]           ; Key[0]       ; Key[0]      ; 0.000        ; 0.043      ; 0.674      ;
+; 0.483 ; registre_dec:registre_dec|q_sig[1] ; registre_dec:registre_dec|q_sig[2] ; Key[0]       ; Key[0]      ; 0.000        ; 0.048      ; 0.717      ;
+; 0.492 ; registre_dec:registre_dec|q_sig[5] ; registre_dec:registre_dec|q_sig[4] ; Key[0]       ; Key[0]      ; 0.000        ; 0.048      ; 0.726      ;
+; 0.492 ; registre_dec:registre_dec|q_sig[4] ; registre_dec:registre_dec|q_sig[5] ; Key[0]       ; Key[0]      ; 0.000        ; 0.048      ; 0.726      ;
+; 0.493 ; registre_dec:registre_dec|q_sig[4] ; registre_dec:registre_dec|q_sig[3] ; Key[0]       ; Key[0]      ; 0.000        ; 0.048      ; 0.727      ;
+; 0.493 ; cpteur:compteur|q_sig[3]           ; cpteur:compteur|q_sig[3]           ; Key[0]       ; Key[0]      ; 0.000        ; 0.043      ; 0.722      ;
+; 0.696 ; cpteur:compteur|q_sig[2]           ; cpteur:compteur|q_sig[2]           ; Key[0]       ; Key[0]      ; 0.000        ; 0.043      ; 0.925      ;
+; 0.697 ; cpteur:compteur|q_sig[1]           ; cpteur:compteur|q_sig[1]           ; Key[0]       ; Key[0]      ; 0.000        ; 0.043      ; 0.926      ;
+; 0.701 ; registre_dec:registre_dec|q_sig[3] ; registre_dec:registre_dec|q_sig[2] ; Key[0]       ; Key[0]      ; 0.000        ; 0.048      ; 0.935      ;
+; 0.701 ; registre_dec:registre_dec|q_sig[6] ; registre_dec:registre_dec|q_sig[5] ; Key[0]       ; Key[0]      ; 0.000        ; 0.048      ; 0.935      ;
+; 0.718 ; registre_dec:registre_dec|q_sig[5] ; registre_dec:registre_dec|q_sig[6] ; Key[0]       ; Key[0]      ; 0.000        ; 0.048      ; 0.952      ;
+; 0.720 ; registre_dec:registre_dec|q_sig[3] ; registre_dec:registre_dec|q_sig[4] ; Key[0]       ; Key[0]      ; 0.000        ; 0.048      ; 0.954      ;
+; 0.732 ; registre_dec:registre_dec|q_sig[2] ; registre_dec:registre_dec|q_sig[3] ; Key[0]       ; Key[0]      ; 0.000        ; 0.048      ; 0.966      ;
+; 0.770 ; registre_dec:registre_dec|q_sig[6] ; registre_dec:registre_dec|q_sig[7] ; Key[0]       ; Key[0]      ; 0.000        ; 0.305      ; 1.261      ;
+; 0.805 ; registre_dec:registre_dec|q_sig[7] ; registre_dec:registre_dec|q_sig[6] ; Key[0]       ; Key[0]      ; 0.000        ; -0.124     ; 0.867      ;
+; 0.838 ; registre_dec:registre_dec|q_sig[0] ; registre_dec:registre_dec|q_sig[1] ; Key[0]       ; Key[0]      ; 0.000        ; -0.124     ; 0.900      ;
+; 0.877 ; registre_dec:registre_dec|q_sig[2] ; registre_dec:registre_dec|q_sig[1] ; Key[0]       ; Key[0]      ; 0.000        ; 0.048      ; 1.111      ;
+; 1.010 ; cpteur:compteur|q_sig[1]           ; cpteur:compteur|q_sig[2]           ; Key[0]       ; Key[0]      ; 0.000        ; 0.047      ; 1.243      ;
+; 1.019 ; cpteur:compteur|q_sig[2]           ; cpteur:compteur|q_sig[3]           ; Key[0]       ; Key[0]      ; 0.000        ; 0.047      ; 1.252      ;
+; 1.019 ; cpteur:compteur|q_sig[0]           ; cpteur:compteur|q_sig[1]           ; Key[0]       ; Key[0]      ; 0.000        ; 0.047      ; 1.252      ;
+; 1.024 ; cpteur:compteur|q_sig[0]           ; cpteur:compteur|q_sig[2]           ; Key[0]       ; Key[0]      ; 0.000        ; 0.047      ; 1.257      ;
+; 1.131 ; cpteur:compteur|q_sig[1]           ; cpteur:compteur|q_sig[3]           ; Key[0]       ; Key[0]      ; 0.000        ; 0.047      ; 1.364      ;
+; 1.145 ; cpteur:compteur|q_sig[0]           ; cpteur:compteur|q_sig[3]           ; Key[0]       ; Key[0]      ; 0.000        ; 0.047      ; 1.378      ;
 +-------+------------------------------------+------------------------------------+--------------+-------------+--------------+------------+------------+
 
 
@@ -242,7 +263,7 @@ No synchronizer chains to report.
 +------------+-----------------+------------+---------------------------------------------------------------+
 ; Fmax       ; Restricted Fmax ; Clock Name ; Note                                                          ;
 +------------+-----------------+------------+---------------------------------------------------------------+
-; 763.36 MHz ; 250.0 MHz       ; Key[0]     ; limit due to minimum period restriction (max I/O toggle rate) ;
+; 618.81 MHz ; 250.0 MHz       ; Key[0]     ; limit due to minimum period restriction (max I/O toggle rate) ;
 +------------+-----------------+------------+---------------------------------------------------------------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
@@ -252,7 +273,7 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +--------+--------+------------------+
 ; Clock  ; Slack  ; End Point TNS    ;
 +--------+--------+------------------+
-; Key[0] ; -0.310 ; -0.827           ;
+; Key[0] ; -0.616 ; -2.399           ;
 +--------+--------+------------------+
 
 
@@ -261,7 +282,7 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +--------+-------+------------------+
 ; Clock  ; Slack ; End Point TNS    ;
 +--------+-------+------------------+
-; Key[0] ; 0.387 ; 0.000            ;
+; Key[0] ; 0.362 ; 0.000            ;
 +--------+-------+------------------+
 
 
@@ -282,7 +303,7 @@ No paths to report.
 +--------+--------+--------------------------------+
 ; Clock  ; Slack  ; End Point TNS                  ;
 +--------+--------+--------------------------------+
-; Key[0] ; -3.000 ; -23.560                        ;
+; Key[0] ; -3.000 ; -28.700                        ;
 +--------+--------+--------------------------------+
 
 
@@ -291,20 +312,30 @@ No paths to report.
 +--------+------------------------------------+------------------------------------+--------------+-------------+--------------+------------+------------+
 ; Slack  ; From Node                          ; To Node                            ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
 +--------+------------------------------------+------------------------------------+--------------+-------------+--------------+------------+------------+
-; -0.310 ; registre_dec:registre_dec|q_sig[1] ; registre_dec:registre_dec|q_sig[0] ; Key[0]       ; Key[0]      ; 1.000        ; -0.107     ; 1.222      ;
-; -0.172 ; registre_dec:registre_dec|q_sig[7] ; registre_dec:registre_dec|q_sig[6] ; Key[0]       ; Key[0]      ; 1.000        ; -0.023     ; 1.168      ;
-; -0.082 ; registre_dec:registre_dec|q_sig[2] ; registre_dec:registre_dec|q_sig[1] ; Key[0]       ; Key[0]      ; 1.000        ; -0.044     ; 1.057      ;
-; -0.072 ; registre_dec:registre_dec|q_sig[5] ; registre_dec:registre_dec|q_sig[4] ; Key[0]       ; Key[0]      ; 1.000        ; -0.044     ; 1.047      ;
-; -0.066 ; registre_dec:registre_dec|q_sig[6] ; registre_dec:registre_dec|q_sig[5] ; Key[0]       ; Key[0]      ; 1.000        ; -0.044     ; 1.041      ;
-; -0.063 ; registre_dec:registre_dec|q_sig[2] ; registre_dec:registre_dec|q_sig[3] ; Key[0]       ; Key[0]      ; 1.000        ; -0.044     ; 1.038      ;
-; -0.062 ; registre_dec:registre_dec|q_sig[1] ; registre_dec:registre_dec|q_sig[2] ; Key[0]       ; Key[0]      ; 1.000        ; -0.044     ; 1.037      ;
-; 0.053  ; registre_dec:registre_dec|q_sig[6] ; registre_dec:registre_dec|q_sig[7] ; Key[0]       ; Key[0]      ; 1.000        ; -0.107     ; 0.859      ;
-; 0.123  ; registre_dec:registre_dec|q_sig[0] ; registre_dec:registre_dec|q_sig[1] ; Key[0]       ; Key[0]      ; 1.000        ; -0.023     ; 0.873      ;
-; 0.234  ; registre_dec:registre_dec|q_sig[4] ; registre_dec:registre_dec|q_sig[5] ; Key[0]       ; Key[0]      ; 1.000        ; -0.044     ; 0.741      ;
-; 0.234  ; registre_dec:registre_dec|q_sig[4] ; registre_dec:registre_dec|q_sig[3] ; Key[0]       ; Key[0]      ; 1.000        ; -0.044     ; 0.741      ;
-; 0.235  ; registre_dec:registre_dec|q_sig[5] ; registre_dec:registre_dec|q_sig[6] ; Key[0]       ; Key[0]      ; 1.000        ; -0.044     ; 0.740      ;
-; 0.235  ; registre_dec:registre_dec|q_sig[3] ; registre_dec:registre_dec|q_sig[4] ; Key[0]       ; Key[0]      ; 1.000        ; -0.044     ; 0.740      ;
-; 0.235  ; registre_dec:registre_dec|q_sig[3] ; registre_dec:registre_dec|q_sig[2] ; Key[0]       ; Key[0]      ; 1.000        ; -0.044     ; 0.740      ;
+; -0.616 ; cpteur:compteur|q_sig[0]           ; cpteur:compteur|q_sig[3]           ; Key[0]       ; Key[0]      ; 1.000        ; -0.044     ; 1.591      ;
+; -0.601 ; cpteur:compteur|q_sig[1]           ; cpteur:compteur|q_sig[2]           ; Key[0]       ; Key[0]      ; 1.000        ; -0.044     ; 1.576      ;
+; -0.572 ; cpteur:compteur|q_sig[1]           ; cpteur:compteur|q_sig[3]           ; Key[0]       ; Key[0]      ; 1.000        ; -0.044     ; 1.547      ;
+; -0.528 ; cpteur:compteur|q_sig[0]           ; cpteur:compteur|q_sig[2]           ; Key[0]       ; Key[0]      ; 1.000        ; -0.044     ; 1.503      ;
+; -0.500 ; cpteur:compteur|q_sig[2]           ; cpteur:compteur|q_sig[3]           ; Key[0]       ; Key[0]      ; 1.000        ; -0.044     ; 1.475      ;
+; -0.500 ; cpteur:compteur|q_sig[0]           ; cpteur:compteur|q_sig[1]           ; Key[0]       ; Key[0]      ; 1.000        ; -0.044     ; 1.475      ;
+; -0.207 ; registre_dec:registre_dec|q_sig[2] ; registre_dec:registre_dec|q_sig[1] ; Key[0]       ; Key[0]      ; 1.000        ; -0.044     ; 1.182      ;
+; -0.146 ; registre_dec:registre_dec|q_sig[0] ; registre_dec:registre_dec|q_sig[1] ; Key[0]       ; Key[0]      ; 1.000        ; -0.288     ; 0.877      ;
+; -0.116 ; registre_dec:registre_dec|q_sig[7] ; registre_dec:registre_dec|q_sig[6] ; Key[0]       ; Key[0]      ; 1.000        ; -0.288     ; 0.847      ;
+; -0.084 ; registre_dec:registre_dec|q_sig[6] ; registre_dec:registre_dec|q_sig[7] ; Key[0]       ; Key[0]      ; 1.000        ; 0.123      ; 1.226      ;
+; -0.073 ; registre_dec:registre_dec|q_sig[3] ; registre_dec:registre_dec|q_sig[2] ; Key[0]       ; Key[0]      ; 1.000        ; -0.044     ; 1.048      ;
+; -0.073 ; registre_dec:registre_dec|q_sig[6] ; registre_dec:registre_dec|q_sig[5] ; Key[0]       ; Key[0]      ; 1.000        ; -0.044     ; 1.048      ;
+; -0.071 ; registre_dec:registre_dec|q_sig[2] ; registre_dec:registre_dec|q_sig[3] ; Key[0]       ; Key[0]      ; 1.000        ; -0.044     ; 1.046      ;
+; -0.061 ; cpteur:compteur|q_sig[2]           ; cpteur:compteur|q_sig[2]           ; Key[0]       ; Key[0]      ; 1.000        ; -0.039     ; 1.041      ;
+; -0.058 ; registre_dec:registre_dec|q_sig[3] ; registre_dec:registre_dec|q_sig[4] ; Key[0]       ; Key[0]      ; 1.000        ; -0.044     ; 1.033      ;
+; -0.056 ; registre_dec:registre_dec|q_sig[5] ; registre_dec:registre_dec|q_sig[6] ; Key[0]       ; Key[0]      ; 1.000        ; -0.044     ; 1.031      ;
+; -0.045 ; cpteur:compteur|q_sig[1]           ; cpteur:compteur|q_sig[1]           ; Key[0]       ; Key[0]      ; 1.000        ; -0.039     ; 1.025      ;
+; 0.218  ; cpteur:compteur|q_sig[3]           ; cpteur:compteur|q_sig[3]           ; Key[0]       ; Key[0]      ; 1.000        ; -0.039     ; 0.762      ;
+; 0.232  ; registre_dec:registre_dec|q_sig[5] ; registre_dec:registre_dec|q_sig[4] ; Key[0]       ; Key[0]      ; 1.000        ; -0.044     ; 0.743      ;
+; 0.233  ; registre_dec:registre_dec|q_sig[4] ; registre_dec:registre_dec|q_sig[5] ; Key[0]       ; Key[0]      ; 1.000        ; -0.044     ; 0.742      ;
+; 0.233  ; registre_dec:registre_dec|q_sig[4] ; registre_dec:registre_dec|q_sig[3] ; Key[0]       ; Key[0]      ; 1.000        ; -0.044     ; 0.742      ;
+; 0.245  ; registre_dec:registre_dec|q_sig[1] ; registre_dec:registre_dec|q_sig[2] ; Key[0]       ; Key[0]      ; 1.000        ; -0.044     ; 0.730      ;
+; 0.272  ; registre_dec:registre_dec|q_sig[1] ; registre_dec:registre_dec|q_sig[0] ; Key[0]       ; Key[0]      ; 1.000        ; 0.123      ; 0.870      ;
+; 0.297  ; cpteur:compteur|q_sig[0]           ; cpteur:compteur|q_sig[0]           ; Key[0]       ; Key[0]      ; 1.000        ; -0.039     ; 0.683      ;
 ; 0.321  ; registre_dec:registre_dec|q_sig[7] ; registre_dec:registre_dec|q_sig[7] ; Key[0]       ; Key[0]      ; 1.000        ; -0.039     ; 0.659      ;
 ; 0.321  ; registre_dec:registre_dec|q_sig[0] ; registre_dec:registre_dec|q_sig[0] ; Key[0]       ; Key[0]      ; 1.000        ; -0.039     ; 0.659      ;
 +--------+------------------------------------+------------------------------------+--------------+-------------+--------------+------------+------------+
@@ -315,22 +346,32 @@ No paths to report.
 +-------+------------------------------------+------------------------------------+--------------+-------------+--------------+------------+------------+
 ; Slack ; From Node                          ; To Node                            ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
 +-------+------------------------------------+------------------------------------+--------------+-------------+--------------+------------+------------+
+; 0.362 ; registre_dec:registre_dec|q_sig[1] ; registre_dec:registre_dec|q_sig[0] ; Key[0]       ; Key[0]      ; 0.000        ; 0.288      ; 0.821      ;
 ; 0.387 ; registre_dec:registre_dec|q_sig[7] ; registre_dec:registre_dec|q_sig[7] ; Key[0]       ; Key[0]      ; 0.000        ; 0.039      ; 0.597      ;
 ; 0.387 ; registre_dec:registre_dec|q_sig[0] ; registre_dec:registre_dec|q_sig[0] ; Key[0]       ; Key[0]      ; 0.000        ; 0.039      ; 0.597      ;
-; 0.449 ; registre_dec:registre_dec|q_sig[5] ; registre_dec:registre_dec|q_sig[6] ; Key[0]       ; Key[0]      ; 0.000        ; 0.044      ; 0.664      ;
-; 0.450 ; registre_dec:registre_dec|q_sig[3] ; registre_dec:registre_dec|q_sig[2] ; Key[0]       ; Key[0]      ; 0.000        ; 0.044      ; 0.665      ;
-; 0.451 ; registre_dec:registre_dec|q_sig[4] ; registre_dec:registre_dec|q_sig[3] ; Key[0]       ; Key[0]      ; 0.000        ; 0.044      ; 0.666      ;
-; 0.451 ; registre_dec:registre_dec|q_sig[3] ; registre_dec:registre_dec|q_sig[4] ; Key[0]       ; Key[0]      ; 0.000        ; 0.044      ; 0.666      ;
+; 0.398 ; cpteur:compteur|q_sig[0]           ; cpteur:compteur|q_sig[0]           ; Key[0]       ; Key[0]      ; 0.000        ; 0.039      ; 0.608      ;
+; 0.444 ; registre_dec:registre_dec|q_sig[1] ; registre_dec:registre_dec|q_sig[2] ; Key[0]       ; Key[0]      ; 0.000        ; 0.044      ; 0.659      ;
+; 0.445 ; cpteur:compteur|q_sig[3]           ; cpteur:compteur|q_sig[3]           ; Key[0]       ; Key[0]      ; 0.000        ; 0.039      ; 0.655      ;
 ; 0.451 ; registre_dec:registre_dec|q_sig[4] ; registre_dec:registre_dec|q_sig[5] ; Key[0]       ; Key[0]      ; 0.000        ; 0.044      ; 0.666      ;
-; 0.544 ; registre_dec:registre_dec|q_sig[0] ; registre_dec:registre_dec|q_sig[1] ; Key[0]       ; Key[0]      ; 0.000        ; 0.107      ; 0.822      ;
-; 0.617 ; registre_dec:registre_dec|q_sig[6] ; registre_dec:registre_dec|q_sig[7] ; Key[0]       ; Key[0]      ; 0.000        ; 0.023      ; 0.811      ;
-; 0.628 ; registre_dec:registre_dec|q_sig[6] ; registre_dec:registre_dec|q_sig[5] ; Key[0]       ; Key[0]      ; 0.000        ; 0.044      ; 0.843      ;
-; 0.638 ; registre_dec:registre_dec|q_sig[2] ; registre_dec:registre_dec|q_sig[1] ; Key[0]       ; Key[0]      ; 0.000        ; 0.044      ; 0.853      ;
-; 0.640 ; registre_dec:registre_dec|q_sig[5] ; registre_dec:registre_dec|q_sig[4] ; Key[0]       ; Key[0]      ; 0.000        ; 0.044      ; 0.855      ;
-; 0.658 ; registre_dec:registre_dec|q_sig[1] ; registre_dec:registre_dec|q_sig[2] ; Key[0]       ; Key[0]      ; 0.000        ; 0.044      ; 0.873      ;
-; 0.658 ; registre_dec:registre_dec|q_sig[2] ; registre_dec:registre_dec|q_sig[3] ; Key[0]       ; Key[0]      ; 0.000        ; 0.044      ; 0.873      ;
-; 0.720 ; registre_dec:registre_dec|q_sig[7] ; registre_dec:registre_dec|q_sig[6] ; Key[0]       ; Key[0]      ; 0.000        ; 0.107      ; 0.998      ;
-; 0.958 ; registre_dec:registre_dec|q_sig[1] ; registre_dec:registre_dec|q_sig[0] ; Key[0]       ; Key[0]      ; 0.000        ; 0.023      ; 1.152      ;
+; 0.452 ; registre_dec:registre_dec|q_sig[4] ; registre_dec:registre_dec|q_sig[3] ; Key[0]       ; Key[0]      ; 0.000        ; 0.044      ; 0.667      ;
+; 0.452 ; registre_dec:registre_dec|q_sig[5] ; registre_dec:registre_dec|q_sig[4] ; Key[0]       ; Key[0]      ; 0.000        ; 0.044      ; 0.667      ;
+; 0.634 ; cpteur:compteur|q_sig[2]           ; cpteur:compteur|q_sig[2]           ; Key[0]       ; Key[0]      ; 0.000        ; 0.039      ; 0.844      ;
+; 0.637 ; cpteur:compteur|q_sig[1]           ; cpteur:compteur|q_sig[1]           ; Key[0]       ; Key[0]      ; 0.000        ; 0.039      ; 0.847      ;
+; 0.639 ; registre_dec:registre_dec|q_sig[3] ; registre_dec:registre_dec|q_sig[2] ; Key[0]       ; Key[0]      ; 0.000        ; 0.044      ; 0.854      ;
+; 0.640 ; registre_dec:registre_dec|q_sig[6] ; registre_dec:registre_dec|q_sig[5] ; Key[0]       ; Key[0]      ; 0.000        ; 0.044      ; 0.855      ;
+; 0.657 ; registre_dec:registre_dec|q_sig[5] ; registre_dec:registre_dec|q_sig[6] ; Key[0]       ; Key[0]      ; 0.000        ; 0.044      ; 0.872      ;
+; 0.658 ; registre_dec:registre_dec|q_sig[3] ; registre_dec:registre_dec|q_sig[4] ; Key[0]       ; Key[0]      ; 0.000        ; 0.044      ; 0.873      ;
+; 0.670 ; registre_dec:registre_dec|q_sig[2] ; registre_dec:registre_dec|q_sig[3] ; Key[0]       ; Key[0]      ; 0.000        ; 0.044      ; 0.885      ;
+; 0.690 ; registre_dec:registre_dec|q_sig[6] ; registre_dec:registre_dec|q_sig[7] ; Key[0]       ; Key[0]      ; 0.000        ; 0.288      ; 1.149      ;
+; 0.745 ; registre_dec:registre_dec|q_sig[7] ; registre_dec:registre_dec|q_sig[6] ; Key[0]       ; Key[0]      ; 0.000        ; -0.123     ; 0.793      ;
+; 0.775 ; registre_dec:registre_dec|q_sig[0] ; registre_dec:registre_dec|q_sig[1] ; Key[0]       ; Key[0]      ; 0.000        ; -0.123     ; 0.823      ;
+; 0.808 ; registre_dec:registre_dec|q_sig[2] ; registre_dec:registre_dec|q_sig[1] ; Key[0]       ; Key[0]      ; 0.000        ; 0.044      ; 1.023      ;
+; 0.917 ; cpteur:compteur|q_sig[2]           ; cpteur:compteur|q_sig[3]           ; Key[0]       ; Key[0]      ; 0.000        ; 0.044      ; 1.132      ;
+; 0.918 ; cpteur:compteur|q_sig[0]           ; cpteur:compteur|q_sig[1]           ; Key[0]       ; Key[0]      ; 0.000        ; 0.044      ; 1.133      ;
+; 0.919 ; cpteur:compteur|q_sig[1]           ; cpteur:compteur|q_sig[2]           ; Key[0]       ; Key[0]      ; 0.000        ; 0.044      ; 1.134      ;
+; 0.929 ; cpteur:compteur|q_sig[0]           ; cpteur:compteur|q_sig[2]           ; Key[0]       ; Key[0]      ; 0.000        ; 0.044      ; 1.144      ;
+; 1.018 ; cpteur:compteur|q_sig[1]           ; cpteur:compteur|q_sig[3]           ; Key[0]       ; Key[0]      ; 0.000        ; 0.044      ; 1.233      ;
+; 1.028 ; cpteur:compteur|q_sig[0]           ; cpteur:compteur|q_sig[3]           ; Key[0]       ; Key[0]      ; 0.000        ; 0.044      ; 1.243      ;
 +-------+------------------------------------+------------------------------------+--------------+-------------+--------------+------------+------------+
 
 
@@ -345,7 +386,7 @@ No synchronizer chains to report.
 +--------+-------+-------------------+
 ; Clock  ; Slack ; End Point TNS     ;
 +--------+-------+-------------------+
-; Key[0] ; 0.299 ; 0.000             ;
+; Key[0] ; 0.143 ; 0.000             ;
 +--------+-------+-------------------+
 
 
@@ -354,7 +395,7 @@ No synchronizer chains to report.
 +--------+-------+------------------+
 ; Clock  ; Slack ; End Point TNS    ;
 +--------+-------+------------------+
-; Key[0] ; 0.201 ; 0.000            ;
+; Key[0] ; 0.173 ; 0.000            ;
 +--------+-------+------------------+
 
 
@@ -375,7 +416,7 @@ No paths to report.
 +--------+--------+--------------------------------+
 ; Clock  ; Slack  ; End Point TNS                  ;
 +--------+--------+--------------------------------+
-; Key[0] ; -3.000 ; -24.888                        ;
+; Key[0] ; -3.000 ; -30.390                        ;
 +--------+--------+--------------------------------+
 
 
@@ -384,20 +425,30 @@ No paths to report.
 +-------+------------------------------------+------------------------------------+--------------+-------------+--------------+------------+------------+
 ; Slack ; From Node                          ; To Node                            ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
 +-------+------------------------------------+------------------------------------+--------------+-------------+--------------+------------+------------+
-; 0.299 ; registre_dec:registre_dec|q_sig[1] ; registre_dec:registre_dec|q_sig[0] ; Key[0]       ; Key[0]      ; 1.000        ; -0.050     ; 0.658      ;
-; 0.354 ; registre_dec:registre_dec|q_sig[7] ; registre_dec:registre_dec|q_sig[6] ; Key[0]       ; Key[0]      ; 1.000        ; -0.017     ; 0.636      ;
-; 0.422 ; registre_dec:registre_dec|q_sig[2] ; registre_dec:registre_dec|q_sig[1] ; Key[0]       ; Key[0]      ; 1.000        ; -0.023     ; 0.562      ;
-; 0.425 ; registre_dec:registre_dec|q_sig[5] ; registre_dec:registre_dec|q_sig[4] ; Key[0]       ; Key[0]      ; 1.000        ; -0.023     ; 0.559      ;
-; 0.432 ; registre_dec:registre_dec|q_sig[6] ; registre_dec:registre_dec|q_sig[5] ; Key[0]       ; Key[0]      ; 1.000        ; -0.023     ; 0.552      ;
-; 0.434 ; registre_dec:registre_dec|q_sig[1] ; registre_dec:registre_dec|q_sig[2] ; Key[0]       ; Key[0]      ; 1.000        ; -0.023     ; 0.550      ;
-; 0.436 ; registre_dec:registre_dec|q_sig[2] ; registre_dec:registre_dec|q_sig[3] ; Key[0]       ; Key[0]      ; 1.000        ; -0.023     ; 0.548      ;
-; 0.492 ; registre_dec:registre_dec|q_sig[6] ; registre_dec:registre_dec|q_sig[7] ; Key[0]       ; Key[0]      ; 1.000        ; -0.050     ; 0.465      ;
-; 0.517 ; registre_dec:registre_dec|q_sig[0] ; registre_dec:registre_dec|q_sig[1] ; Key[0]       ; Key[0]      ; 1.000        ; -0.017     ; 0.473      ;
-; 0.593 ; registre_dec:registre_dec|q_sig[4] ; registre_dec:registre_dec|q_sig[5] ; Key[0]       ; Key[0]      ; 1.000        ; -0.023     ; 0.391      ;
-; 0.594 ; registre_dec:registre_dec|q_sig[5] ; registre_dec:registre_dec|q_sig[6] ; Key[0]       ; Key[0]      ; 1.000        ; -0.023     ; 0.390      ;
-; 0.594 ; registre_dec:registre_dec|q_sig[3] ; registre_dec:registre_dec|q_sig[4] ; Key[0]       ; Key[0]      ; 1.000        ; -0.023     ; 0.390      ;
-; 0.594 ; registre_dec:registre_dec|q_sig[3] ; registre_dec:registre_dec|q_sig[2] ; Key[0]       ; Key[0]      ; 1.000        ; -0.023     ; 0.390      ;
-; 0.594 ; registre_dec:registre_dec|q_sig[4] ; registre_dec:registre_dec|q_sig[3] ; Key[0]       ; Key[0]      ; 1.000        ; -0.023     ; 0.390      ;
+; 0.143 ; cpteur:compteur|q_sig[1]           ; cpteur:compteur|q_sig[3]           ; Key[0]       ; Key[0]      ; 1.000        ; -0.024     ; 0.840      ;
+; 0.147 ; cpteur:compteur|q_sig[1]           ; cpteur:compteur|q_sig[2]           ; Key[0]       ; Key[0]      ; 1.000        ; -0.024     ; 0.836      ;
+; 0.157 ; cpteur:compteur|q_sig[0]           ; cpteur:compteur|q_sig[3]           ; Key[0]       ; Key[0]      ; 1.000        ; -0.024     ; 0.826      ;
+; 0.194 ; cpteur:compteur|q_sig[0]           ; cpteur:compteur|q_sig[2]           ; Key[0]       ; Key[0]      ; 1.000        ; -0.024     ; 0.789      ;
+; 0.225 ; cpteur:compteur|q_sig[0]           ; cpteur:compteur|q_sig[1]           ; Key[0]       ; Key[0]      ; 1.000        ; -0.024     ; 0.758      ;
+; 0.225 ; cpteur:compteur|q_sig[2]           ; cpteur:compteur|q_sig[3]           ; Key[0]       ; Key[0]      ; 1.000        ; -0.024     ; 0.758      ;
+; 0.341 ; registre_dec:registre_dec|q_sig[2] ; registre_dec:registre_dec|q_sig[1] ; Key[0]       ; Key[0]      ; 1.000        ; -0.024     ; 0.642      ;
+; 0.395 ; registre_dec:registre_dec|q_sig[0] ; registre_dec:registre_dec|q_sig[1] ; Key[0]       ; Key[0]      ; 1.000        ; -0.141     ; 0.471      ;
+; 0.398 ; registre_dec:registre_dec|q_sig[6] ; registre_dec:registre_dec|q_sig[7] ; Key[0]       ; Key[0]      ; 1.000        ; 0.049      ; 0.658      ;
+; 0.411 ; registre_dec:registre_dec|q_sig[7] ; registre_dec:registre_dec|q_sig[6] ; Key[0]       ; Key[0]      ; 1.000        ; -0.141     ; 0.455      ;
+; 0.424 ; registre_dec:registre_dec|q_sig[6] ; registre_dec:registre_dec|q_sig[5] ; Key[0]       ; Key[0]      ; 1.000        ; -0.024     ; 0.559      ;
+; 0.425 ; registre_dec:registre_dec|q_sig[3] ; registre_dec:registre_dec|q_sig[2] ; Key[0]       ; Key[0]      ; 1.000        ; -0.024     ; 0.558      ;
+; 0.430 ; registre_dec:registre_dec|q_sig[2] ; registre_dec:registre_dec|q_sig[3] ; Key[0]       ; Key[0]      ; 1.000        ; -0.024     ; 0.553      ;
+; 0.433 ; cpteur:compteur|q_sig[2]           ; cpteur:compteur|q_sig[2]           ; Key[0]       ; Key[0]      ; 1.000        ; -0.022     ; 0.552      ;
+; 0.436 ; registre_dec:registre_dec|q_sig[3] ; registre_dec:registre_dec|q_sig[4] ; Key[0]       ; Key[0]      ; 1.000        ; -0.024     ; 0.547      ;
+; 0.440 ; registre_dec:registre_dec|q_sig[5] ; registre_dec:registre_dec|q_sig[6] ; Key[0]       ; Key[0]      ; 1.000        ; -0.024     ; 0.543      ;
+; 0.442 ; cpteur:compteur|q_sig[1]           ; cpteur:compteur|q_sig[1]           ; Key[0]       ; Key[0]      ; 1.000        ; -0.022     ; 0.543      ;
+; 0.585 ; registre_dec:registre_dec|q_sig[1] ; registre_dec:registre_dec|q_sig[0] ; Key[0]       ; Key[0]      ; 1.000        ; 0.049      ; 0.471      ;
+; 0.590 ; registre_dec:registre_dec|q_sig[4] ; registre_dec:registre_dec|q_sig[3] ; Key[0]       ; Key[0]      ; 1.000        ; -0.024     ; 0.393      ;
+; 0.590 ; registre_dec:registre_dec|q_sig[5] ; registre_dec:registre_dec|q_sig[4] ; Key[0]       ; Key[0]      ; 1.000        ; -0.024     ; 0.393      ;
+; 0.591 ; registre_dec:registre_dec|q_sig[4] ; registre_dec:registre_dec|q_sig[5] ; Key[0]       ; Key[0]      ; 1.000        ; -0.024     ; 0.392      ;
+; 0.591 ; cpteur:compteur|q_sig[3]           ; cpteur:compteur|q_sig[3]           ; Key[0]       ; Key[0]      ; 1.000        ; -0.022     ; 0.394      ;
+; 0.598 ; registre_dec:registre_dec|q_sig[1] ; registre_dec:registre_dec|q_sig[2] ; Key[0]       ; Key[0]      ; 1.000        ; -0.024     ; 0.385      ;
+; 0.626 ; cpteur:compteur|q_sig[0]           ; cpteur:compteur|q_sig[0]           ; Key[0]       ; Key[0]      ; 1.000        ; -0.022     ; 0.359      ;
 ; 0.635 ; registre_dec:registre_dec|q_sig[7] ; registre_dec:registre_dec|q_sig[7] ; Key[0]       ; Key[0]      ; 1.000        ; -0.022     ; 0.350      ;
 ; 0.635 ; registre_dec:registre_dec|q_sig[0] ; registre_dec:registre_dec|q_sig[0] ; Key[0]       ; Key[0]      ; 1.000        ; -0.022     ; 0.350      ;
 +-------+------------------------------------+------------------------------------+--------------+-------------+--------------+------------+------------+
@@ -408,22 +459,32 @@ No paths to report.
 +-------+------------------------------------+------------------------------------+--------------+-------------+--------------+------------+------------+
 ; Slack ; From Node                          ; To Node                            ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
 +-------+------------------------------------+------------------------------------+--------------+-------------+--------------+------------+------------+
+; 0.173 ; registre_dec:registre_dec|q_sig[1] ; registre_dec:registre_dec|q_sig[0] ; Key[0]       ; Key[0]      ; 0.000        ; 0.141      ; 0.398      ;
 ; 0.201 ; registre_dec:registre_dec|q_sig[7] ; registre_dec:registre_dec|q_sig[7] ; Key[0]       ; Key[0]      ; 0.000        ; 0.022      ; 0.307      ;
 ; 0.201 ; registre_dec:registre_dec|q_sig[0] ; registre_dec:registre_dec|q_sig[0] ; Key[0]       ; Key[0]      ; 0.000        ; 0.022      ; 0.307      ;
-; 0.221 ; registre_dec:registre_dec|q_sig[5] ; registre_dec:registre_dec|q_sig[6] ; Key[0]       ; Key[0]      ; 0.000        ; 0.023      ; 0.328      ;
-; 0.222 ; registre_dec:registre_dec|q_sig[3] ; registre_dec:registre_dec|q_sig[2] ; Key[0]       ; Key[0]      ; 0.000        ; 0.023      ; 0.329      ;
-; 0.222 ; registre_dec:registre_dec|q_sig[4] ; registre_dec:registre_dec|q_sig[3] ; Key[0]       ; Key[0]      ; 0.000        ; 0.023      ; 0.329      ;
-; 0.222 ; registre_dec:registre_dec|q_sig[3] ; registre_dec:registre_dec|q_sig[4] ; Key[0]       ; Key[0]      ; 0.000        ; 0.023      ; 0.329      ;
-; 0.223 ; registre_dec:registre_dec|q_sig[4] ; registre_dec:registre_dec|q_sig[5] ; Key[0]       ; Key[0]      ; 0.000        ; 0.023      ; 0.330      ;
-; 0.262 ; registre_dec:registre_dec|q_sig[0] ; registre_dec:registre_dec|q_sig[1] ; Key[0]       ; Key[0]      ; 0.000        ; 0.050      ; 0.396      ;
-; 0.295 ; registre_dec:registre_dec|q_sig[6] ; registre_dec:registre_dec|q_sig[7] ; Key[0]       ; Key[0]      ; 0.000        ; 0.017      ; 0.396      ;
-; 0.317 ; registre_dec:registre_dec|q_sig[6] ; registre_dec:registre_dec|q_sig[5] ; Key[0]       ; Key[0]      ; 0.000        ; 0.023      ; 0.424      ;
-; 0.324 ; registre_dec:registre_dec|q_sig[5] ; registre_dec:registre_dec|q_sig[4] ; Key[0]       ; Key[0]      ; 0.000        ; 0.023      ; 0.431      ;
-; 0.325 ; registre_dec:registre_dec|q_sig[2] ; registre_dec:registre_dec|q_sig[1] ; Key[0]       ; Key[0]      ; 0.000        ; 0.023      ; 0.432      ;
-; 0.330 ; registre_dec:registre_dec|q_sig[2] ; registre_dec:registre_dec|q_sig[3] ; Key[0]       ; Key[0]      ; 0.000        ; 0.023      ; 0.437      ;
-; 0.331 ; registre_dec:registre_dec|q_sig[1] ; registre_dec:registre_dec|q_sig[2] ; Key[0]       ; Key[0]      ; 0.000        ; 0.023      ; 0.438      ;
-; 0.357 ; registre_dec:registre_dec|q_sig[7] ; registre_dec:registre_dec|q_sig[6] ; Key[0]       ; Key[0]      ; 0.000        ; 0.050      ; 0.491      ;
-; 0.460 ; registre_dec:registre_dec|q_sig[1] ; registre_dec:registre_dec|q_sig[0] ; Key[0]       ; Key[0]      ; 0.000        ; 0.017      ; 0.561      ;
+; 0.208 ; cpteur:compteur|q_sig[0]           ; cpteur:compteur|q_sig[0]           ; Key[0]       ; Key[0]      ; 0.000        ; 0.022      ; 0.314      ;
+; 0.217 ; registre_dec:registre_dec|q_sig[1] ; registre_dec:registre_dec|q_sig[2] ; Key[0]       ; Key[0]      ; 0.000        ; 0.024      ; 0.325      ;
+; 0.223 ; registre_dec:registre_dec|q_sig[4] ; registre_dec:registre_dec|q_sig[3] ; Key[0]       ; Key[0]      ; 0.000        ; 0.024      ; 0.331      ;
+; 0.223 ; registre_dec:registre_dec|q_sig[5] ; registre_dec:registre_dec|q_sig[4] ; Key[0]       ; Key[0]      ; 0.000        ; 0.024      ; 0.331      ;
+; 0.223 ; registre_dec:registre_dec|q_sig[4] ; registre_dec:registre_dec|q_sig[5] ; Key[0]       ; Key[0]      ; 0.000        ; 0.024      ; 0.331      ;
+; 0.226 ; cpteur:compteur|q_sig[3]           ; cpteur:compteur|q_sig[3]           ; Key[0]       ; Key[0]      ; 0.000        ; 0.022      ; 0.332      ;
+; 0.320 ; cpteur:compteur|q_sig[2]           ; cpteur:compteur|q_sig[2]           ; Key[0]       ; Key[0]      ; 0.000        ; 0.022      ; 0.426      ;
+; 0.321 ; cpteur:compteur|q_sig[1]           ; cpteur:compteur|q_sig[1]           ; Key[0]       ; Key[0]      ; 0.000        ; 0.022      ; 0.427      ;
+; 0.323 ; registre_dec:registre_dec|q_sig[3] ; registre_dec:registre_dec|q_sig[2] ; Key[0]       ; Key[0]      ; 0.000        ; 0.024      ; 0.431      ;
+; 0.323 ; registre_dec:registre_dec|q_sig[6] ; registre_dec:registre_dec|q_sig[5] ; Key[0]       ; Key[0]      ; 0.000        ; 0.024      ; 0.431      ;
+; 0.328 ; registre_dec:registre_dec|q_sig[5] ; registre_dec:registre_dec|q_sig[6] ; Key[0]       ; Key[0]      ; 0.000        ; 0.024      ; 0.436      ;
+; 0.331 ; registre_dec:registre_dec|q_sig[3] ; registre_dec:registre_dec|q_sig[4] ; Key[0]       ; Key[0]      ; 0.000        ; 0.024      ; 0.439      ;
+; 0.336 ; registre_dec:registre_dec|q_sig[6] ; registre_dec:registre_dec|q_sig[7] ; Key[0]       ; Key[0]      ; 0.000        ; 0.141      ; 0.561      ;
+; 0.336 ; registre_dec:registre_dec|q_sig[2] ; registre_dec:registre_dec|q_sig[3] ; Key[0]       ; Key[0]      ; 0.000        ; 0.024      ; 0.444      ;
+; 0.351 ; registre_dec:registre_dec|q_sig[7] ; registre_dec:registre_dec|q_sig[6] ; Key[0]       ; Key[0]      ; 0.000        ; -0.049     ; 0.386      ;
+; 0.364 ; registre_dec:registre_dec|q_sig[0] ; registre_dec:registre_dec|q_sig[1] ; Key[0]       ; Key[0]      ; 0.000        ; -0.049     ; 0.399      ;
+; 0.399 ; registre_dec:registre_dec|q_sig[2] ; registre_dec:registre_dec|q_sig[1] ; Key[0]       ; Key[0]      ; 0.000        ; 0.024      ; 0.507      ;
+; 0.468 ; cpteur:compteur|q_sig[1]           ; cpteur:compteur|q_sig[2]           ; Key[0]       ; Key[0]      ; 0.000        ; 0.024      ; 0.576      ;
+; 0.476 ; cpteur:compteur|q_sig[2]           ; cpteur:compteur|q_sig[3]           ; Key[0]       ; Key[0]      ; 0.000        ; 0.024      ; 0.584      ;
+; 0.477 ; cpteur:compteur|q_sig[0]           ; cpteur:compteur|q_sig[1]           ; Key[0]       ; Key[0]      ; 0.000        ; 0.024      ; 0.585      ;
+; 0.480 ; cpteur:compteur|q_sig[0]           ; cpteur:compteur|q_sig[2]           ; Key[0]       ; Key[0]      ; 0.000        ; 0.024      ; 0.588      ;
+; 0.531 ; cpteur:compteur|q_sig[1]           ; cpteur:compteur|q_sig[3]           ; Key[0]       ; Key[0]      ; 0.000        ; 0.024      ; 0.639      ;
+; 0.543 ; cpteur:compteur|q_sig[0]           ; cpteur:compteur|q_sig[3]           ; Key[0]       ; Key[0]      ; 0.000        ; 0.024      ; 0.651      ;
 +-------+------------------------------------+------------------------------------+--------------+-------------+--------------+------------+------------+
 
 
@@ -438,10 +499,10 @@ No synchronizer chains to report.
 +------------------+--------+-------+----------+---------+---------------------+
 ; Clock            ; Setup  ; Hold  ; Recovery ; Removal ; Minimum Pulse Width ;
 +------------------+--------+-------+----------+---------+---------------------+
-; Worst-case Slack ; -0.448 ; 0.201 ; N/A      ; N/A     ; -3.000              ;
-;  Key[0]          ; -0.448 ; 0.201 ; N/A      ; N/A     ; -3.000              ;
-; Design-wide TNS  ; -1.778 ; 0.0   ; 0.0      ; 0.0     ; -24.888             ;
-;  Key[0]          ; -1.778 ; 0.000 ; N/A      ; N/A     ; -24.888             ;
+; Worst-case Slack ; -0.793 ; 0.173 ; N/A      ; N/A     ; -3.000              ;
+;  Key[0]          ; -0.793 ; 0.173 ; N/A      ; N/A     ; -3.000              ;
+; Design-wide TNS  ; -3.802 ; 0.0   ; 0.0      ; 0.0     ; -30.39              ;
+;  Key[0]          ; -3.802 ; 0.000 ; N/A      ; N/A     ; -30.390             ;
 +------------------+--------+-------+----------+---------+---------------------+
 
 
@@ -496,8 +557,6 @@ No synchronizer chains to report.
 ; SW[9]                   ; 3.3-V LVTTL  ; 2640 ps         ; 2640 ps         ;
 ; SW[10]                  ; 3.3-V LVTTL  ; 2640 ps         ; 2640 ps         ;
 ; SW[11]                  ; 3.3-V LVTTL  ; 2640 ps         ; 2640 ps         ;
-; SW[12]                  ; 3.3-V LVTTL  ; 2640 ps         ; 2640 ps         ;
-; SW[13]                  ; 3.3-V LVTTL  ; 2640 ps         ; 2640 ps         ;
 ; Key[2]                  ; 3.3-V LVTTL  ; 2640 ps         ; 2640 ps         ;
 ; Key[3]                  ; 3.3-V LVTTL  ; 2640 ps         ; 2640 ps         ;
 ; SW[0]                   ; 3.3-V LVTTL  ; 2640 ps         ; 2640 ps         ;
@@ -511,9 +570,11 @@ No synchronizer chains to report.
 ; SW[5]                   ; 3.3-V LVTTL  ; 2640 ps         ; 2640 ps         ;
 ; SW[6]                   ; 3.3-V LVTTL  ; 2640 ps         ; 2640 ps         ;
 ; SW[7]                   ; 3.3-V LVTTL  ; 2640 ps         ; 2640 ps         ;
-; SW[14]                  ; 3.3-V LVTTL  ; 2640 ps         ; 2640 ps         ;
 ; SW[15]                  ; 3.3-V LVTTL  ; 2640 ps         ; 2640 ps         ;
+; SW[14]                  ; 3.3-V LVTTL  ; 2640 ps         ; 2640 ps         ;
 ; SW[16]                  ; 3.3-V LVTTL  ; 2640 ps         ; 2640 ps         ;
+; SW[12]                  ; 3.3-V LVTTL  ; 2640 ps         ; 2640 ps         ;
+; SW[13]                  ; 3.3-V LVTTL  ; 2640 ps         ; 2640 ps         ;
 ; ~ALTERA_ASDO_DATA1~     ; 3.3-V LVTTL  ; 2640 ps         ; 2640 ps         ;
 ; ~ALTERA_FLASH_nCE_nCSO~ ; 3.3-V LVTTL  ; 2640 ps         ; 2640 ps         ;
 ; ~ALTERA_DATA0~          ; 3.3-V LVTTL  ; 2640 ps         ; 2640 ps         ;
@@ -651,7 +712,7 @@ No synchronizer chains to report.
 +------------+----------+----------+----------+----------+----------+
 ; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
 +------------+----------+----------+----------+----------+----------+
-; Key[0]     ; Key[0]   ; 16       ; 0        ; 0        ; 0        ;
+; Key[0]     ; Key[0]   ; 26       ; 0        ; 0        ; 0        ;
 +------------+----------+----------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
@@ -661,7 +722,7 @@ Entries labeled "false path" only account for clock-to-clock false paths and not
 +------------+----------+----------+----------+----------+----------+
 ; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
 +------------+----------+----------+----------+----------+----------+
-; Key[0]     ; Key[0]   ; 16       ; 0        ; 0        ; 0        ;
+; Key[0]     ; Key[0]   ; 26       ; 0        ; 0        ; 0        ;
 +------------+----------+----------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
@@ -685,10 +746,10 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 +---------------------------------+-------+------+
 ; Illegal Clocks                  ; 0     ; 0    ;
 ; Unconstrained Clocks            ; 0     ; 0    ;
-; Unconstrained Input Ports       ; 13    ; 13   ;
-; Unconstrained Input Port Paths  ; 64    ; 64   ;
-; Unconstrained Output Ports      ; 16    ; 16   ;
-; Unconstrained Output Port Paths ; 16    ; 16   ;
+; Unconstrained Input Ports       ; 15    ; 15   ;
+; Unconstrained Input Port Paths  ; 79    ; 79   ;
+; Unconstrained Output Ports      ; 27    ; 27   ;
+; Unconstrained Output Port Paths ; 48    ; 48   ;
 +---------------------------------+-------+------+
 
 
@@ -715,6 +776,8 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 ; SW[5]      ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; SW[6]      ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; SW[7]      ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; SW[12]     ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; SW[13]     ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; SW[14]     ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; SW[15]     ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; SW[16]     ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
@@ -727,6 +790,17 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 +-------------+---------------------------------------------------------------------------------------+
 ; Output Port ; Comment                                                                               ;
 +-------------+---------------------------------------------------------------------------------------+
+; Hex0[0]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; Hex0[1]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; Hex0[2]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; Hex0[3]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; Hex0[4]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; Hex0[5]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; Hex0[6]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; LEDG[0]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; LEDG[1]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; LEDG[2]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; LEDG[3]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; LEDR[0]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; LEDR[1]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; LEDR[2]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
@@ -760,6 +834,8 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 ; SW[5]      ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; SW[6]      ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; SW[7]      ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; SW[12]     ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; SW[13]     ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; SW[14]     ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; SW[15]     ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; SW[16]     ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
@@ -772,6 +848,17 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 +-------------+---------------------------------------------------------------------------------------+
 ; Output Port ; Comment                                                                               ;
 +-------------+---------------------------------------------------------------------------------------+
+; Hex0[0]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; Hex0[1]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; Hex0[2]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; Hex0[3]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; Hex0[4]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; Hex0[5]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; Hex0[6]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; LEDG[0]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; LEDG[1]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; LEDG[2]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; LEDG[3]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; LEDR[0]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; LEDR[1]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; LEDR[2]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
@@ -797,11 +884,11 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 Info: *******************************************************************
 Info: Running Quartus Prime Timing Analyzer
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Standard Edition
-    Info: Processing started: Fri Sep 29 16:59:24 2023
+    Info: Processing started: Wed Oct 04 15:09:51 2023
 Info: Command: quartus_sta DE2_115 -c DE2_115
 Info: qsta_default_script.tcl version: #1
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
 Info (21077): Low junction temperature is 0 degrees C
 Info (21077): High junction temperature is 85 degrees C
 Info (332104): Reading SDC File: 'DE2_115.sdc'
@@ -823,50 +910,50 @@ Info: Found TIMING_ANALYZER_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
 Info: Analyzing Slow 1200mV 85C Model
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
-Info (332146): Worst-case setup slack is -0.448
+Info (332146): Worst-case setup slack is -0.793
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.448              -1.778 Key[0] 
-Info (332146): Worst-case hold slack is 0.440
+    Info (332119):    -0.793              -3.802 Key[0] 
+Info (332146): Worst-case hold slack is 0.400
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.440               0.000 Key[0] 
+    Info (332119):     0.400               0.000 Key[0] 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
 Info (332146): Worst-case minimum pulse width slack is -3.000
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -3.000             -23.560 Key[0] 
+    Info (332119):    -3.000             -28.700 Key[0] 
 Info: Analyzing Slow 1200mV 0C Model
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (332154): The derive_clock_uncertainty command did not apply clock uncertainty to any clock-to-clock transfers.
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
-Info (332146): Worst-case setup slack is -0.310
+Info (332146): Worst-case setup slack is -0.616
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.310              -0.827 Key[0] 
-Info (332146): Worst-case hold slack is 0.387
+    Info (332119):    -0.616              -2.399 Key[0] 
+Info (332146): Worst-case hold slack is 0.362
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.387               0.000 Key[0] 
+    Info (332119):     0.362               0.000 Key[0] 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
 Info (332146): Worst-case minimum pulse width slack is -3.000
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -3.000             -23.560 Key[0] 
+    Info (332119):    -3.000             -28.700 Key[0] 
 Info: Analyzing Fast 1200mV 0C Model
 Info (332154): The derive_clock_uncertainty command did not apply clock uncertainty to any clock-to-clock transfers.
-Info (332146): Worst-case setup slack is 0.299
+Info (332146): Worst-case setup slack is 0.143
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.299               0.000 Key[0] 
-Info (332146): Worst-case hold slack is 0.201
+    Info (332119):     0.143               0.000 Key[0] 
+Info (332146): Worst-case hold slack is 0.173
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.201               0.000 Key[0] 
+    Info (332119):     0.173               0.000 Key[0] 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
 Critical Warning (332148): Timing requirements not met
@@ -874,13 +961,13 @@ Critical Warning (332148): Timing requirements not met
 Info (332146): Worst-case minimum pulse width slack is -3.000
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -3.000             -24.888 Key[0] 
+    Info (332119):    -3.000             -30.390 Key[0] 
 Info (332102): Design is not fully constrained for setup requirements
 Info (332102): Design is not fully constrained for hold requirements
 Info: Quartus Prime Timing Analyzer was successful. 0 errors, 10 warnings
-    Info: Peak virtual memory: 4842 megabytes
-    Info: Processing ended: Fri Sep 29 16:59:32 2023
-    Info: Elapsed time: 00:00:08
-    Info: Total CPU time (on all processors): 00:00:03
+    Info: Peak virtual memory: 4869 megabytes
+    Info: Processing ended: Wed Oct 04 15:09:56 2023
+    Info: Elapsed time: 00:00:05
+    Info: Total CPU time (on all processors): 00:00:02
 
 

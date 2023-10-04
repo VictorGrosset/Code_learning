@@ -13,6 +13,7 @@ entity Carte_DE2_115 is
 end entity;
 
 architecture arch_Carte_DE2_115 of Carte_DE2_115 is 
+signal iQ : std_logic_vector(3 downto 0);
 	
 	begin 
 	registre:entity work.registre_en(arch_registre_en)	
@@ -20,6 +21,15 @@ architecture arch_Carte_DE2_115 of Carte_DE2_115 is
 	
 	registre_dec :entity work.registre_dec(arch_registre_dec)
 	port map(  clk => Key(0), load => SW(16) , resetn =>Key(1) , decal => SW(15), sens => SW(14), e => SW(7 downto 0), q => LEDR(15 Downto 8));
+	
+	compteur : entity work.cpteur( arch_cpteur) 
+	port map(  clk => Key(0), load => SW(12) , resetn =>Key(1) , compt => SW(13), e => SW(3 downto 0), q => iQ);
+	
+   LEDG(3 Downto 0) <= iQ;
+	
+	deco7seg : entity work.deco7seg(ar)
+	port map ( E => iQ, S => Hex0);
+	
 	
 end architecture;
 	

@@ -10,79 +10,266 @@
 # Copying C:/intelFPGA/18.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
 # Modifying modelsim.ini
 # 
-# vcom -93 -work work {H:/VHDL/TP_3/TP_3/src/registre_dec.vhd}
+# vcom -93 -work work {H:/VHDL/TP_3/TP_3/src/cpteur.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 16:34:11 on Sep 29,2023
-# vcom -reportprogress 300 -93 -work work H:/VHDL/TP_3/TP_3/src/registre_dec.vhd 
+# Start time: 14:01:25 on Oct 04,2023
+# vcom -reportprogress 300 -93 -work work H:/VHDL/TP_3/TP_3/src/cpteur.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity cpteur
+# -- Compiling architecture arch_cpteur of cpteur
+# End time: 14:01:26 on Oct 04,2023, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# 
+vcom -reportprogress 300 -work work H:/VHDL/TP_3/TP_3/src/registre_dec.vhd
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:01:39 on Oct 04,2023
+# vcom -reportprogress 300 -work work H:/VHDL/TP_3/TP_3/src/registre_dec.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity registre_dec
 # -- Compiling architecture arch_registre_dec of registre_dec
-# End time: 16:34:11 on Sep 29,2023, Elapsed time: 0:00:00
+# End time: 14:01:39 on Oct 04,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# 
-vcom -reportprogress 300 -work work H:/VHDL/TP_3/TP_3/src/registre_dec_tb.vhd
+vcom -reportprogress 300 -work work H:/VHDL/TP_3/TP_3/src/compteur_tb.vhd
 # Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 16:34:33 on Sep 29,2023
-# vcom -reportprogress 300 -work work H:/VHDL/TP_3/TP_3/src/registre_dec_tb.vhd 
+# Start time: 14:01:45 on Oct 04,2023
+# vcom -reportprogress 300 -work work H:/VHDL/TP_3/TP_3/src/compteur_tb.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
-# -- Compiling entity registre_dec_tb
-# -- Compiling architecture arch_registre_dec_tb of registre_dec_tb
-# -- Loading entity registre_dec
-# End time: 16:34:33 on Sep 29,2023, Elapsed time: 0:00:00
+# -- Loading package NUMERIC_STD
+# -- Compiling entity compteur_tb
+# -- Compiling architecture arch_compteur_tb of compteur_tb
+# -- Loading entity cpteur
+# End time: 14:01:45 on Oct 04,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-vsim work.registre_dec_tb
-# vsim work.registre_dec_tb 
-# Start time: 16:34:37 on Sep 29,2023
+vsim work.compteur_tb
+# vsim work.compteur_tb 
+# Start time: 14:01:57 on Oct 04,2023
 # Loading std.standard
 # Loading std.textio(body)
 # Loading ieee.std_logic_1164(body)
-# Loading work.registre_dec_tb(arch_registre_dec_tb)
-# Loading work.registre_dec(arch_registre_dec)
+# Loading ieee.numeric_std(body)
+# Loading work.compteur_tb(arch_compteur_tb)
+# Loading work.cpteur(arch_cpteur)
+add wave -position insertpoint  \
+sim:/compteur_tb/e_tb \
+sim:/compteur_tb/q_tb \
+sim:/compteur_tb/resetn_tb \
+sim:/compteur_tb/load_tb \
+sim:/compteur_tb/compt_tb \
+sim:/compteur_tb/clk_tb
+run
+restart
+run
+vcom -reportprogress 300 -work work H:/VHDL/TP_3/TP_3/src/compteur_tb.vhd
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:06:14 on Oct 04,2023
+# vcom -reportprogress 300 -work work H:/VHDL/TP_3/TP_3/src/compteur_tb.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity compteur_tb
+# -- Compiling architecture arch_compteur_tb of compteur_tb
+# -- Loading entity cpteur
+# End time: 14:06:15 on Oct 04,2023, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+restart
+# Loading work.compteur_tb(arch_compteur_tb)
+run
+restart
+restart
+run
+vcom -reportprogress 300 -work work H:/VHDL/TP_3/TP_3/src/compteur_tb.vhd
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:09:08 on Oct 04,2023
+# vcom -reportprogress 300 -work work H:/VHDL/TP_3/TP_3/src/compteur_tb.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity compteur_tb
+# -- Compiling architecture arch_compteur_tb of compteur_tb
+# -- Loading entity cpteur
+# End time: 14:09:08 on Oct 04,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+restart
+# Loading work.compteur_tb(arch_compteur_tb)
+run
+vcom -reportprogress 300 -work work H:/VHDL/TP_3/TP_3/src/compteur_tb.vhd
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:17:35 on Oct 04,2023
+# vcom -reportprogress 300 -work work H:/VHDL/TP_3/TP_3/src/compteur_tb.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity compteur_tb
+# -- Compiling architecture arch_compteur_tb of compteur_tb
+# -- Loading entity cpteur
+# End time: 14:17:35 on Oct 04,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+restart
+# Loading work.compteur_tb(arch_compteur_tb)
+run
+vcom -reportprogress 300 -work work H:/VHDL/TP_3/TP_3/src/compteur_tb.vhd
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:18:35 on Oct 04,2023
+# vcom -reportprogress 300 -work work H:/VHDL/TP_3/TP_3/src/compteur_tb.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity compteur_tb
+# -- Compiling architecture arch_compteur_tb of compteur_tb
+# -- Loading entity cpteur
+# End time: 14:18:35 on Oct 04,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+restart
+# Loading work.compteur_tb(arch_compteur_tb)
+run
+restart
+run
+vcom -reportprogress 300 -work work H:/VHDL/TP_3/TP_3/src/compteur_tb.vhd
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:29:50 on Oct 04,2023
+# vcom -reportprogress 300 -work work H:/VHDL/TP_3/TP_3/src/compteur_tb.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity compteur_tb
+# -- Compiling architecture arch_compteur_tb of compteur_tb
+# -- Loading entity cpteur
+# End time: 14:29:50 on Oct 04,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
 view -new wave
 # -new not supported on PE
 add wave -position insertpoint  \
-sim:/registre_dec_tb/e_tb \
-sim:/registre_dec_tb/q_tb \
-sim:/registre_dec_tb/resetn_tb \
-sim:/registre_dec_tb/load_tb \
-sim:/registre_dec_tb/decal_tb \
-sim:/registre_dec_tb/sens_tb \
-sim:/registre_dec_tb/clk_tb
+sim:/compteur_tb/e_tb \
+sim:/compteur_tb/q_tb \
+sim:/compteur_tb/resetn_tb \
+sim:/compteur_tb/load_tb \
+sim:/compteur_tb/compt_tb \
+sim:/compteur_tb/clk_tb
+restart
+# Loading work.compteur_tb(arch_compteur_tb)
 run
-vcom -work work H:/VHDL/TP_3/TP_3/src/registre_dec_tb.vhd
+restart
+run
+vcom -reportprogress 300 -work work H:/VHDL/TP_3/TP_3/src/compteur_tb.vhd
 # Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 16:45:40 on Sep 29,2023
-# vcom -reportprogress 300 -work work H:/VHDL/TP_3/TP_3/src/registre_dec_tb.vhd 
+# Start time: 14:32:21 on Oct 04,2023
+# vcom -reportprogress 300 -work work H:/VHDL/TP_3/TP_3/src/compteur_tb.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
-# -- Compiling entity registre_dec_tb
-# -- Compiling architecture arch_registre_dec_tb of registre_dec_tb
-# -- Loading entity registre_dec
-# End time: 16:45:41 on Sep 29,2023, Elapsed time: 0:00:01
+# -- Loading package NUMERIC_STD
+# -- Compiling entity compteur_tb
+# -- Compiling architecture arch_compteur_tb of compteur_tb
+# -- Loading entity cpteur
+# End time: 14:32:22 on Oct 04,2023, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
-vsim work.registre_dec_tb
-# End time: 16:45:46 on Sep 29,2023, Elapsed time: 0:11:09
-# Errors: 1, Warnings: 0
-# vsim work.registre_dec_tb 
-# Start time: 16:45:46 on Sep 29,2023
+view -new wave
+# -new not supported on PE
+add wave -position insertpoint  \
+sim:/compteur_tb/e_tb \
+sim:/compteur_tb/q_tb \
+sim:/compteur_tb/resetn_tb \
+sim:/compteur_tb/load_tb \
+sim:/compteur_tb/compt_tb \
+sim:/compteur_tb/clk_tb
+run
+restart
+# Loading work.compteur_tb(arch_compteur_tb)
+run
+run
+restart
+run
+vcom -work work H:/VHDL/TP_3/TP_3/src/compteur_tb.vhd
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:42:10 on Oct 04,2023
+# vcom -reportprogress 300 -work work H:/VHDL/TP_3/TP_3/src/compteur_tb.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity compteur_tb
+# -- Compiling architecture arch_compteur_tb of compteur_tb
+# -- Loading entity cpteur
+# End time: 14:42:11 on Oct 04,2023, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+vsim work.compteur_tb
+# End time: 14:42:24 on Oct 04,2023, Elapsed time: 0:40:27
+# Errors: 2, Warnings: 0
+# vsim work.compteur_tb 
+# Start time: 14:42:25 on Oct 04,2023
 # Loading std.standard
 # Loading std.textio(body)
 # Loading ieee.std_logic_1164(body)
-# Loading work.registre_dec_tb(arch_registre_dec_tb)
-# Loading work.registre_dec(arch_registre_dec)
-add wave -position insertpoint  \
-sim:/registre_dec_tb/e_tb \
-sim:/registre_dec_tb/q_tb \
-sim:/registre_dec_tb/resetn_tb \
-sim:/registre_dec_tb/load_tb \
-sim:/registre_dec_tb/decal_tb \
-sim:/registre_dec_tb/sens_tb \
-sim:/registre_dec_tb/clk_tb
-run
-# End time: 16:54:09 on Sep 29,2023, Elapsed time: 0:08:23
+# Loading ieee.numeric_std(body)
+# Loading work.compteur_tb(arch_compteur_tb)
+# Loading work.cpteur(arch_cpteur)
+vsim work.compteur_tb
+# End time: 14:43:08 on Oct 04,2023, Elapsed time: 0:00:43
 # Errors: 0, Warnings: 0
+# vsim work.compteur_tb 
+# Start time: 14:43:08 on Oct 04,2023
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.compteur_tb(arch_compteur_tb)
+# Loading work.cpteur(arch_cpteur)
+view -new wave
+# -new not supported on PE
+add wave -position insertpoint  \
+sim:/compteur_tb/e_tb \
+sim:/compteur_tb/q_tb \
+sim:/compteur_tb/resetn_tb \
+sim:/compteur_tb/load_tb \
+sim:/compteur_tb/compt_tb \
+sim:/compteur_tb/clk_tb
+run
+vcom -work work H:/VHDL/TP_3/TP_3/src/compteur_tb.vhd
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:45:34 on Oct 04,2023
+# vcom -reportprogress 300 -work work H:/VHDL/TP_3/TP_3/src/compteur_tb.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity compteur_tb
+# -- Compiling architecture arch_compteur_tb of compteur_tb
+# -- Loading entity cpteur
+# End time: 14:45:34 on Oct 04,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+restart
+# Loading work.compteur_tb(arch_compteur_tb)
+run
+vcom -work work H:/VHDL/TP_3/TP_3/src/compteur_tb.vhd
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:46:39 on Oct 04,2023
+# vcom -reportprogress 300 -work work H:/VHDL/TP_3/TP_3/src/compteur_tb.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity compteur_tb
+# -- Compiling architecture arch_compteur_tb of compteur_tb
+# -- Loading entity cpteur
+# End time: 14:46:39 on Oct 04,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+restart
+# Loading work.compteur_tb(arch_compteur_tb)
+run
+run
+restart
+run
+# End time: 14:51:08 on Oct 04,2023, Elapsed time: 0:08:00
+# Errors: 1, Warnings: 0

@@ -1,0 +1,33 @@
+library ieee;
+use ieee.std_logic_1164.all;
+une ieee.numeric_std.all;
+
+entity cpteur is 
+port (  clk, load, resetn, compt : in std_logic;
+              e : in std_logic_vector(3 downto 0 );
+              q : out std_logic_vector(3 downto 0) );
+end entity
+
+architecture arch_cpteur  of cpteur is
+signal : q_sig std_logic_vector_unsigned(3 downto 0) 
+
+begin
+process(clk, resetn)
+	begin
+	       if resetn = '0' then
+				q_sig <= (others => '0' );
+	       elsif rising_edge(clk) then
+				if load = '1' then
+					q_sig<= e;
+				elsif compt ='1' then
+					q_sig <= q_sig + 1;
+				else
+					q_sig<=q_sig - 1;
+
+				end if;
+	       end if;
+	
+end process;
+q <= q_sig;
+
+end architecture;
