@@ -2,13 +2,14 @@ import json
 import requests
 
 class RemoteServer:
-    def __init__(self, ip: str, port: int):
-        self.ip_address =ip
-        self.port = port
+    def __init__(self):
+        self.ip_address = '10.6.7.67'
+        self.port = 8888
         self.baseURL = f'http://{self.ip_address}:{self.port}'
+        self.headers = {'Accept': 'application/json'}
 
     def doRequest(self, path: str):
-        response = requests.get(self.baseURL+path)
+        response = requests.get(self.baseURL+path, headers=self.headers)
 
 class RemoteDevice:
     def __init__(self, name: str):
@@ -18,9 +19,10 @@ class RemoteDevice:
 
     def setServer(self, server):
         #associer serveur au device
+        #demander au prof
 
     def getReresentation(self):
-        pass
+
 
 
 class RemoteSensor(RemoteDevice):
@@ -39,10 +41,19 @@ class RemoteSensor(RemoteDevice):
     def getHistory(self):
         # recupérer l'historique depuis le serveur
 
-class RemoteLedger(RemoteDevice):
+class RemoteLed(RemoteDevice):
     def __init__(self, path: str, name: str):
         super().__init__(name)
         self.path = path
+
+    def getReresentation(self):
+        pass
+
+    def switchOn(self, red: int, green: int, blue: int):
+        pass
+
+    def switchOff(self):
+        pass
 
 
 

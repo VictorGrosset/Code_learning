@@ -7,6 +7,7 @@ class IoTDevice:
     def __init__(self, name, descr):
         self.name = name
         self.description = descr
+   
 
     def getRepresentation(self):
         result = {

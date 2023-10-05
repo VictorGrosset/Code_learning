@@ -25,7 +25,7 @@ class TemperatureSensor(Sensor):
     def getValue(self):
         # To-Do : Récupérer la valeur de la température
         # Un objet de la classe SenseHat est déja accéssible ici : IoTDevice.sense
-        self.last_value = IoTDevice.getValue(self)
+        self.last_value = IoTDevice.sense.get_temperature()
         super().saveToHistory()
         return self.last_value
 
@@ -40,7 +40,7 @@ class HumiditySensor(Sensor):
     def getValue(self):
         # To-Do : Récupérer la valeur de l'humidité
         # Un objet de la classe SenseHat est déja accéssible ici : IoTDevice.sense
-        self.last_value = IoTDevice.getValue(self)
+        self.last_value = IoTDevice.sense.get_humidity()
         super().saveToHistory()
         return self.last_value
 
@@ -55,7 +55,7 @@ class PressureSensor(Sensor):
     def getValue(self):
         # To-Do : Récupérer la valeur de la pression
         # Un objet de la classe SenseHat est déja accéssible ici : IoTDevice.sense
-        self.last_value = IoTDevice.getValue(self)
+        self.last_value = IoTDevice.sense.get_pressure()
         super().saveToHistory()
         return self.last_value
 
