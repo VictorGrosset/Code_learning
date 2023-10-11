@@ -1,20 +1,21 @@
 import pyvisa
 import time
-from Mesures import *  # Ne sert que si on utilise un nom de Mesure.py
+#from Mesures import *  # Ne sert que si on utilise un nom de Mesure.py
 
 
 class Instrument:  # À rendre full abstraite, c'est juste pour l'exemple, héritage d'interface si possible
+
+    rm = pyvisa.ResourceManager('@sim') #Attribut de classe !!!!!!  = variable globale de classe
+
     def __init__(self, obj_mesure):
-        self.rm = pyvisa.ResourceManager('@sim')
         self.instrument_address = None
         self.instrument = None
-        self.mesure = None
+        self.mesure = obj_mesure
         self.terminaison_char = ''
         self.timeout = None
         self.delay = None
 
-    def set_instrument_address(self,
-                               instrument_address: str):  # CHoisir s'il faut définir à l'instanciation ou par méthode set
+    def set_instrument_address(self, instrument_address: str):  # CHoisir s'il faut définir à l'instanciation ou par méthode set
         pass
 
     def set_terminaison_char(self, character: str):
@@ -41,7 +42,7 @@ class VNA(Instrument):  # Est-ce que c'est nécessaire d'avoir la classe fille V
         super().__init__(obj_mesure)
         self.instrument_address = None
         self.instrument = None
-        self.mesure = None
+        self.mesure = obj_mesure
         self.terminaison_char = ''
         self.timeout = None  # A implementer
         self.delay = None  # A implementer
@@ -70,17 +71,16 @@ class VNA(Instrument):  # Est-ce que c'est nécessaire d'avoir la classe fille V
 
 
 class S2VNA(VNA):
-    def __init(self, obj_mesure: S21):
+    def __init(self, obj_mesure):
         super().__init__(obj_mesure)
         self.instrument_address = None
-        self.instrument = None
+        self.instrument = None #instru du rm
         self.mesure = obj_mesure
-        self.terminaison_char = ''
+        self.terminaison_char = None
         self.timeout = None
         self.delay = None
 
-    def set_instrument_address(self,
-                               instrument_address: str):  # CHoisir s'il faut définir à l'instanciation ou par méthode set
+    def set_instrument_address(self, instrument_address: str):  # CHoisir s'il faut définir à l'instanciation ou par méthode set
         self.instrument_address = instrument_address
 
     def set_terminaison_char(self, character: str):
@@ -93,17 +93,20 @@ class S2VNA(VNA):
         self.timeout = timeout
 
     def open_instrument(self):
+        #Instrument.rm.list_resources()
         self.instrument = self.rm.open_resource(self.instrument_address)
 
     def close_instrument(self):
         self.instrument.close_instrument()
 
     def do_measure(self):
-        write = 1
         list_command = self.mesure.get_list_command()
         for command in list_command:
-            if write == 1:  # Trouver moyen de savoir si c'est write ou query
-                self.instrument.write(list_command(command))
+            if "?" in command:  # Trouver moyen de savoir si c'est write ou query
+                self.instrument.query(list_command(command))
             else:
                 self.instrument.write(list_command(command))
             time.sleep(self.delay)
+
+
+
