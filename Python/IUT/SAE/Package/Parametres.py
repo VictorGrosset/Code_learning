@@ -1,16 +1,19 @@
 class Parametre:
-    def getParam(self):
+    def __init__(self):
+        pass
+    def get_param(self):
         pass
 
 
 class DefaultARV(Parametre):
     def __init__(self):
+        super().__init__()
         self.f_min = 100000000  # 1 MHz
         self.f_max = 2000000000  # 2 GHz
         self.nb_pt = 100
         self.Pref = -10  # dBm
 
-    def getParam(self):
+    def get_param(self):
         dico_param_arv = {
             "fmin": self.f_min,
             "fmax": self.f_max,
@@ -29,7 +32,7 @@ class S21ARV(DefaultARV):
         self.nb_pt = 101  # 101 points
         self.rbw = 100e3  # 100 kHz
 
-    def getParam(self):
+    def get_param(self):
         dico_param_arv = {
             "format": self.format,
             "type_mesure": self.type_mesure,
@@ -42,11 +45,12 @@ class S21ARV(DefaultARV):
 
 class DefaultOscillo(Parametre):
     def __init__(self):
+        super().__init__()
         self.time_base = 0.001  # 1 ms
         self.amplitude = 3  # V
         self.Zin = 1000000  # Impédence d'entrée 1 M Ohm
 
-    def getParam(self):
+    def get_param(self):
         dico_param_oscillo = {
             "tps": self.time_base,
             "ampl": self.amplitude,

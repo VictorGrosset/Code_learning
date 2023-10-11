@@ -7,7 +7,7 @@ class Mesure:
         self.result = 0
         self.list_command = []
 
-    def reglages(self, parametres):
+    def reglages(self, parametres): #Doute sur l'utilité
         pass
 
     def mesure(self):
@@ -28,7 +28,7 @@ class S21(Mesure):
         pass
 
     def mesure(self):
-        parameters_values = self.parametres.getParam()
+        parameters_values = self.parametres.get_param()
         self.list_command.append(f'SYSTem:PRESet')
         self.list_command.append(f'SENS:SWE:POIN {parameters_values["nb_pt"]}')
         self.list_command.append(f'CALCulate1:FORMat {parameters_values["format"]}')
