@@ -29,17 +29,18 @@ class S21(Mesure):
 
     def mesure(self):
         parameters_values = self.parametres.get_param()
-        self.list_command.append(f'SYSTem:PRESet')
-        self.list_command.append(f'SENS:SWE:POIN {parameters_values["nb_pt"]}')
+        self.list_command.append(f'*RST; *CLS')
+        self.list_command.append(f'SENSe1:FREQuency:STARt {parameters_values["f_min"]}')
+        self.list_command.append(f'SENSe1:FREQuency:STOP {parameters_values["f_max"]}')
+        self.list_command.append(f'SENSe1:BAND {parameters_values["rbw"]}')
+        self.list_command.append(f'SENSe:SWE:POIN {parameters_values["nb_pt"]}')
         self.list_command.append(f'CALCulate1:FORMat {parameters_values["format"]}')
         self.list_command.append(f'CALCulate1:PARameter1:DEF {parameters_values["type_mesure"]}')
-        self.list_command.append(f'CALCulate1:PARameter1:SEL ')
-        self.list_command.append(f'SENS:BAND {parameters_values["rbw"]}')
-        self.list_command.append(f'INITiate1:CONTinuous ON')
         self.list_command.append(f'CALCulate1:MARKer1 ON')
-        self.list_command.append(f'CALCulate1:MARKer1: {parameters_values["f_marker1"]}')
-        self.list_command.append(f'CALCulat1:MARKer1:Y?')  # Attention, c'est une command query. Il faudrait un flag
-        # pour savoir si c'est write ou query
+        self.list_command.append(f'CALCulate1:MARKer1:X {parameters_values["f_marker"]}')
+        self.list_command.append(f'CALCulate1:MARKer1:Y?')
+        self.list_command.append(f'INITiate1:CONTinuous ON')
+
 
     def get_list_command(self):
         self.mesure()

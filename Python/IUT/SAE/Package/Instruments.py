@@ -5,11 +5,11 @@ import time
 
 class Instrument:  # À rendre full abstraite, c'est juste pour l'exemple, héritage d'interface si possible
 
-    rm = pyvisa.ResourceManager('@sim') #Attribut de classe !!!!!!  = variable globale de classe
+    rm = pyvisa.ResourceManager() #Attribut de classe = variable globale de classe
 
     def __init__(self, obj_mesure):
         self.instrument_address = None
-        self.instrument = None
+        self.instrument = None #rm.open_ressource(instrument_address)
         self.mesure = obj_mesure
         self.terminaison_char = ''
         self.timeout = None
@@ -47,8 +47,7 @@ class VNA(Instrument):  # Est-ce que c'est nécessaire d'avoir la classe fille V
         self.timeout = None  # A implementer
         self.delay = None  # A implementer
 
-    def set_instrument_address(self,
-                               instrument_address: str):  # CHoisir s'il faut définir à l'instanciation ou par méthode set
+    def set_instrument_address(self, instrument_address: str):  # CHoisir s'il faut définir à l'instanciation ou par méthode set
         pass
 
     def set_terminaison_char(self, character: str):
@@ -79,6 +78,7 @@ class S2VNA(VNA):
         self.terminaison_char = None
         self.timeout = None
         self.delay = None
+        #TCPIP0::localhost::5025::SOCKET
 
     def set_instrument_address(self, instrument_address: str):  # CHoisir s'il faut définir à l'instanciation ou par méthode set
         self.instrument_address = instrument_address
@@ -93,20 +93,22 @@ class S2VNA(VNA):
         self.timeout = timeout
 
     def open_instrument(self):
-        #Instrument.rm.list_resources()
         self.instrument = self.rm.open_resource(self.instrument_address)
 
     def close_instrument(self):
         self.instrument.close_instrument()
 
     def do_measure(self):
+        Instrument.rm.list_resources()
         list_command = self.mesure.get_list_command()
         for command in list_command:
-            if "?" in command:  # Trouver moyen de savoir si c'est write ou query
-                self.instrument.query(list_command(command))
+            if "?" in command:
+                result = self.instrument.query(command+self.terminaison_char)
+                print(result)
             else:
-                self.instrument.write(list_command(command))
+                self.instrument.write(command+self.terminaison_char)
             time.sleep(self.delay)
+
 
 
 

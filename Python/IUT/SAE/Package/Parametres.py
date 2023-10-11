@@ -26,17 +26,21 @@ class DefaultARV(Parametre):
 class S21ARV(DefaultARV):
     def __init__(self):
         super().__init__()
-        self.format = "sLin"  # Smith linéaire
-        self.type_mesure = "S21"  # S21
-        self.f_marker1 = 1e6  # 1 MHz
-        self.nb_pt = 101  # 101 points
-        self.rbw = 100e3  # 100 kHz
+        self.f_min = 3e9
+        self.f_max = 6e9
+        self.format = "sLin"
+        self.type_mesure = "S21"
+        self.f_marker = 4.18535e9
+        self.nb_pt = 1001
+        self.rbw = 1e6
 
     def get_param(self):
         dico_param_arv = {
+            "f_min": self.f_min,
+            "f_max": self.f_max,
             "format": self.format,
             "type_mesure": self.type_mesure,
-            "f_marker1": self.f_marker1,
+            "f_marker": self.f_marker,
             "nb_pt": self.nb_pt,
             "rbw": self.rbw
         }
