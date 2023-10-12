@@ -97,9 +97,7 @@ class S2VNA(VNA):
                 self.instrument.write(command)
             time.sleep(self.latency)
 
-    def export_data(
-            self):  # Todo: définir une méthode par défaut pour l'export quite à override ensuite suivant les types de résultat
-        # Todo: prévoir une méthode d'import et de traitement des données brutes dans une classe traitement
+    def export_data(self):
         self.frequency_list_unformated = self.instrument.query('CALC:DATA:XAX?')  # fréquences
         frequency_list = self.frequency_list_unformated.split(',')
         nb_line = len(frequency_list)

@@ -10,14 +10,11 @@ s2vna.do_measure()
 s2vna.export_data()
 s2vna.close_comm_instrument()
 
-
-
-
 #Todo Si on a le temps, créer une classe JSON decoder pour importer des parametres en .mescouilles. J'ai des exemples vu j'ai bien fini le TP dessus. C'est vraiment pas long
-#Todo Tracer la courbe sur matplotlib
 #Todo Importer la courbe dans un .pdf
-#Faire en sorte que Instrument utilise Mesures et Parametre. Ce sera plus facile d'intéragir avec ces classes
-
+#Todo Faire en sorte que Instrument utilise Mesures et Parametre. Ce sera plus facile d'intéragir avec ces classes
+#Todo: prévoir des méthodes d'import et de traitement des données brutes dans une classe traitement. Ce n'est pas à Instrument de gérer çà, mais par manque de temps...
+#Todo: définir une méthode par défaut pour l'export quite à override ensuite suivant les types de résultat
 
 
 
