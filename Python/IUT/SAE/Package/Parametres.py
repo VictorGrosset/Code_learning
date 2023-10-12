@@ -33,6 +33,7 @@ class S21ARV(DefaultARV):
         self.f_marker = 4.18535e9
         self.nb_pt = 1001
         self.rbw = 1e6
+        self.vbw = 3e6
 
     def get_param(self):
         dico_param_arv = {
@@ -42,7 +43,8 @@ class S21ARV(DefaultARV):
             "type_mesure": self.type_mesure,
             "f_marker": self.f_marker,
             "nb_pt": self.nb_pt,
-            "rbw": self.rbw
+            "rbw": self.rbw,
+            "vbw": self.vbw
         }
         return dico_param_arv
 

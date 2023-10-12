@@ -1,0 +1,157 @@
+//
+//Auteur: VG
+//
+
+//Driver ESU26  CW BCI
+    //initialisation (write)    
+    *RST                                //Reset
+    *CLS                                //Clear Data
+    SYST:DISP:UPD ON                    //Display update during remote control
+    INST:COUP:PROT ALL                  //10 dB attenuation minimum
+    INP:ATT:AUTO ON                     //Auto attenuation
+    INP:COUP DC                         //DC Block
+    INP:TYPE INPUT2                     //Select input 2
+    CALC:UNIT:POW DBM                   //dBm measurement
+    INST RECeiver                       //Receiver mode
+    DET:REC POS                         //Peak detector
+    BAND:AUTO OFF                       //Deactivate automatic RBW
+    BAND 10 kHz                         //10 kHz RBW
+    SWE:TIME 20ms                       //20 ms sweep
+
+    //Fréquence (write)
+    FREQ:CENT (X)MHZ                    //Set center frequency
+
+    //Mesure  (query)
+    TRACE?\sSINGLE                      //Read result
+
+//Driver ESU26 SW BCI Bande 1
+    //initialisation (write)
+    *RST                                //Reset
+    *CLS                                //Clear Data
+    SYST:DISP:UPD ON                    //Display update during remote control
+    INST:COUP:PROT ALL                  //10 dB attenuation minimum
+    INP:ATT:AUTO ON                     //Auto attenuation
+    INP:COUP DC                         //DC Block
+    INP:TYPE INPUT2                     //Select input 2
+    CALC:UNIT:POW DBM                   //dBm measurement
+    INST:SEL SAN                        //Analyzer mode
+    DISP:WIND:TRAC:Y:RLEV 0DBM          //0 dBm reference level
+    FREQ:SPAN 0HZ                       //Span 0
+    BAND:AUTO OFF                       //Deactivate automatic RBW
+    BAND 2KHZ                           //2 kHz RBW 
+    SWE:TIME: 0.02                      //20 ms sweep
+    INIT:CONT OFF                       //Single sweep mode
+
+    //Fréquence (write)
+    FREQ:CENT (X)MHZ                    //Set center frequency
+
+    //Mesure (write-query)
+    INIT;*WAI;CALC:MARK:MAX             //Trig sweep, wait and place marker (write)
+    CALC:MARK:Y?                        //Read result  (query)
+
+//Driver ESU26 SW BCI Bande 2
+    //initialisation (write)
+    *RST                                //Reset
+    *CLS                                //Clear Data
+    SYST:DISP:UPD ON                    //Display update during remote control
+    INST:COUP:PROT ALL                  //10 dB attenuation minimum
+    INP:ATT:AUTO ON                     //Auto attenuation
+    INP:COUP DC                         //DC Block
+    INP:TYPE INPUT2                     //Select input 2
+    CALC:UNIT:POW DBM                   //dBm measure
+    INST RECeiver                       //Receiver mode
+    DET:REC POS                         //Max peak detector
+    BAND:AUTO OFF                       //Deactivate automatic RBW
+    BAND 10 kHz                         //10 kHz RBW
+    SWE:TIME 20ms                       //20 ms sweep
+
+    //Fréquence (write)
+    FREQ:CENT (X)MHZ                    //Set center frequency
+
+    //Mesure  (query)
+    TRACE?\sSINGLE                      //Read result                 //Read result
+
+//Driver ESIB26 CW BCI
+    //initialisation (write)
+    *RST                                //Reset
+    CLS                                 //Clear Data
+    SYST:DISP:UPD ON                    //Display update during remote control
+    INST:COUP:PROT ALL                  //10 dB attenuation minimum
+    INP:ATT:AUTO ON                     //Auto attenuation
+    INP:COUP DC                         //DC Block
+    INP:TYPE INPUT2                     //Select input 2
+    CALC:UNIT:POW DBM                   //dBm measure
+    INST RECeiver                       //Receiver mode
+    DET:REC POS                         //Peak detector
+    BAND:AUTO OFF                       //Deactivate automatic RBW
+    BAND 1 kHz                          //1 kHz RBW
+    SWE:TIME 20ms                       //20 ms sweep
+
+    //Fréquence (write)
+    FREQ:CENT (X)MHZ                    //Set center frequency
+
+    //Mesure (query)
+    TRACE?\sSINGLE                      //Read result
+
+//Driver ESIB26 SW BCI Bande 1
+    //initialisation (write)
+    *RST                                //Reset
+    *CLS                                //Clear Data
+    SYST:DISP:UPD ON                    //Display update during remote control
+    INST:COUP:PROT ALL                  //10 dB attenuation minimum
+    INP:ATT:AUTO ON                     //Auto attenuation
+    INP:COUP DC                         //DC Block
+    INP:TYPE INPUT2                     //Select input 2
+    CALC:UNIT:POW DBM                   //dBm measure
+    INST:SEL SAN                        //Analyzer mode
+    DISP:WIND:TRAC:Y:RLEV 0DBM          //0 dBm reference level
+    FREQ:SPAN 0HZ                       //Span 0
+    BAND:AUTO OFF                       //Deactivate automatic RBW    
+    BAND 2KHZ                           //2 kHz RBW 
+    SWE:TIME: 0.02                      //20 ms sweep
+    INIT:CONT OFF                       //Single sweep mode
+
+    //Fréquence (write)
+    FREQ:CENT (X)MHZ                    //Set center frequency
+
+    //Mesure (write-query)
+    INIT;*WAI;CALC:MARK:MAX             //Trig sweep, wait and place marker (write)
+    CALC:MARK:Y?                        //Read result  (query)
+
+//Driver ESIB26 SW BCI Bande 2
+    //initialisation (write)
+    *RST                                //Reset
+    *CLS                                //Clear Data
+    SYST:DISP:UPD ON                    //Display update during remote control
+    INST:COUP:PROT ALL                  //10 dB attenuation minimum
+    INP:ATT:AUTO ON                     //Auto attenuation
+    INP:COUP DC                         //DC Block
+    INP:TYPE INPUT2                     //Select input 2
+    CALC:UNIT:POW DBM                   //dBm measure
+    INST RECeiver                       //Receiver mode
+    DET:REC POS                         //Max peak detector
+    BAND:AUTO OFF                       //Deactivate automatic RBW
+    BAND 10 kHz                         //10 kHz RBW
+    SWE:TIME 20ms                       //20 ms sweep
+
+    //Fréquence (write)
+    FREQ:CENT (X)MHZ                    //Set center frequency
+
+    //Mesure  (query)
+    TRACE?\sSINGLE                      //Read result                 //Read result
+
+//Driver FSL18 
+    //initialisation (write)
+    *RST
+    *CLS
+    SYST:DISP:UPD ON                    //Display update during remote control
+    INP:ATT:AUTO ON                     //Auto attenuation
+    CALC:UNIT:POW\sDBM                  //dBm measurement   
+    INIT:CONT ON                        //Coninuous measurement
+    TRIG:SOUR IMM                       //Internal trigger source
+    FREQUENCY:SPAN 1MHZ                 //1 MHz Span
+    SWE:TIME 20MS                       //20 ms sweep
+    BAND:VID:AUTO ON                    //Auto VBW
+    BAND\s100KHz                        //100 kHz RBW
+    DISP:TRAC1:Y:RLEV\s10\sDBM          //10 dBm reference level
+    DISP:TRAC1:MODE\sWRIT               //?

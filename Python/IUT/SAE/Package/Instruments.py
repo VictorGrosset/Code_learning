@@ -5,7 +5,7 @@ import time
 
 class Instrument:  # À rendre full abstraite, c'est juste pour l'exemple, héritage d'interface si possible
 
-    rm = pyvisa.ResourceManager() #Attribut de classe = variable globale de classe
+    rm = pyvisa.ResourceManager('@py') #Attribut de classe = variable globale de classe
 
     def __init__(self, obj_mesure):
         self.instrument_address = None
@@ -99,11 +99,10 @@ class S2VNA(VNA):
         self.instrument.close_instrument()
 
     def do_measure(self):
-        Instrument.rm.list_resources()
         list_command = self.mesure.get_list_command()
         for command in list_command:
             if "?" in command:
-                result = self.instrument.query(command+self.terminaison_char)
+                result = self.instrument.query(command)
                 print(result)
             else:
                 self.instrument.write(command+self.terminaison_char)
