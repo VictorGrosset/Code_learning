@@ -14,3 +14,5 @@ resultat = arv.query('CALCulate1:MARKer1:Y?')
 print("le coefficient de réflexion égal à ", resultat)
 resultat = arv.query('CALCulate:SELected:FUNCtion:DATA?')
 print("le coefficient de réflexion égal à ", resultat)
+
+arv.close()

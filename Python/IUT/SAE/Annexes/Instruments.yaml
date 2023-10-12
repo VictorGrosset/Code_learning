@@ -1,4 +1,0 @@
-ASRL1::INSTR:
-    device: device 1
-    filename: default.yaml
-    bundled: true

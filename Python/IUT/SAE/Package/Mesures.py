@@ -1,14 +1,8 @@
-#from Parametres import *
-
-
 class Mesure:
     def __init__(self):
         self.parametres = None
-        self.result = 0 #a voir
+        self.result = 0  # a voir
         self.list_command = []
-
-    def reglages(self, parametres): #Doute sur l'utilité
-        pass
 
     def mesure(self):
         pass
@@ -21,11 +15,8 @@ class S21(Mesure):
     def __init__(self, obj_parametres):
         super().__init__()
         self.parametres = obj_parametres
-        # self.result = 0
-        # self.list_command = []
-
-    def reglages(self, parametres):
-        pass
+        self.result = 0
+        self.list_command = []
 
     def mesure(self):
         parameters_values = self.parametres.get_param()
@@ -43,8 +34,6 @@ class S21(Mesure):
         self.list_command.append(f'CALCulate1:MARKer1:X {parameters_values["f_marker"]}')
         self.list_command.append(f'INIT; *WAIt')
         self.list_command.append(f'CALCulate1:MARKer1:Y?')
-        #self.list_command.append(f'INITiate1:CONTinuous ON')
-
 
     def get_list_command(self):
         self.mesure()

@@ -1,39 +1,39 @@
 import pyvisa
 import time
-#from Mesures import *  # Ne sert que si on utilise un nom de Mesure.py
+import csv
+import csv2pdf
+import plotly
+import reportlab
 
+
+# import csv
+# import matplotlib
 
 class Instrument:  # À rendre full abstraite, c'est juste pour l'exemple, héritage d'interface si possible
 
-    rm = pyvisa.ResourceManager('@py') #Attribut de classe = variable globale de classe
+    rm = pyvisa.ResourceManager('@py')  # Attribut de classe = variable globale de classe
 
     def __init__(self, obj_mesure):
         self.instrument_address = None
-        self.instrument = None #rm.open_ressource(instrument_address)
+        self.instrument = None  # rm.open_ressource(instrument_address)
         self.mesure = obj_mesure
-        self.terminaison_char = ''
+        self.terminaison_char = None
         self.timeout = None
-        self.delay = None
+        self.latency = None
+        self.data = None
+        self.value_list_unformated = None
+        self.frequency_list_unformated = None
 
-    def set_instrument_address(self, instrument_address: str):  # CHoisir s'il faut définir à l'instanciation ou par méthode set
+    def open_comm_instrument(self, instrument_address: str, terminaison_char: str, timeout: int, latency: float, baudrate: int):
         pass
 
-    def set_terminaison_char(self, character: str):
-        pass
-
-    def set_delay(self, delay: int):
-        pass
-
-    def set_timeout(self, timeout: int):
-        pass
-
-    def open_instrument(self):
-        pass
-
-    def close_instrument(self):
+    def close_comm_instrument(self):
         pass
 
     def do_measure(self):
+        pass
+
+    def export_data(self):
         pass
 
 
@@ -43,60 +43,49 @@ class VNA(Instrument):  # Est-ce que c'est nécessaire d'avoir la classe fille V
         self.instrument_address = None
         self.instrument = None
         self.mesure = obj_mesure
-        self.terminaison_char = ''
-        self.timeout = None  # A implementer
-        self.delay = None  # A implementer
+        self.terminaison_char = None
+        self.timeout = None
+        self.latency = None
+        self.data = None
 
-    def set_instrument_address(self, instrument_address: str):  # CHoisir s'il faut définir à l'instanciation ou par méthode set
+    def open_comm_instrument(self, instrument_address: str, terminaison_char: str, timeout: int, latency: float, baudrate: int):
         pass
 
-    def set_terminaison_char(self, character: str):
-        pass
-
-    def set_delay(self, delay: int):
-        pass
-
-    def set_timeout(self, timeout: int):
-        pass
-
-    def open_instrument(self):
-        pass
-
-    def close_instrument(self):
+    def close_comm_instrument(self):
         pass
 
     def do_measure(self):
         pass
 
+    def export_data(self):
+        pass
+
 
 class S2VNA(VNA):
-    def __init(self, obj_mesure):
+    def __init__(self, obj_mesure):
         super().__init__(obj_mesure)
-        self.instrument_address = None
-        self.instrument = None #instru du rm
+        self.instrument_address = None  # TCPIP0::localhost::5025::SOCKET
+        self.instrument = None  # instru du rm
         self.mesure = obj_mesure
         self.terminaison_char = None
         self.timeout = None
-        self.delay = None
-        #TCPIP0::localhost::5025::SOCKET
+        self.latency = None
+        self.data = None
+        self.value_list_unformated = None
+        self.frequency_list_unformated = None
 
-    def set_instrument_address(self, instrument_address: str):  # CHoisir s'il faut définir à l'instanciation ou par méthode set
+    def open_comm_instrument(self, instrument_address: str, terminaison_char: str, timeout: int, latency: float, baudrate: int):
         self.instrument_address = instrument_address
-
-    def set_terminaison_char(self, character: str):
-        self.terminaison_char = character
-
-    def set_delay(self, delay: int):
-        self.delay = delay
-
-    def set_timeout(self, timeout: int):
+        self.terminaison_char = terminaison_char
         self.timeout = timeout
-
-    def open_instrument(self):
+        self.latency = latency
         self.instrument = self.rm.open_resource(self.instrument_address)
+        self.instrument.timeout = self.timeout
+        self.instrument.read_termination = self.terminaison_char
+        self.instrument.write_termination = self.terminaison_char
 
-    def close_instrument(self):
-        self.instrument.close_instrument()
+    def close_comm_instrument(self):
+        self.instrument.close()
 
     def do_measure(self):
         list_command = self.mesure.get_list_command()
@@ -105,9 +94,39 @@ class S2VNA(VNA):
                 result = self.instrument.query(command)
                 print(result)
             else:
-                self.instrument.write(command+self.terminaison_char)
-            time.sleep(self.delay)
+                self.instrument.write(command)
+            time.sleep(self.latency)
+
+    def export_data(
+            self):  # Todo: définir une méthode par défaut pour l'export quite à override ensuite suivant les types de résultat
+        # Todo: prévoir une méthode d'import et de traitement des données brutes dans une classe traitement
+        self.frequency_list_unformated = self.instrument.query('CALC:DATA:XAX?')  # fréquences
+        frequency_list = self.frequency_list_unformated.split(',')
+        nb_line = len(frequency_list)
+
+        self.value_list_unformated = self.instrument.query('CALCulate1:DATA:FDATa?')  # valeurs
+        value_list = self.value_list_unformated.split(',')
+        magnitude = []
+        phase = []
+        for index in range(0, nb_line * 2, 1):
+            if index % 2 == 0:
+                magnitude.append(value_list[index])
+            else:
+                phase.append(value_list[index])
 
 
+        self.data = []
+        self.data = list(
+            zip(frequency_list, magnitude, value_list))  # Passe de 3 lignes 1001 colonnes à 1001 lignes 3 colonnes
 
+        with open('data.csv', "w") as data_file:
+            data_writer = csv.writer(data_file, delimiter=',', quotechar='"', quoting=csv.QUOTE_MINIMAL)
+            data_writer.writerow(['Fréquence (MHz)', 'Magnitude (U)', 'Phase (°)'])
+            data_writer.writerows(self.data)
+        csv2pdf.convert("data.csv", "data.pdf", headersize=10, delimiter=',')
+        self.data.clear()
+        curve = plotly.graph_objs.Figure(plotly.graph_objs.Scattersmith(imag=phase, real=magnitude))
+        curve.show()
 
+        self.frequency_list_unformated = ""
+        self.value_list_unformated = ""
