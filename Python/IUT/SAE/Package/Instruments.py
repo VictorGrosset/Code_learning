@@ -3,26 +3,24 @@ import time
 import csv
 import csv2pdf
 import plotly
-import reportlab
-
 
 # import csv
 # import matplotlib
 
-class Instrument:  # À rendre full abstraite, c'est juste pour l'exemple, héritage d'interface si possible
+class Instrument:
 
     rm = pyvisa.ResourceManager('@py')  # Attribut de classe = variable globale de classe
 
     def __init__(self, obj_mesure):
-        self.instrument_address = None
-        self.instrument = None  # rm.open_ressource(instrument_address)
+        self.instrument_address = str
+        self.instrument = str  # rm.open_ressource(instrument_address)
         self.mesure = obj_mesure
-        self.terminaison_char = None
-        self.timeout = None
-        self.latency = None
-        self.data = None
-        self.value_list_unformated = None
-        self.frequency_list_unformated = None
+        self.terminaison_char = str
+        self.timeout = int
+        self.latency = float
+        self.data = list
+        self.value_list_unformated = str
+        self.frequency_list_unformated = str
 
     def open_comm_instrument(self, instrument_address: str, terminaison_char: str, timeout: int, latency: float, baudrate: int):
         pass
@@ -40,13 +38,6 @@ class Instrument:  # À rendre full abstraite, c'est juste pour l'exemple, héri
 class VNA(Instrument):  # Est-ce que c'est nécessaire d'avoir la classe fille VNA comme moyen de gérer les compositions
     def __init__(self, obj_mesure):
         super().__init__(obj_mesure)
-        self.instrument_address = None
-        self.instrument = None
-        self.mesure = obj_mesure
-        self.terminaison_char = None
-        self.timeout = None
-        self.latency = None
-        self.data = None
 
     def open_comm_instrument(self, instrument_address: str, terminaison_char: str, timeout: int, latency: float, baudrate: int):
         pass
@@ -64,15 +55,6 @@ class VNA(Instrument):  # Est-ce que c'est nécessaire d'avoir la classe fille V
 class S2VNA(VNA):
     def __init__(self, obj_mesure):
         super().__init__(obj_mesure)
-        self.instrument_address = None  # TCPIP0::localhost::5025::SOCKET
-        self.instrument = None  # instru du rm
-        self.mesure = obj_mesure
-        self.terminaison_char = None
-        self.timeout = None
-        self.latency = None
-        self.data = None
-        self.value_list_unformated = None
-        self.frequency_list_unformated = None
 
     def open_comm_instrument(self, instrument_address: str, terminaison_char: str, timeout: int, latency: float, baudrate: int):
         self.instrument_address = instrument_address

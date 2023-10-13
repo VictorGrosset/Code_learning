@@ -1,8 +1,18 @@
 class Mesure:
-    def __init__(self):
+    def __init__(self, obj_parametre):
         self.parametres = None
-        self.result = 0  # a voir
         self.list_command = []
+
+    def mesure(self):
+        pass
+
+    def get_list_command(self):
+        pass
+    
+
+class ARV(Mesure):
+    def __init__(self, obj_parametre):
+        super().__init__(obj_parametre)
 
     def mesure(self):
         pass
@@ -11,11 +21,10 @@ class Mesure:
         pass
 
 
-class S21(Mesure):
+class S21(ARV):
     def __init__(self, obj_parametres):
-        super().__init__()
+        super().__init__(obj_parametres)
         self.parametres = obj_parametres
-        self.result = 0
         self.list_command = []
 
     def mesure(self):
@@ -40,12 +49,12 @@ class S21(Mesure):
         return self.list_command
 
 
-class Vrms:
+class Vrms(Mesure):
     def __init__(self, obj_parametres):
-        pass
-
-    def reglages(self):
-        pass
+        super.__init__(obj_parametres)
 
     def mesure(self):
+        pass
+
+    def get_list_command(self):
         pass
